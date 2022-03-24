@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konfigurator</title>
+    <!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> -->
+    <!-- <script src="js/require.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <!-- <script src="//cdn.rawgit.com/mrdoob/three.js/master/build/three.js"></script> -->
+    <!-- <script src="//cdn.rawgit.com/mrdoob/three.js/master/examples/js/controls/OrbitControls.js"></script> -->
+
+    <!-- <script src="js/orbit.js"></script> -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <script src="./js/Tween.min.js"></script>
+    <script type="module" src="./js/dynamic.js"></script>
+    <script type="module" src="./js/main.js"></script>
+</head>
+
+<body>
+    <div class="tooltip">
+        <p class="tooltipText">test</p>
+        <!-- <i class="fas fa-chevron-down"></i> -->
+        <div class="arrowBubbleBox"></div>
+    </div>
+
+    <!-- <span class="info" data-bs-toggle="tooltip" data-bs-placement="top" title="Some Information"></span> -->
+
+    <div class="mainContent">
+        <div class="mainContentInner">
+            <div class="confContainer">
+                <div class="menu list-group float-start" id="list-example">
+                    <!-- <a href="#scroll-section-1" class="menuItem list-group-item list-group-item-action">
+                        <div>
+                            <div class="menu-icon menu-icon-ruler"></div>
+                            <p>Form</p>
+                        </div>
+                    </a>
+
+
+                    <a href="#scroll-section-2" class="menuItem list-group-item list-group-item-action">
+                        <div>
+                            <div class="menu-icon menu-icon-can"></div>
+                            <p>Farbe</p>
+                        </div>
+                    </a>
+
+
+                    <a href="#scroll-section-3" class="menuItem list-group-item list-group-item-action">
+                        <div>
+                            <div class="menu-icon menu-icon-link"></div>
+                            <p>Optionen</p>
+                        </div>
+                    </a>
+
+                    <a href="#scroll-section-4" class="menuItem list-group-item list-group-item-action">
+                        <div>
+                            <div class="menu-icon menu-icon-env"></div>
+                            <p>Umgebung</p>
+                        </div>
+                    </a> -->
+                </div>
+
+                <!-- 
+                    <a href="#sec3" class="menuItem list-group-item list-group-item-action">
+                        <img src="./img/external-link-alt-solid.svg" alt="">
+                        <p>Ausstattung</p>
+                    </a>
+                    <a href="#sec4" class="menuItem list-group-item list-group-item-action">
+                        <img src="./img/external-link-alt-solid.svg" alt="">
+                        <p>Umgebung</p>
+                    </a>
+					-->
+
+                <div class="openMenu">
+                    <div>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <div class="blurBG"></div>
+
+                <div class="closeMenu-mobile">
+                    <div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div id="OptionList" class="menu-option">
+                    <div class="closeMenu">
+                        <div>
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                    </div>
+
+                    <!-- <div id="click-stoffbahnen-toggle">click-stoffbahnen-toggle</div> -->
+                    <!-- <div id="click-terrassendachmainmaterial-gebuerstet">click-terrassendachmainmaterial-gebuerstet</div> -->
+                    <!-- <div id="click-terrassendachmainmaterial-glatt">click-terrassendachmainmaterial-glatt</div> -->
+
+                    <div class="opt-item" id="sec15">
+                        <h3>Eigenes Bild hochladen</h3>
+                        <div class="kat-wrapper">
+                            <div class="kat-item fullWidth">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 mt-3 mt-sm-0 p-0">
+                                            <a href="#" id="imageUploaderPre" class="btn btn-secondary">Bild Hochladen</a
+                        >
+                      </div>
+
+                      <div class="col-12 p-0">
+                        <div class="userImageModeVisible">
+                          <div class="col-12 col-sm-12 mt-3 mt-sm-3 p-0">
+                            <a href="#" id="imagedelete" class="btn btn-link"
+                              >Bild entfernen</a
+                            >
+                          </div>
+
+                          <div class="col-12">
+                            <input
+                              style="display: none"
+                              id="userImage"
+                              type="file"
+                            />
+                          </div>
+                          <div class="col-12 userImageLoadedVisible">
+                            <div
+                              class="col-12 col-sm-4 justify-content-center align-items-center d-flex"
+                            >
+                              <p class="text-bold heading text-left">Zoom</p>
+                            </div>
+                            <div
+                              class="col-12 col-sm-8 justify-content-center align-items-center d-flex"
+                            >
+                              <input
+                                class="w-100"
+                                type="range"
+                                min="100"
+                                max="200"
+                                step="1"
+                                value="100"
+                                id="ui-userimage-x"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="col-12 userImageLoadedVisible">
+                            <div
+                              class="col-12 col-sm-4 justify-content-center align-items-center d-flex"
+                            >
+                              <p class="text-bold heading text-left">
+                                Sichtfeld
+                              </p>
+                            </div>
+                            <div
+                              class="col-12 col-sm-8 justify-content-center align-items-center d-flex"
+                            >
+                              <input
+                                class="w-100"
+                                type="range"
+                                min="30"
+                                max="90"
+                                step="1"
+                                value="40"
+                                id="ui-fov-slider"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- <div
+                            class="row userImageLoadedVisible text-center mt-3"
+                          > -->
+                          <!-- <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                              <a
+                                href="#"
+                                id="ui-toggle-userimagehelper"
+                                class="btn btn-outline-secondary"
+                                >Toggle Helper Lines</a
+                              >
+                            </div> -->
+                          <!-- <div class="col-12 col-sm-6">
+                              <a
+                                href="#"
+                                id="ui-takeScreenshot"
+                                class="btn btn-outline-secondary"
+                                >Screenshot</a
+                              >
+                            </div> -->
+                          <!-- </div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="opt-item opt-item-last" id="sec15">
+              <h3>Ihre Konfiguration</h3>
+              <div class="kat-wrapper">
+                <div class="kat-item fullWidth">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-12 col-sm-6 g-0 centerElement">
+                        <p class="w-100 text-start">
+                          Gesamtpreis: <span class="sumText">22.000 €</span>
+                        </p>
+                        <p class="discText text-start w-100">
+                          Sie sparen: 2.768 €
+                        </p>
+                        <!-- <a href="" class="btn btn-primary mt-2">Angebot anfordern</a> -->
+                                        </div>
+                                        <div class="col-12 col-sm-6 mt-3 mt-sm-0 centerElement">
+                                            <!-- <p>Sparen sie bis zu 20%</p> -->
+                                            <a href="./anfrage.html" class="btn btn-primary">Angebot anfordern</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-3">
+                <a
+                  href="./stueckliste.html"
+                  class="w-100 w-sm-50 d-block ps-sm-0 text-center text-sm-start config-link"
+                  >Übersicht</a
+                >
+              </div>
+              <div class=" ">
+                <a
+                  class="w-100 w-sm-50 d-block ps-sm-0 text-center text-sm-start config-link"
+                  >Infomaterial</a
+                >
+              </div>
+            </div>
+
+            <div class="bottomElement">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6 centerElement">
+                    <p class="w-100 text-start ps-3">
+                      Gesamtpreis: <span class="sumText">22.000 €</span>
+                    </p>
+                    <p class="discText text-start ps-3 w-100">
+                      Sie sparen: 2.768 €
+                    </p>
+                    <!-- <a href="" class="btn btn-primary mt-2">Angebot anfordern</a> -->
+                                        </div>
+                                        <div class="col-6 centerElement">
+                                            <!-- <p>Sparen sie bis zu 20%</p> -->
+                                            <a href="./anfrage.html" class="btn btn-primary">Angebot anfordern</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="visual float-end d-none d-lg-block"> -->
+          <div class="visual float-end">
+            <div id="gui_container"></div>
+
+            <div class="visual-topContent">
+              <!-- <div class="bgFade"></div> -->
+              <div class="container-fluid h-100">
+                <div class="row h-100">
+                  <div class="col-4"></div>
+                  <div class="col-4 h-100 Logo-fix">
+                    <div class="logoContainer h-100 Logo-fix"></div>
+                  </div>
+                  <div class="col-4 h-100 hide-on-mobile">
+                    <div class="row">
+                      <div class="col-4 h-100"></div>
+                      <div class="col-8 h-100">
+                        <a class="btn btn-secondary tb-individual" href=""
+                          >Individuelle Planung</a
+                        >
+                        <a class="btn btn-secondary tb-kontakt" href=""
+                          >Kontakt</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="visual-mainContent">
+              <div id="treeLoadingContainer" class="treeLoadingContainer">
+                <div class="container">
+                  <div class="row justify-content-center">
+                    <div
+                      class="col-6 offset-3 d-flex flex-column justify-content-center align-items-center vh-100"
+                    >
+                      <div class="loadingText text-center">
+                        <i class="fas fa-circle-notch fa-spin"></i><br />
+                        &nbsp;&nbsp;&nbsp;Lade ...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="threecontainer"></div>
+
+              <div
+                style="
+                  position: absolute;
+                  z-index: 100;
+                  left: 0;
+                  bottom: 0;
+                  right: 0;
+                  height: 50px;
+                  background-color: rgba(0, 0, 0, 0.33);
+                  color: #fff;
+                  display: none;
+                "
+              >
+                <button id="Cam1">Cam1</button>
+                <button id="Cam2">Cam2</button>
+                <button id="Farbe1">Farbe1</button>
+                <button id="Farbe2">Farbe2</button>
+                <button id="Farbe3">Farbe3</button>
+
+                <div style="display: inline-block; width: 400px">
+                  <input
+                    type="range"
+                    min="5"
+                    max="10"
+                    value="5"
+                    class="slider"
+                    id="widthSlider"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="userImageControlsContainer"
+              class="userImageControlsContainer"
+            >
+              <div class="imgUploadContainer2">
+                <a id="enableUserImageMode" class="icon_imgUpload"></a>
+                                            <a id="disableUserImageMode" class="icon_imgUpload"></a>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="zoomRangeSliderContainer">
+                        <div class="closeMenu_zoomSlider">
+                            <div>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <label>FOV <input class="w-100" type="range" min="30" max="90" step="1" value="40" id="ui-fov-slider"></label>
+                        <label>Bild Zoom <input class="w-100" type="range" min="100" max="200" step="1" value="100" id="ui-userimage-x"></label>
+                    </div>
+
+
+                    <div class="imgUploadContainer">
+                        <div class="closeMenu_imgUpload">
+                            <div>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="iconContDiv">
+                            <span id="enableUserImageMode" class="icon_imgUpload"></span>
+                        </div>
+                        <div class="iconContDiv">
+                            <span id="enableUserImageMode" class="icon_imgUpload"></span>
+                        </div>
+                        <div class="iconContDiv">
+                            <span id="enableUserImageMode" class="icon_imgUpload"></span>
+                        </div>
+                        <div id="enableUserImageZoomSettings" class="iconContDiv">
+                            <span id="enableUserImageMode" class="icon_imgUpload"></span>
+                        </div>
+                        <!-- <div class="rangeSliderContainer">
+                            <input type="range" name="" id="">
+                            <input type="range" name="" id="">
+                        </div> -->
+                                </div>
+                                -->
+
+                                <div class="iconContDivainer-other">
+                                    <!-- <div id="enableUserImageMode_cont" class="iconContDiv ">
+                            <span id="enableUserImageMode_Pre" class="icon_imgUpload"></span>
+                        </div> -->
+
+                                    <div class="iconContDiv">
+                                        <span id="btn_zoomIn" class="icon-plus"></span>
+                                    </div>
+                                    <div class="iconContDiv">
+                                        <span id="btn_zoomOut" class="icon-minus"></span>
+                                    </div>
+                                    <div class="iconContDiv">
+                                        <span class="icon-outer" id="click-campositionbtn-1"></span>
+                                    </div>
+                                    <div class="iconContDiv">
+                                        <span class="icon-inner" id="click-campositionbtn-2"></span>
+                                    </div>
+
+                                    <!-- <div>
+					<span class="icon-undo"></span>
+				</div> -->
+                                    <!-- <div>
+					<span class="icon-redo"></span>
+				</div> -->
+                                    <!-- <div>
+					<span class="icon-save"></span>
+				</div>
+				<div>
+					<span class="icon-user"></span>
+				</div> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modalOption">
+                            <div class="blackOut"></div>
+                            <div class="modalContent">
+                                <div class="container-fluid">
+                                    <div class="row mt-5">
+                                        <div class="col-12 col-sm-6">
+                                            <div class="visualBox">
+                                                <img id="modalOptionBox_img" src="./img/conf/dacherweiterung.jpg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <h3 id="modalOptionBox_headline" class="mt-3 mt-sm-0">
+                                                Glatter Wandanschluss
+                                            </h3>
+                                            <p id="modalOptionBox_text" class="mt-4">
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam era
+                                            </p>
+                                            <div class="col-12 mt-5">
+                                                <a value="" id="modalOptionBox_btn" class="btn btn-primary">Hinzufügen</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="closeBtn-modal"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet"> -->
+
+    <script>
+      // Our Javascript will go here.
+    </script>
+  </body>
+</html>

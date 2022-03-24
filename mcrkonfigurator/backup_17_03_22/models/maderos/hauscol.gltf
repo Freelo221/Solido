@@ -1,0 +1,3522 @@
+{
+    "asset": {
+        "version": "2.0",
+        "generator": "Open Asset Import Library (assimp v5.0.5eb040c7)"
+    },
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 6282,
+            "type": "VEC3",
+            "max": [
+                410.62677001953127,
+                -196.01475524902345,
+                403.05133056640627
+            ],
+            "min": [
+                -870.46435546875,
+                -224.197509765625,
+                0.0
+            ]
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 6282,
+            "type": "VEC3",
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ]
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 14184,
+            "type": "SCALAR",
+            "max": [
+                6281
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 638,
+            "type": "VEC3",
+            "max": [
+                400.7580871582031,
+                660.2415161132813,
+                918.9447021484375
+            ],
+            "min": [
+                -961.3668212890625,
+                -202.50006103515626,
+                368.99786376953127
+            ]
+        },
+        {
+            "bufferView": 4,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 638,
+            "type": "VEC3",
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ]
+        },
+        {
+            "bufferView": 5,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 1536,
+            "type": "SCALAR",
+            "max": [
+                637
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 6,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1124,
+            "type": "VEC3",
+            "max": [
+                402.1017150878906,
+                460.4596862792969,
+                820.2564086914063
+            ],
+            "min": [
+                -962.71044921875,
+                -202.72283935546876,
+                -0.0000152587890625
+            ]
+        },
+        {
+            "bufferView": 7,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1124,
+            "type": "VEC3",
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ]
+        },
+        {
+            "bufferView": 8,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 2382,
+            "type": "SCALAR",
+            "max": [
+                1123
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 9,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 78,
+            "type": "VEC3",
+            "max": [
+                380.5713195800781,
+                449.1946716308594,
+                812.7564086914063
+            ],
+            "min": [
+                -941.1800537109375,
+                -182.5,
+                7.499977111816406
+            ]
+        },
+        {
+            "bufferView": 10,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 78,
+            "type": "VEC3",
+            "max": [
+                1.0,
+                0.0,
+                9.990203579945956e-7
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -6.465753017437237e-7
+            ]
+        },
+        {
+            "bufferView": 11,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 144,
+            "type": "SCALAR",
+            "max": [
+                77
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 12,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 60,
+            "type": "VEC3",
+            "max": [
+                408.25799560546877,
+                665.2415161132813,
+                2.6077957153320314
+            ],
+            "min": [
+                -968.86669921875,
+                -207.5,
+                -0.000030517578125
+            ]
+        },
+        {
+            "bufferView": 13,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 60,
+            "type": "VEC3",
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                0.0
+            ]
+        },
+        {
+            "bufferView": 14,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 156,
+            "type": "SCALAR",
+            "max": [
+                59
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 15,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 48,
+            "type": "VEC3",
+            "max": [
+                348.1614074707031,
+                656.6318359375,
+                422.5349426269531
+            ],
+            "min": [
+                -908.77001953125,
+                -215.10958862304688,
+                387.31878662109377
+            ]
+        },
+        {
+            "bufferView": 16,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 48,
+            "type": "VEC3",
+            "max": [
+                1.0,
+                1.0,
+                0.04623926430940628
+            ],
+            "min": [
+                -1.0,
+                -0.9999741911888123,
+                -0.9999909996986389
+            ]
+        },
+        {
+            "bufferView": 17,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 108,
+            "type": "SCALAR",
+            "max": [
+                47
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 18,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 553,
+            "type": "VEC3",
+            "max": [
+                383.0713195800781,
+                613.9292602539063,
+                836.535888671875
+            ],
+            "min": [
+                -943.6800537109375,
+                -197.4952392578125,
+                3.93914794921875
+            ]
+        },
+        {
+            "bufferView": 19,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 553,
+            "type": "VEC3",
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ]
+        },
+        {
+            "bufferView": 20,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 1230,
+            "type": "SCALAR",
+            "max": [
+                552
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 21,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 555,
+            "type": "VEC3",
+            "max": [
+                398.2580871582031,
+                655.2415771484375,
+                913.9447021484375
+            ],
+            "min": [
+                -958.8668212890625,
+                -197.50003051757813,
+                -0.000030517578125
+            ]
+        },
+        {
+            "bufferView": 22,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 555,
+            "type": "VEC3",
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ]
+        },
+        {
+            "bufferView": 23,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 1428,
+            "type": "SCALAR",
+            "max": [
+                554
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 24,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 97,
+            "type": "VEC3",
+            "max": [
+                361.6590881347656,
+                655.2415771484375,
+                873.111572265625
+            ],
+            "min": [
+                -916.326904296875,
+                -215.10958862304688,
+                403.01263427734377
+            ]
+        },
+        {
+            "bufferView": 25,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 97,
+            "type": "VEC3",
+            "max": [
+                0.7219560146331787,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -0.7219560146331787,
+                -1.0,
+                -1.0
+            ]
+        },
+        {
+            "bufferView": 26,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 258,
+            "type": "SCALAR",
+            "max": [
+                96
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 27,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                -1076.575927734375,
+                -193.4622039794922,
+                7.848480224609375
+            ],
+            "min": [
+                -1380.7813720703126,
+                -226.4402618408203,
+                -7.14508056640625
+            ]
+        },
+        {
+            "bufferView": 28,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                0.8782199025154114,
+                1.0,
+                0.9995943307876587
+            ],
+            "min": [
+                -0.7421460747718811,
+                -1.0,
+                -0.9995924830436707
+            ]
+        },
+        {
+            "bufferView": 29,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 1548,
+            "type": "SCALAR",
+            "max": [
+                527
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 30,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                -1076.575927734375,
+                -193.4622039794922,
+                7.848480224609375
+            ],
+            "min": [
+                -1380.7813720703126,
+                -226.4402618408203,
+                -7.14508056640625
+            ]
+        },
+        {
+            "bufferView": 31,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                0.8782199025154114,
+                1.0,
+                0.9995943307876587
+            ],
+            "min": [
+                -0.7421460747718811,
+                -1.0,
+                -0.9995924830436707
+            ]
+        },
+        {
+            "bufferView": 32,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 1548,
+            "type": "SCALAR",
+            "max": [
+                527
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 33,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                -1076.575927734375,
+                -193.4622039794922,
+                7.848480224609375
+            ],
+            "min": [
+                -1380.7813720703126,
+                -226.4402618408203,
+                -7.14508056640625
+            ]
+        },
+        {
+            "bufferView": 34,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                0.8782199025154114,
+                1.0,
+                0.9995943307876587
+            ],
+            "min": [
+                -0.7421460747718811,
+                -1.0,
+                -0.9995924830436707
+            ]
+        },
+        {
+            "bufferView": 35,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 1548,
+            "type": "SCALAR",
+            "max": [
+                527
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 36,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                -1076.575927734375,
+                -193.4622039794922,
+                7.848480224609375
+            ],
+            "min": [
+                -1380.7813720703126,
+                -226.4402618408203,
+                -7.14508056640625
+            ]
+        },
+        {
+            "bufferView": 37,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                0.8782199025154114,
+                1.0,
+                0.9995943307876587
+            ],
+            "min": [
+                -0.7421460747718811,
+                -1.0,
+                -0.9995924830436707
+            ]
+        },
+        {
+            "bufferView": 38,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 1548,
+            "type": "SCALAR",
+            "max": [
+                527
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 39,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                -1076.575927734375,
+                -200.57647705078126,
+                7.848480224609375
+            ],
+            "min": [
+                -1380.7813720703126,
+                -233.55455017089845,
+                -7.14508056640625
+            ]
+        },
+        {
+            "bufferView": 40,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                0.8782798647880554,
+                1.0,
+                0.9995943903923035
+            ],
+            "min": [
+                -0.742152214050293,
+                -1.0,
+                -0.9995923638343811
+            ]
+        },
+        {
+            "bufferView": 41,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 1548,
+            "type": "SCALAR",
+            "max": [
+                527
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 42,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                -1076.5758056640626,
+                -200.57647705078126,
+                7.848480224609375
+            ],
+            "min": [
+                -1380.78125,
+                -233.55455017089845,
+                -7.14508056640625
+            ]
+        },
+        {
+            "bufferView": 43,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                0.8782476186752319,
+                1.0,
+                0.9995943903923035
+            ],
+            "min": [
+                -0.742152214050293,
+                -1.0,
+                -0.9995923638343811
+            ]
+        },
+        {
+            "bufferView": 44,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 1548,
+            "type": "SCALAR",
+            "max": [
+                527
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 45,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                -1076.575927734375,
+                -199.65394592285157,
+                7.84857177734375
+            ],
+            "min": [
+                -1380.781494140625,
+                -232.63201904296876,
+                -7.14501953125
+            ]
+        },
+        {
+            "bufferView": 46,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                0.8782193064689636,
+                1.0,
+                0.9995943903923035
+            ],
+            "min": [
+                -0.742118775844574,
+                -1.0,
+                -0.9995924830436707
+            ]
+        },
+        {
+            "bufferView": 47,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 1548,
+            "type": "SCALAR",
+            "max": [
+                527
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 48,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                -1076.575927734375,
+                -199.65394592285157,
+                7.84857177734375
+            ],
+            "min": [
+                -1380.781494140625,
+                -232.63201904296876,
+                -7.14501953125
+            ]
+        },
+        {
+            "bufferView": 49,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                0.8782511949539185,
+                1.0,
+                0.9995943903923035
+            ],
+            "min": [
+                -0.7421731948852539,
+                -1.0,
+                -0.9995924830436707
+            ]
+        },
+        {
+            "bufferView": 50,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 1548,
+            "type": "SCALAR",
+            "max": [
+                527
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 51,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                -1076.575927734375,
+                -199.65394592285157,
+                7.8485107421875
+            ],
+            "min": [
+                -1380.781494140625,
+                -232.63201904296876,
+                -7.14508056640625
+            ]
+        },
+        {
+            "bufferView": 52,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                0.8782511949539185,
+                1.0,
+                0.9995943307876587
+            ],
+            "min": [
+                -0.742118775844574,
+                -1.0,
+                -0.9995924830436707
+            ]
+        },
+        {
+            "bufferView": 53,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 1548,
+            "type": "SCALAR",
+            "max": [
+                527
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 54,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                -1076.5760498046876,
+                -199.65394592285157,
+                7.8485107421875
+            ],
+            "min": [
+                -1380.781494140625,
+                -232.63201904296876,
+                -7.14508056640625
+            ]
+        },
+        {
+            "bufferView": 55,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                0.8782511949539185,
+                1.0,
+                0.9995943903923035
+            ],
+            "min": [
+                -0.7421733140945435,
+                -1.0,
+                -0.9995924830436707
+            ]
+        },
+        {
+            "bufferView": 56,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 1548,
+            "type": "SCALAR",
+            "max": [
+                527
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 57,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                -729.7848510742188,
+                -193.46221923828126,
+                7.848485946655273
+            ],
+            "min": [
+                -1033.990478515625,
+                -226.44027709960938,
+                -7.145082473754883
+            ]
+        },
+        {
+            "bufferView": 58,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                0.8782687783241272,
+                1.0,
+                0.9995943307876587
+            ],
+            "min": [
+                -0.7421189546585083,
+                -1.0,
+                -0.9995924234390259
+            ]
+        },
+        {
+            "bufferView": 59,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 1548,
+            "type": "SCALAR",
+            "max": [
+                527
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 60,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                -760.9797973632813,
+                -193.46221923828126,
+                7.848483085632324
+            ],
+            "min": [
+                -1065.1851806640626,
+                -226.44027709960938,
+                -7.145082473754883
+            ]
+        },
+        {
+            "bufferView": 61,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 528,
+            "type": "VEC3",
+            "max": [
+                0.8783009052276611,
+                1.0,
+                0.9995943307876587
+            ],
+            "min": [
+                -0.7421461939811707,
+                -1.0,
+                -0.9995924830436707
+            ]
+        },
+        {
+            "bufferView": 62,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 1548,
+            "type": "SCALAR",
+            "max": [
+                527
+            ],
+            "min": [
+                0
+            ]
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 538512,
+            "uri": "result.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 75384,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 75384,
+            "byteLength": 75384,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 150768,
+            "byteLength": 56736,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 207504,
+            "byteLength": 7656,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 215160,
+            "byteLength": 7656,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 222816,
+            "byteLength": 6144,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 228960,
+            "byteLength": 13488,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 242448,
+            "byteLength": 13488,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 255936,
+            "byteLength": 9528,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 265464,
+            "byteLength": 936,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 266400,
+            "byteLength": 936,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 267336,
+            "byteLength": 576,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 267912,
+            "byteLength": 720,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 268632,
+            "byteLength": 720,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 269352,
+            "byteLength": 624,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 269976,
+            "byteLength": 576,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 270552,
+            "byteLength": 576,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 271128,
+            "byteLength": 432,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 271560,
+            "byteLength": 6636,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 278196,
+            "byteLength": 6636,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 284832,
+            "byteLength": 4920,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 289752,
+            "byteLength": 6660,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 296412,
+            "byteLength": 6660,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 303072,
+            "byteLength": 5712,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 308784,
+            "byteLength": 1164,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 309948,
+            "byteLength": 1164,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 311112,
+            "byteLength": 1032,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 312144,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 318480,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 324816,
+            "byteLength": 6192,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 331008,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 337344,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 343680,
+            "byteLength": 6192,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 349872,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 356208,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 362544,
+            "byteLength": 6192,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 368736,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 375072,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 381408,
+            "byteLength": 6192,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 387600,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 393936,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 400272,
+            "byteLength": 6192,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 406464,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 412800,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 419136,
+            "byteLength": 6192,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 425328,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 431664,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 438000,
+            "byteLength": 6192,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 444192,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 450528,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 456864,
+            "byteLength": 6192,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 463056,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 469392,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 475728,
+            "byteLength": 6192,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 481920,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 488256,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 494592,
+            "byteLength": 6192,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 500784,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 507120,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 513456,
+            "byteLength": 6192,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 519648,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 525984,
+            "byteLength": 6336,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 532320,
+            "byteLength": 6192,
+            "target": 34963
+        }
+    ],
+    "materials": [
+        {
+            "name": "emptymatfu",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.5960784554481506,
+                    0.33725491166114809,
+                    0.1411764770746231,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.959750771522522
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "hauscol_rinne",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 2,
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hauscol_blech",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 5,
+                    "attributes": {
+                        "POSITION": 3,
+                        "NORMAL": 4
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hauscol_fensterrahmen",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 8,
+                    "attributes": {
+                        "POSITION": 6,
+                        "NORMAL": 7
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hauscol_fensterglas",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 11,
+                    "attributes": {
+                        "POSITION": 9,
+                        "NORMAL": 10
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hauscol_fundament",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 14,
+                    "attributes": {
+                        "POSITION": 12,
+                        "NORMAL": 13
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hauscol_holz",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 17,
+                    "attributes": {
+                        "POSITION": 15,
+                        "NORMAL": 16
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hauscol_inside",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 20,
+                    "attributes": {
+                        "POSITION": 18,
+                        "NORMAL": 19
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hauscol_wand",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 23,
+                    "attributes": {
+                        "POSITION": 21,
+                        "NORMAL": 22
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hauscol_dachziegel",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 26,
+                    "attributes": {
+                        "POSITION": 24,
+                        "NORMAL": 25
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hauscol_vorhang",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 29,
+                    "attributes": {
+                        "POSITION": 27,
+                        "NORMAL": 28
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hauscol_vorhang",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 32,
+                    "attributes": {
+                        "POSITION": 30,
+                        "NORMAL": 31
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hauscol_vorhang",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 35,
+                    "attributes": {
+                        "POSITION": 33,
+                        "NORMAL": 34
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hauscol_vorhang",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 38,
+                    "attributes": {
+                        "POSITION": 36,
+                        "NORMAL": 37
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hauscol_vorhang",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 41,
+                    "attributes": {
+                        "POSITION": 39,
+                        "NORMAL": 40
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hauscol_vorhang",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 44,
+                    "attributes": {
+                        "POSITION": 42,
+                        "NORMAL": 43
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hauscol_vorhang",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 47,
+                    "attributes": {
+                        "POSITION": 45,
+                        "NORMAL": 46
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hauscol_vorhang",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 50,
+                    "attributes": {
+                        "POSITION": 48,
+                        "NORMAL": 49
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hauscol_vorhang",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 53,
+                    "attributes": {
+                        "POSITION": 51,
+                        "NORMAL": 52
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hauscol_vorhang",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 56,
+                    "attributes": {
+                        "POSITION": 54,
+                        "NORMAL": 55
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hauscol_vorhang",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 59,
+                    "attributes": {
+                        "POSITION": 57,
+                        "NORMAL": 58
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hauscol_vorhang",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 62,
+                    "attributes": {
+                        "POSITION": 60,
+                        "NORMAL": 61
+                    }
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "RootNode",
+            "children": [
+                1
+            ]
+        },
+        {
+            "name": "hauscol_$AssimpFbx$_Translation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.59375,
+                48.23091506958008,
+                -78.78204345703125,
+                1.0
+            ],
+            "children": [
+                2
+            ]
+        },
+        {
+            "name": "hauscol_$AssimpFbx$_PreRotation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -4.371138828673793e-8,
+                -1.0,
+                0.0,
+                0.0,
+                1.0,
+                -4.371138828673793e-8,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                3
+            ]
+        },
+        {
+            "name": "hauscol_$AssimpFbx$_Scaling",
+            "matrix": [
+                0.10000000149011612,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.10000000149011612,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.10000000149011612,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                4
+            ]
+        },
+        {
+            "name": "hauscol",
+            "children": [
+                5,
+                10,
+                13,
+                16,
+                19,
+                22,
+                25,
+                28,
+                31,
+                34,
+                39,
+                44,
+                49,
+                54,
+                59,
+                64,
+                69,
+                74,
+                79,
+                84,
+                89
+            ]
+        },
+        {
+            "name": "hauscol_rinne_$AssimpFbx$_Translation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                17.448516845703126,
+                -766.05517578125,
+                -482.30914306640627,
+                1.0
+            ],
+            "children": [
+                6
+            ]
+        },
+        {
+            "name": "hauscol_rinne_$AssimpFbx$_Rotation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -1.0,
+                8.742277657347586e-8,
+                0.0,
+                0.0,
+                -8.742277657347586e-8,
+                -1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                7
+            ]
+        },
+        {
+            "name": "hauscol_rinne_$AssimpFbx$_Scaling",
+            "matrix": [
+                -1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                8
+            ]
+        },
+        {
+            "name": "hauscol_rinne_$AssimpFbx$_GeometricTranslation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                262.8558349609375,
+                545.533203125,
+                0.0,
+                1.0
+            ],
+            "children": [
+                9
+            ]
+        },
+        {
+            "name": "hauscol_rinne",
+            "mesh": 0
+        },
+        {
+            "name": "hauscol_blech_$AssimpFbx$_Translation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                17.448516845703126,
+                -766.05517578125,
+                -482.30914306640627,
+                1.0
+            ],
+            "children": [
+                11
+            ]
+        },
+        {
+            "name": "hauscol_blech_$AssimpFbx$_GeometricTranslation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                262.8558349609375,
+                545.533203125,
+                0.0,
+                1.0
+            ],
+            "children": [
+                12
+            ]
+        },
+        {
+            "name": "hauscol_blech",
+            "mesh": 1
+        },
+        {
+            "name": "hauscol_fensterrahmen_$AssimpFbx$_Translation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                17.448516845703126,
+                -766.05517578125,
+                -482.30914306640627,
+                1.0
+            ],
+            "children": [
+                14
+            ]
+        },
+        {
+            "name": "hauscol_fensterrahmen_$AssimpFbx$_GeometricTranslation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                262.8558349609375,
+                545.533203125,
+                0.0,
+                1.0
+            ],
+            "children": [
+                15
+            ]
+        },
+        {
+            "name": "hauscol_fensterrahmen",
+            "mesh": 2
+        },
+        {
+            "name": "hauscol_fensterglas_$AssimpFbx$_Translation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                17.448516845703126,
+                -766.05517578125,
+                -482.30914306640627,
+                1.0
+            ],
+            "children": [
+                17
+            ]
+        },
+        {
+            "name": "hauscol_fensterglas_$AssimpFbx$_GeometricTranslation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                262.8558349609375,
+                545.533203125,
+                0.0,
+                1.0
+            ],
+            "children": [
+                18
+            ]
+        },
+        {
+            "name": "hauscol_fensterglas",
+            "mesh": 3
+        },
+        {
+            "name": "hauscol_fundament_$AssimpFbx$_Translation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                17.448516845703126,
+                -766.05517578125,
+                -482.30914306640627,
+                1.0
+            ],
+            "children": [
+                20
+            ]
+        },
+        {
+            "name": "hauscol_fundament_$AssimpFbx$_GeometricTranslation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                262.8558349609375,
+                545.533203125,
+                0.0,
+                1.0
+            ],
+            "children": [
+                21
+            ]
+        },
+        {
+            "name": "hauscol_fundament",
+            "mesh": 4
+        },
+        {
+            "name": "hauscol_holz_$AssimpFbx$_Translation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                17.448516845703126,
+                -766.05517578125,
+                -482.30914306640627,
+                1.0
+            ],
+            "children": [
+                23
+            ]
+        },
+        {
+            "name": "hauscol_holz_$AssimpFbx$_GeometricTranslation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                262.8558349609375,
+                545.533203125,
+                0.0,
+                1.0
+            ],
+            "children": [
+                24
+            ]
+        },
+        {
+            "name": "hauscol_holz",
+            "mesh": 5
+        },
+        {
+            "name": "hauscol_inside_$AssimpFbx$_Translation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                17.448516845703126,
+                -766.05517578125,
+                -482.30914306640627,
+                1.0
+            ],
+            "children": [
+                26
+            ]
+        },
+        {
+            "name": "hauscol_inside_$AssimpFbx$_GeometricTranslation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                262.8558349609375,
+                545.533203125,
+                0.0,
+                1.0
+            ],
+            "children": [
+                27
+            ]
+        },
+        {
+            "name": "hauscol_inside",
+            "mesh": 6
+        },
+        {
+            "name": "hauscol_wand_$AssimpFbx$_Translation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                17.448516845703126,
+                -766.05517578125,
+                -482.30914306640627,
+                1.0
+            ],
+            "children": [
+                29
+            ]
+        },
+        {
+            "name": "hauscol_wand_$AssimpFbx$_GeometricTranslation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                262.8558349609375,
+                545.533203125,
+                0.0,
+                1.0
+            ],
+            "children": [
+                30
+            ]
+        },
+        {
+            "name": "hauscol_wand",
+            "mesh": 7
+        },
+        {
+            "name": "hauscol_dachziegel_$AssimpFbx$_Translation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                17.448516845703126,
+                -766.0504150390625,
+                -482.30914306640627,
+                1.0
+            ],
+            "children": [
+                32
+            ]
+        },
+        {
+            "name": "hauscol_dachziegel_$AssimpFbx$_GeometricTranslation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                262.8558349609375,
+                545.533203125,
+                0.0,
+                1.0
+            ],
+            "children": [
+                33
+            ]
+        },
+        {
+            "name": "hauscol_dachziegel",
+            "mesh": 8
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Translation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                -440.9124755859375,
+                -394.3521728515625,
+                -351.3040771484375,
+                1.0
+            ],
+            "children": [
+                35
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Rotation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -1.6292068494294654e-7,
+                1.0,
+                0.0,
+                0.0,
+                -1.0,
+                -1.6292068494294654e-7,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                36
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Scaling",
+            "matrix": [
+                0.4495469927787781,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                2.0927278995513918,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.6783919930458069,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                37
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_GeometricTranslation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                1228.6787109375,
+                209.95123291015626,
+                -0.35170984268188479,
+                1.0
+            ],
+            "children": [
+                38
+            ]
+        },
+        {
+            "name": "hauscol_vorhang",
+            "mesh": 9
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Translation_node",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                -188.10877990722657,
+                -394.3521728515625,
+                -351.3040771484375,
+                1.0
+            ],
+            "children": [
+                40
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Rotation_node",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -1.6292068494294654e-7,
+                1.0,
+                0.0,
+                0.0,
+                -1.0,
+                -1.6292068494294654e-7,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                41
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Scaling_node",
+            "matrix": [
+                0.4495469927787781,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                2.0927278995513918,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.6783919930458069,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                42
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_GeometricTranslation_node",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                1228.6787109375,
+                209.95123291015626,
+                -0.35170984268188479,
+                1.0
+            ],
+            "children": [
+                43
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_node",
+            "mesh": 10
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Translation_node_0",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                652.61474609375,
+                -140.3275146484375,
+                -351.3040771484375,
+                1.0
+            ],
+            "children": [
+                45
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Rotation_node_0",
+            "matrix": [
+                -4.371138828673793e-8,
+                1.0,
+                0.0,
+                0.0,
+                1.6292068494294654e-7,
+                7.121489643379785e-15,
+                1.0,
+                0.0,
+                1.0,
+                4.371138828673793e-8,
+                -1.6292068494294654e-7,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                46
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Scaling_node_0",
+            "matrix": [
+                0.5531619787216187,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                2.0927278995513918,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.6783919930458069,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                47
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_GeometricTranslation_node_0",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                1228.6787109375,
+                209.95123291015626,
+                -0.35170984268188479,
+                1.0
+            ],
+            "children": [
+                48
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_node_0",
+            "mesh": 11
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Translation_node_1",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                652.61474609375,
+                151.5989990234375,
+                -351.3040771484375,
+                1.0
+            ],
+            "children": [
+                50
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Rotation_node_1",
+            "matrix": [
+                -4.371138828673793e-8,
+                1.0,
+                0.0,
+                0.0,
+                1.6292068494294654e-7,
+                7.121489643379785e-15,
+                1.0,
+                0.0,
+                1.0,
+                4.371138828673793e-8,
+                -1.6292068494294654e-7,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                51
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Scaling_node_1",
+            "matrix": [
+                0.5531619787216187,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                2.0927278995513918,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.6783919930458069,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                52
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_GeometricTranslation_node_1",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                1228.6787109375,
+                209.95123291015626,
+                -0.35170984268188479,
+                1.0
+            ],
+            "children": [
+                53
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_node_1",
+            "mesh": 12
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Translation_node_2",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                -111.46700286865235,
+                -394.0682678222656,
+                88.369873046875,
+                1.0
+            ],
+            "children": [
+                55
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Rotation_node_2",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -1.6292068494294654e-7,
+                1.0,
+                0.0,
+                0.0,
+                -1.0,
+                -1.6292068494294654e-7,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                56
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Scaling_node_2",
+            "matrix": [
+                0.30994001030921938,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                6.419980049133301,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.6783919930458069,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                57
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_GeometricTranslation_node_2",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                1228.6787109375,
+                209.95123291015626,
+                -0.35170984268188479,
+                1.0
+            ],
+            "children": [
+                58
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_node_2",
+            "mesh": 13
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Translation_node_3",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                113.13495635986328,
+                -394.0682678222656,
+                88.369873046875,
+                1.0
+            ],
+            "children": [
+                60
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Rotation_node_3",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -1.6292068494294654e-7,
+                1.0,
+                0.0,
+                0.0,
+                -1.0,
+                -1.6292068494294654e-7,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                61
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Scaling_node_3",
+            "matrix": [
+                0.30994001030921938,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                6.419980049133301,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.6783919930458069,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                62
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_GeometricTranslation_node_3",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                1228.6787109375,
+                209.95123291015626,
+                -0.35170984268188479,
+                1.0
+            ],
+            "children": [
+                63
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_node_3",
+            "mesh": 14
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Translation_node_4",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                653.0409545898438,
+                -200.3131103515625,
+                10.783416748046875,
+                1.0
+            ],
+            "children": [
+                65
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Rotation_node_4",
+            "matrix": [
+                -4.371138828673793e-8,
+                1.0,
+                0.0,
+                0.0,
+                1.6292068494294654e-7,
+                7.121489643379785e-15,
+                1.0,
+                0.0,
+                1.0,
+                4.371138828673793e-8,
+                -1.6292068494294654e-7,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                66
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Scaling_node_4",
+            "matrix": [
+                0.30994001030921938,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                7.376529216766357,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.6783919930458069,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                67
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_GeometricTranslation_node_4",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                1228.6787109375,
+                209.95123291015626,
+                -0.35170984268188479,
+                1.0
+            ],
+            "children": [
+                68
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_node_4",
+            "mesh": 15
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Translation_node_5",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                653.0409545898438,
+                -79.5621337890625,
+                10.783416748046875,
+                1.0
+            ],
+            "children": [
+                70
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Rotation_node_5",
+            "matrix": [
+                -4.371138828673793e-8,
+                1.0,
+                0.0,
+                0.0,
+                1.6292068494294654e-7,
+                7.121489643379785e-15,
+                1.0,
+                0.0,
+                1.0,
+                4.371138828673793e-8,
+                -1.6292068494294654e-7,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                71
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Scaling_node_5",
+            "matrix": [
+                0.30994001030921938,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                7.376529216766357,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.6783919930458069,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                72
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_GeometricTranslation_node_5",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                1228.6787109375,
+                209.95123291015626,
+                -0.35170984268188479,
+                1.0
+            ],
+            "children": [
+                73
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_node_5",
+            "mesh": 16
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Translation_node_6",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                653.0409545898438,
+                80.8792724609375,
+                10.783416748046875,
+                1.0
+            ],
+            "children": [
+                75
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Rotation_node_6",
+            "matrix": [
+                -4.371138828673793e-8,
+                1.0,
+                0.0,
+                0.0,
+                1.6292068494294654e-7,
+                7.121489643379785e-15,
+                1.0,
+                0.0,
+                1.0,
+                4.371138828673793e-8,
+                -1.6292068494294654e-7,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                76
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Scaling_node_6",
+            "matrix": [
+                0.30994001030921938,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                7.376529216766357,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.6783919930458069,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                77
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_GeometricTranslation_node_6",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                1228.6787109375,
+                209.95123291015626,
+                -0.35170984268188479,
+                1.0
+            ],
+            "children": [
+                78
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_node_6",
+            "mesh": 17
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Translation_node_7",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                653.0409545898438,
+                226.15374755859376,
+                10.783416748046875,
+                1.0
+            ],
+            "children": [
+                80
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Rotation_node_7",
+            "matrix": [
+                -4.371138828673793e-8,
+                1.0,
+                0.0,
+                0.0,
+                1.6292068494294654e-7,
+                7.121489643379785e-15,
+                1.0,
+                0.0,
+                1.0,
+                4.371138828673793e-8,
+                -1.6292068494294654e-7,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                81
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Scaling_node_7",
+            "matrix": [
+                0.30994001030921938,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                7.376529216766357,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.6783919930458069,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                82
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_GeometricTranslation_node_7",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                1228.6787109375,
+                209.95123291015626,
+                -0.35170984268188479,
+                1.0
+            ],
+            "children": [
+                83
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_node_7",
+            "mesh": 18
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Translation_node_8",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                368.9986877441406,
+                -394.2676086425781,
+                -354.34295654296877,
+                1.0
+            ],
+            "children": [
+                85
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Rotation_node_8",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -1.6292068494294654e-7,
+                1.0,
+                0.0,
+                0.0,
+                -1.0,
+                -1.6292068494294654e-7,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                86
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Scaling_node_8",
+            "matrix": [
+                0.30994001030921938,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                7.376529216766357,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.6783919930458069,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                87
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_GeometricTranslation_node_8",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                1228.6787109375,
+                209.95123291015626,
+                -0.35170984268188479,
+                1.0
+            ],
+            "children": [
+                88
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_node_8",
+            "mesh": 19
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Translation_node_9",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                199.9311981201172,
+                -394.2676086425781,
+                -354.34295654296877,
+                1.0
+            ],
+            "children": [
+                90
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Rotation_node_9",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -1.6292068494294654e-7,
+                1.0,
+                0.0,
+                0.0,
+                -1.0,
+                -1.6292068494294654e-7,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                91
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_Scaling_node_9",
+            "matrix": [
+                0.3405759930610657,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                7.376529216766357,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.6783919930458069,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                92
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_$AssimpFbx$_GeometricTranslation_node_9",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                1228.6787109375,
+                209.95123291015626,
+                -0.35170984268188479,
+                1.0
+            ],
+            "children": [
+                93
+            ]
+        },
+        {
+            "name": "hauscol_vorhang_node_9",
+            "mesh": 20
+        }
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0
+}

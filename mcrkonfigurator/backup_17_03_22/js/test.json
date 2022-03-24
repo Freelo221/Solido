@@ -1,0 +1,2984 @@
+{
+    "settings": {
+        "rows": ["2959", "3457", "3955"],
+        "cols": ["4020", "4810", "5600", "6390"]
+    },
+    "menuItems": [{
+            "id": "MenuElement-0",
+            "name": "Form",
+            "icon": "ruler",
+            "element": {
+                "jQuery360076171342808810241": {
+                    "events": {
+                        "click": [{
+                            "type": "click",
+                            "origType": "click",
+                            "data": null,
+                            "guid": 31,
+                            "namespace": ""
+                        }]
+                    }
+                }
+            },
+            "childs": []
+        },
+        {
+            "id": "MenuElement-1",
+            "name": "Farbe",
+            "icon": "can",
+            "element": {
+                "jQuery360076171342808810241": {
+                    "events": {
+                        "click": [{
+                            "type": "click",
+                            "origType": "click",
+                            "data": null,
+                            "guid": 31,
+                            "namespace": ""
+                        }]
+                    }
+                }
+            },
+            "childs": []
+        },
+        {
+            "id": "MenuElement-2",
+            "name": "Ausstattung",
+            "icon": "link",
+            "element": {
+                "jQuery360076171342808810241": {
+                    "events": {
+                        "click": [{
+                            "type": "click",
+                            "origType": "click",
+                            "data": null,
+                            "guid": 31,
+                            "namespace": ""
+                        }]
+                    }
+                }
+            },
+            "childs": []
+        },
+        {
+            "id": "MenuElement-3",
+            "name": "Umgebung",
+            "icon": "env",
+            "element": {
+                "jQuery360076171342808810241": {
+                    "events": {
+                        "click": [{
+                            "type": "click",
+                            "origType": "click",
+                            "data": null,
+                            "guid": 31,
+                            "namespace": ""
+                        }]
+                    }
+                }
+            },
+            "childs": []
+        }
+    ],
+    "optionItems": [{
+            "id": "Slider",
+            "name": "Dachgröße",
+            "type": "",
+            "subline": "",
+            "menuType": "Form",
+            "element": {},
+            "childs": [{
+                "id": "Slider-0",
+                "type": "x-slider",
+                "isCheckbox": "",
+                "name": "Slider",
+                "price": "",
+                "img": "",
+                "hover": false,
+                "fixed": false,
+                "single": false,
+                "upgrade": false,
+                "info": false,
+                "background": "",
+                "infoHeadline": "",
+                "infoText": "",
+                "infoImage": "",
+                "selected": false,
+                "extra": true,
+                "extraText1": "",
+                "extraText2": "",
+                "extraText3": "",
+                "function": "",
+                "functionParam": "",
+                "tooltipText": "",
+                "element": {
+                    "jQuery360076171342808810241": {
+                        "events": {
+                            "click": [{
+                                "type": "click",
+                                "origType": "click",
+                                "data": null,
+                                "guid": 31,
+                                "namespace": ""
+                            }]
+                        }
+                    }
+                },
+                "LED": [
+                    { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                ],
+                "slider": [{
+                        "function": "ChangeWidth",
+                        "text": "Breite",
+                        "min": "4020",
+                        "max": "6390",
+                        "step": "790",
+                        "unit": "mm",
+                        "start": "5600"
+                    },
+                    {
+                        "function": "ChangeHeight",
+                        "text": "Tiefe",
+                        "min": "2959",
+                        "max": "3955",
+                        "step": "498",
+                        "unit": "mm",
+                        "start": "3955"
+                    }
+                ],
+                "extraPrice": "undefined",
+                "hasExtraPrice": false,
+                "toggleExtraPrice": false,
+                "showPrice": true,
+                "priceTable": [{
+                    "2959": [{
+                        "4020": "6450",
+                        "4810": "7300",
+                        "5600": "8150",
+                        "6390": "8950"
+                    }],
+                    "3457": [{
+                        "4020": "6900",
+                        "4810": "7750",
+                        "5600": "8700",
+                        "6390": "9600"
+                    }],
+                    "3955": [{
+                        "4020": "7300",
+                        "4810": "8250",
+                        "5600": "9250",
+                        "6390": "10200"
+                    }]
+                }],
+                "discountTable": [{
+                    "2959": [{
+                        "4020": "1290",
+                        "4810": "1460",
+                        "5600": "1630",
+                        "6390": "1790"
+                    }],
+                    "3457": [{
+                        "4020": "1380",
+                        "4810": "1550",
+                        "5600": "1740",
+                        "6390": "1920"
+                    }],
+                    "3955": [{
+                        "4020": "1460",
+                        "4810": "1650",
+                        "5600": "1850",
+                        "6390": "2040"
+                    }]
+                }]
+            }],
+            "childs2": []
+        },
+        {
+            "id": "Konstruktion",
+            "name": "Konstruktion",
+            "type": "",
+            "subline": "",
+            "menuType": "Form",
+            "element": {},
+            "childs": [{
+                    "id": "Konstruktion-1",
+                    "type": "2col",
+                    "isCheckbox": "",
+                    "name": "Sparrenklaue",
+                    "price": "190",
+                    "img": "./img/conf/sparrenklaue.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": false,
+                    "upgrade": true,
+                    "info": true,
+                    "background": "",
+                    "infoHeadline": "Sparrenklaue",
+                    "infoText": "Eine Sparrenklaue ist die häufigste Verbindung bei Dachstühlen und Terrassendächern. Dabei handelt es sich um eine Einkerbung der Sparren, die auf den Pfetten aufliegen.",
+                    "infoImage": "./img/conf/sparrenklaue.jpg",
+                    "selected": false,
+                    "extra": true,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "RafterStateToggle",
+                    "functionParam": "",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        }
+                    ],
+                    "extraPrice": "undefined",
+                    "hasExtraPrice": false,
+                    "toggleExtraPrice": false,
+                    "priceTable": [{
+                        "2959": [
+                            { "4020": "130", "4810": "160", "5600": "190", "6390": "210" }
+                        ],
+                        "3457": [
+                            { "4020": "130", "4810": "160", "5600": "190", "6390": "210" }
+                        ],
+                        "3955": [
+                            { "4020": "130", "4810": "160", "5600": "190", "6390": "210" }
+                        ]
+                    }],
+                    "showPrice": true,
+                    "discountTable": [{
+                        "2959": [{ "4020": "5", "4810": "3", "5600": "0", "6390": "5" }],
+                        "3457": [{ "4020": "5", "4810": "3", "5600": "0", "6390": "5" }],
+                        "3955": [{ "4020": "5", "4810": "3", "5600": "0", "6390": "5" }]
+                    }]
+                },
+                {
+                    "id": "Konstruktion-2",
+                    "type": "2col",
+                    "isCheckbox": "",
+                    "name": "Glasdachüberstand",
+                    "price": "404",
+                    "img": "./img/conf/glasueberstand.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": false,
+                    "upgrade": true,
+                    "info": true,
+                    "background": "",
+                    "infoHeadline": "Glasdacherweiterung",
+                    "infoText": "Die Sicherung der Dachkonstruktion vor Witterungseinflüssen gehört zu unserem hohen Qualitätsanspruch. Je nach Bausituation und Optik können Sie wählen, ob ein Dachüberstand zu Ihrem Projekt passt. ",
+                    "infoImage": "https://mcrcp.mcrobots.slxhost.de/images/product/MADEROS-Dachueberstand_5a73313340bdc.jpg",
+                    "selected": false,
+                    "extra": true,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "ChangeOverhangState",
+                    "functionParam": "",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": "4020"
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": "3955"
+                        }
+                    ],
+                    "extraPrice": "undefined",
+                    "hasExtraPrice": false,
+                    "toggleExtraPrice": false,
+                    "showPrice": true,
+                    "priceTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }],
+                    "discountTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }]
+                },
+                {
+                    "id": "Konstruktion-3",
+                    "type": "2col",
+                    "isCheckbox": "",
+                    "name": "Sparrenauflage, glatt",
+                    "price": "0",
+                    "img": "./img/conf/sparrenklaue.jpg",
+                    "hover": false,
+                    "fixed": false,
+                    "single": false,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": true,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "",
+                    "functionParam": "",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "hasExtraPrice": false,
+                    "extraPrice": "",
+                    "toggleExtraPrice": false,
+                    "showPrice": true,
+                    "priceTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }],
+                    "discountTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }],
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        }
+                    ]
+                },
+                {
+                    "id": "Konstruktion-4",
+                    "type": "2col",
+                    "isCheckbox": false,
+                    "name": "Dachabschluss, glatt ",
+                    "price": "0",
+                    "img": "./img/conf/glatter-wandanschluss.jpg",
+                    "hover": true,
+                    "fixed": true,
+                    "single": false,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": true,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "",
+                    "functionParam": "",
+                    "element": {},
+                    "hasExtraPrice": false,
+                    "extraPrice": "",
+                    "toggleExtraPrice": false,
+                    "showPrice": true,
+                    "priceTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }],
+                    "discountTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }],
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        }
+                    ]
+                }
+            ],
+            "childs2": []
+        },
+        {
+            "id": "Pfosten",
+            "name": "Pfosten",
+            "type": "",
+            "subline": "",
+            "menuType": "Form",
+            "element": {},
+            "childs": [{
+                    "id": "Pfosten-0",
+                    "type": "2col",
+                    "isCheckbox": "",
+                    "name": "Eingerückt",
+                    "price": "0",
+                    "img": "./img/conf/pfosten-eingerueckt.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": true,
+                    "extra": true,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "ChangePoleState",
+                    "functionParam": "eingerückt",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        }
+                    ],
+                    "priceTable": [{
+                        "2959": [
+                            { "4020": "100", "4810": "200", "5600": "300", "6390": "400" }
+                        ],
+                        "3457": [
+                            { "4020": "150", "4810": "250", "5600": "350", "6390": "450" }
+                        ],
+                        "3955": [
+                            { "4020": "200", "4810": "300", "5600": "400", "6390": "500" }
+                        ]
+                    }],
+                    "extraPrice": "",
+                    "hasExtraPrice": false,
+                    "toggleExtraPrice": false,
+                    "showPrice": true
+                },
+                {
+                    "id": "Pfosten-1",
+                    "type": "2col",
+                    "isCheckbox": "",
+                    "name": "Bündig",
+                    "price": "750",
+                    "img": "./img/conf/pfosten-buendig.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": false,
+                    "extra": true,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "ChangePoleState",
+                    "functionParam": "bündig",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        }
+                    ],
+                    "extraPrice": "undefined",
+                    "hasExtraPrice": false,
+                    "toggleExtraPrice": false,
+                    "priceTable": [{
+                        "2959": [
+                            { "4020": "0", "4810": "600", "5600": "750", "6390": "600" }
+                        ],
+                        "3457": [
+                            { "4020": "0", "4810": "650", "5600": "750", "6390": "550" }
+                        ],
+                        "3955": [
+                            { "4020": "0", "4810": "600", "5600": "550", "6390": "550" }
+                        ]
+                    }],
+                    "showPrice": true,
+                    "discountTable": [{
+                        "2959": [
+                            { "4020": "0", "4810": "120", "5600": "150", "6390": "120" }
+                        ],
+                        "3457": [
+                            { "4020": "0", "4810": "130", "5600": "150", "6390": "110" }
+                        ],
+                        "3955": [
+                            { "4020": "0", "4810": "120", "5600": "150", "6390": "110" }
+                        ]
+                    }]
+                },
+                {
+                    "id": "Pfosten-2",
+                    "type": "1col",
+                    "isCheckbox": "",
+                    "name": "Punktfundament",
+                    "price": "180",
+                    "img": "./img/conf/punktfundament.jpg",
+                    "hover": true,
+                    "fixed": true,
+                    "single": false,
+                    "upgrade": false,
+                    "info": true,
+                    "background": "",
+                    "infoHeadline": "Punktfundament",
+                    "infoText": "Zur Montage des Solido Terrassendaches müssen Punktfundamente je Pfosten gegossen werden. Wir liefern Ihnen gerne die passenden Schalungselemente für die Fundamente mit. ",
+                    "infoImage": "./img/conf/punktfundament.jpg",
+                    "selected": true,
+                    "extra": true,
+                    "extraText1": "inkl. je 3 Sack Estrichbeton & Stahlknickschutz",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "",
+                    "functionParam": "",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        }
+                    ],
+                    "extraPrice": "90",
+                    "hasExtraPrice": true,
+                    "toggleExtraPrice": false,
+                    "priceTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "270" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "270" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "270" }]
+                    }],
+                    "showPrice": true,
+                    "discountTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }]
+                }
+            ],
+            "childs2": []
+        },
+        {
+            "id": "Anbausituation",
+            "name": "Anbausituation",
+            "type": "",
+            "subline": "",
+            "menuType": "Form",
+            "element": {},
+            "childs": [{
+                    "id": "Anbausituation-0",
+                    "type": "2col",
+                    "isCheckbox": "",
+                    "name": "Wandanschluss-Paket",
+                    "price": "0",
+                    "img": "./img/conf/wandanschluss-paket.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": true,
+                    "background": "",
+                    "infoHeadline": "Wandanschluss Paket",
+                    "infoText": "Unser Wandanschluss-Paket enthält alle notwenigen Bauteile zur Montage an einer glatten Hauswand: \n - Mauerwerksverankerung \n - inkl. EPDM-Band \n - Seitlicher Dachabschluss mit Aluwinkel",
+                    "infoImage": "./img/conf/wandanschluss-paket.jpg",
+                    "selected": true,
+                    "extra": true,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "",
+                    "functionParam": "",
+                    "tooltipText": "Zur Wandmontage an einer glatten Hauswand",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": "4020"
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": "3955"
+                        }
+                    ],
+                    "extraPrice": "undefined",
+                    "hasExtraPrice": false,
+                    "toggleExtraPrice": false,
+                    "showPrice": true,
+                    "priceTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }],
+                    "discountTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }]
+                },
+                {
+                    "id": "Anbausituation-1",
+                    "type": "2col",
+                    "isCheckbox": "",
+                    "name": "WDVS Wandanschluss",
+                    "price": "1120",
+                    "img": "./img/conf/wdvs-wandanschluss.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": true,
+                    "background": "",
+                    "infoHeadline": "WDVS Wandanschluss",
+                    "infoText": "Sollten Ihre Außenwand aus einem Wärmedämmverbundsystem (WDVS) bestehen, benötigen Sie dieses Wandanschluss-Paket. Durch den speziellen Aufbau des Wärmedämmverbundsystems sind andere Bauteile zur Wandmontage notwendig.",
+                    "infoImage": "./img/conf/wdvs-wandanschluss.jpg",
+                    "selected": false,
+                    "extra": true,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "",
+                    "functionParam": "",
+                    "tooltipText": "Zur Wandmontage bei einem Wärmedämmverbundsystem (WDVS)",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": "4020"
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": "3955"
+                        }
+                    ],
+                    "extraPrice": "undefined",
+                    "hasExtraPrice": false,
+                    "toggleExtraPrice": false,
+                    "priceTable": [{
+                        "2959": [
+                            { "4020": "800", "4810": "960", "5600": "1120", "6390": "1280" }
+                        ],
+                        "3457": [
+                            { "4020": "800", "4810": "960", "5600": "1120", "6390": "1280" }
+                        ],
+                        "3955": [
+                            { "4020": "800", "4810": "960", "5600": "1120", "6390": "1280" }
+                        ]
+                    }],
+                    "showPrice": true,
+                    "discountTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }]
+                },
+                {
+                    "id": "Anbausituation-2",
+                    "type": "2col",
+                    "isCheckbox": "",
+                    "name": "Reaktionsanker",
+                    "price": "0000",
+                    "img": "./img/conf/wandanschluss-paket.jpg",
+                    "hover": false,
+                    "fixed": false,
+                    "single": false,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": false,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "",
+                    "functionParam": "",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "hasExtraPrice": false,
+                    "extraPrice": "",
+                    "toggleExtraPrice": false,
+                    "showPrice": true,
+                    "priceTable": [{
+                        "2959": [{
+                            "4020": "500",
+                            "4810": "1000",
+                            "5600": "1500",
+                            "6390": "2000"
+                        }],
+                        "3457": [{
+                            "4020": "500",
+                            "4810": "1000",
+                            "5600": "1500",
+                            "6390": "2000"
+                        }],
+                        "3955": [{
+                            "4020": "500",
+                            "4810": "1000",
+                            "5600": "1500",
+                            "6390": "2000"
+                        }]
+                    }],
+                    "discountTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }],
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        }
+                    ]
+                }
+            ],
+            "childs2": []
+        },
+        {
+            "id": "Farbe",
+            "name": "Farbe",
+            "type": "",
+            "subline": "",
+            "menuType": "Farbe",
+            "element": {},
+            "childs": [{
+                    "id": "Farbe-0",
+                    "type": "3col",
+                    "isCheckbox": "",
+                    "name": "RAL 9016",
+                    "price": "0",
+                    "img": "",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "#F1F0EA",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": true,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "SwitchColor",
+                    "functionParam": "0xF1F0EA",
+                    "tooltipText": "Extrem langlebig dank speziellem Holzmodifikations-Verfahren",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        }
+                    ],
+                    "extraPrice": "undefined",
+                    "hasExtraPrice": false,
+                    "toggleExtraPrice": false,
+                    "showPrice": true,
+                    "priceTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }]
+                },
+                {
+                    "id": "Farbe-1",
+                    "type": "3col",
+                    "isCheckbox": "",
+                    "name": "RAL 9006",
+                    "price": "0",
+                    "img": "",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "#595959",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": false,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "SwitchColor",
+                    "functionParam": "0x595959",
+                    "tooltipText": "Extrem langlebig dank speziellem Holzmodifikations-Verfahren",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        }
+                    ],
+                    "extraPrice": "undefined",
+                    "hasExtraPrice": false,
+                    "toggleExtraPrice": false,
+                    "showPrice": true,
+                    "priceTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }]
+                },
+                {
+                    "id": "Farbe-2",
+                    "type": "3col",
+                    "isCheckbox": "",
+                    "name": "RAL 7016",
+                    "price": "0",
+                    "img": "",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "#0c0e0f",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": false,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "SwitchColor",
+                    "functionParam": "0x0c0e0f",
+                    "tooltipText": "Extrem langlebig dank speziellem Holzmodifikations-Verfahren",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        }
+                    ],
+                    "extraPrice": "undefined",
+                    "hasExtraPrice": false,
+                    "toggleExtraPrice": false,
+                    "showPrice": true,
+                    "priceTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }]
+                }
+            ],
+            "childs2": []
+        },
+        {
+            "id": "Oberfläche",
+            "name": "Oberfläche",
+            "type": "",
+            "subline": "",
+            "menuType": "Farbe",
+            "element": {},
+            "childs": [{
+                    "id": "Oberfläche-0",
+                    "type": "2col",
+                    "isCheckbox": "",
+                    "name": "Gebürstet",
+                    "price": "0",
+                    "img": "./img/conf/oberflaeche-gebuerstet.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": true,
+                    "background": "#000000",
+                    "infoHeadline": "Gebürstet",
+                    "infoText": "Wie all unsere Terrassendächer beseht auch das Solido aus hochwertigem deutschen Qualitätsholz. Wir verarbeiten ausschließlich Ausleseholz, das nahezu keine Astlöcher aufweist. Umweltfreundlicher, wasserbasierter Holzschutz macht das Holz witterungsbeständig und verleiht eine lebendige Optik. Holz gibt Wohnräumen einen natürlichen Charakter, versprüht Wärme und Behaglichkeit. Die natürliche Maserungen der gebürsteten Oberfläche verleihen Ihrem Produkt einen individuellen Charakter – zeitlos, natürlich, schön. Der eingebauter Holzschutz in Form unserer speziellen Farbe bietet einen sicheren Wetterschutz und lässt das Holz nach jedem Regen wieder abtrocknen.",
+                    "infoImage": "https://mcrcp.mcrobots.slxhost.de/images/product/MADEROS-Bild2_5d78d290e3931.jpg",
+                    "selected": true,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "ChangeRoofMaterial",
+                    "functionParam": "gebuerstet",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        }
+                    ],
+                    "extraPrice": "undefined",
+                    "hasExtraPrice": false,
+                    "toggleExtraPrice": false,
+                    "showPrice": true,
+                    "priceTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }],
+                    "discountTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }]
+                },
+                {
+                    "id": "Oberfläche-1",
+                    "type": "2col",
+                    "isCheckbox": "",
+                    "name": "Glatt",
+                    "price": "990",
+                    "img": "./img/conf/oberflaeche-glatt.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "#000000",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": false,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "ChangeRoofMaterial",
+                    "functionParam": "glatt",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        }
+                    ],
+                    "extraPrice": "undefined",
+                    "hasExtraPrice": false,
+                    "toggleExtraPrice": false,
+                    "showPrice": true,
+                    "priceTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }],
+                    "discountTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }]
+                }
+            ],
+            "childs2": []
+        },
+        {
+            "id": "Dachverglasung",
+            "name": "Dachverglasung",
+            "type": "",
+            "subline": "",
+            "menuType": "Ausstattung",
+            "element": {},
+            "childs": [{
+                    "id": "Dachverglasung-0",
+                    "type": "2col",
+                    "isCheckbox": "",
+                    "name": "Festverglasung",
+                    "price": "0",
+                    "img": "./img/conf/festverglasung.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": true,
+                    "background": "",
+                    "infoHeadline": "Festverglasung",
+                    "infoText": "Die Dachfläche aus Glas ist ein wichtiger Bestandteil Ihres Terrassendaches. Sie dient zum Schutz vor Wind und Regen. Daher nutzer wir ausschließlich Verbundsicherheitsglas in 8mm Stärke.",
+                    "infoImage": "./img/conf/festverglasung.jpg",
+                    "selected": true,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "ChangeRoofGlas",
+                    "functionParam": "fest",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        }
+                    ],
+                    "extraPrice": "undefined",
+                    "hasExtraPrice": false,
+                    "toggleExtraPrice": false,
+                    "showPrice": true,
+                    "priceTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }]
+                },
+                {
+                    "id": "Dachverglasung-1",
+                    "type": "2col",
+                    "isCheckbox": "",
+                    "name": "Schiebedach",
+                    "price": "640",
+                    "img": "./img/conf/schiebedach.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": true,
+                    "background": "",
+                    "infoHeadline": "Schiebedach",
+                    "infoText": "Unser patentiertes Schiebedach bietet viele Vorteile. Sie können Ihr Dach immer den Wetterbedingungen anpassen. Geschlossen bei Regen – geöffnet bei Sonne. Gestalterisch ist unser Schiebedach ein Hingucker und gibt Ihnen ein Stück Unabhängigkeit. Ist das Schiebedach geöffnet kann die Luft gut zirkulieren, geschlossen schützt es Ihre Möbel auf der Terrasse. Die Glasflächen sind witterungsbeständig und garantieren eine klaren Blick in den Himmel. Daneben bietet unser Schiebedach noch eine leichte Bedienbarkeit.",
+                    "infoImage": "https://mcrcp.mcrobots.slxhost.de/images/product/MADEROS-Schiebedach_5a7330f2e2af5.jpg",
+                    "selected": false,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "ChangeRoofGlas",
+                    "functionParam": "schiebe",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        }
+                    ],
+                    "extraPrice": "undefined",
+                    "hasExtraPrice": false,
+                    "toggleExtraPrice": false,
+                    "showPrice": true,
+                    "priceTable": [{
+                        "2959": [
+                            { "4020": "480", "4810": "560", "5600": "640", "6390": "720" }
+                        ],
+                        "3457": [
+                            { "4020": "480", "4810": "560", "5600": "640", "6390": "720" }
+                        ],
+                        "3955": [
+                            { "4020": "480", "4810": "560", "5600": "640", "6390": "720" }
+                        ]
+                    }],
+                    "discountTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }]
+                }
+            ],
+            "childs2": []
+        },
+        {
+            "id": "Beschattung",
+            "name": "Beschattung",
+            "type": "",
+            "subline": "",
+            "menuType": "Ausstattung",
+            "element": {},
+            "childs": [{
+                "id": "Beschattung-0",
+                "type": "2col",
+                "isCheckbox": "",
+                "name": "Peddy Shield Stoffbahnen",
+                "price": "2135",
+                "img": "./img/conf/senkrechte-verglasung.jpg",
+                "hover": true,
+                "fixed": false,
+                "single": false,
+                "upgrade": true,
+                "info": true,
+                "background": "#000000",
+                "infoHeadline": "Peddy Shield Stoffbahnen",
+                "infoText": "Unsere Peddy Shield Stoffbahnen sind Sonnensegel mit Seilspanntechnik, die es in vielen Farben und Größen gibt. Sie bestehen zu 100% aus UV-stabilem Poly­esterstoff mit ca. 95 % Schattierung und UV-Schutz und sind waschbar bei 40° C! Laufhaken oder Gleiter sind leicht abnehmbar wenig Gewicht vom Polyesterstoff (ca. 140 g/m² oder 200 g/m²). hochwertige wasser- und schmutzabweisende Beschichtung der Sonnenschutzsegel",
+                "infoImage": "https://mcrcp.mcrobots.slxhost.de/images/product/960x540/MADEROS-Seilspann-Sonnensegel_5ee750838bef8.jpg",
+                "selected": false,
+                "extra": false,
+                "extraText1": "",
+                "extraText2": "",
+                "extraText3": "",
+                "function": "ChangeStoffbahn",
+                "functionParam": "",
+                "element": {
+                    "jQuery360076171342808810241": {
+                        "events": {
+                            "click": [{
+                                "type": "click",
+                                "origType": "click",
+                                "data": null,
+                                "guid": 31,
+                                "namespace": ""
+                            }]
+                        }
+                    }
+                },
+                "LED": [
+                    { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                ],
+                "slider": [{
+                        "function": "",
+                        "text": "",
+                        "min": "",
+                        "max": "",
+                        "step": "",
+                        "unit": "",
+                        "start": ""
+                    },
+                    {
+                        "function": "",
+                        "text": "",
+                        "min": "",
+                        "max": "",
+                        "step": "",
+                        "unit": "",
+                        "start": ""
+                    }
+                ],
+                "extraPrice": "undefined",
+                "hasExtraPrice": false,
+                "toggleExtraPrice": false,
+                "showPrice": true,
+                "priceTable": [{
+                    "2959": [{
+                        "4020": "1525",
+                        "4810": "1830",
+                        "5600": "2135",
+                        "6390": "2440"
+                    }],
+                    "3457": [{
+                        "4020": "1790",
+                        "4810": "2148",
+                        "5600": "2506",
+                        "6390": "2864"
+                    }],
+                    "3955": [{
+                        "4020": "2040",
+                        "4810": "2448",
+                        "5600": "2856",
+                        "6390": "3264"
+                    }]
+                }],
+                "discountTable": [{
+                    "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                    "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                    "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                }]
+            }],
+            "childs2": []
+        },
+        {
+            "id": "Beleuchtung",
+            "name": "Beleuchtung",
+            "type": "",
+            "subline": "",
+            "menuType": "Ausstattung",
+            "element": {},
+            "childs": [{
+                "id": "Beleuchtung-0",
+                "type": "x-LED",
+                "isCheckbox": "",
+                "name": "LED",
+                "price": "240",
+                "img": "./img/conf/beleuchtung.jpg",
+                "hover": true,
+                "fixed": false,
+                "single": false,
+                "upgrade": true,
+                "info": true,
+                "background": "#000",
+                "infoHeadline": "LED",
+                "infoText": "In die Sparren integrierte LEDs erleuchten Ihren Lieblingsplatz am Abend und geben ihm eine Wohlfühlatmosphäre. Die dimmbaren LEDs mit einem Abstrahlwinkel von 120° Grad sorgen für eine optimale Ausleuchtung. Für eine optimale Ausleuchtung Ihres Terrassendachs empfehlen wir Ihnen, je zwei LEDs in jedem zweiten Sparren.",
+                "infoImage": "",
+                "selected": false,
+                "extra": false,
+                "extraText1": "",
+                "extraText2": "",
+                "extraText3": "",
+                "function": "LedStateToggle",
+                "functionParam": "",
+                "tooltipText": "Für die optimale Beleuchtung sollte jeder zweite Sparren ein Lichtsparren sein",
+                "element": {
+                    "jQuery360076171342808810241": {
+                        "events": {
+                            "click": [{
+                                "type": "click",
+                                "origType": "click",
+                                "data": null,
+                                "guid": 31,
+                                "namespace": ""
+                            }]
+                        }
+                    }
+                },
+                "hasExtraPrice": true,
+                "extraPrice": "",
+                "toggleExtraPrice": false,
+                "showPrice": true,
+                "priceTable": [{
+                    "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                    "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                    "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                }],
+                "LED": [{
+                    "info1": "",
+                    "unit": "Anzahl Sparren",
+                    "min": "2",
+                    "max": "10",
+                    "step": "1"
+                }],
+                "slider": [{
+                        "function": "",
+                        "text": "",
+                        "min": "",
+                        "max": "",
+                        "step": "",
+                        "unit": "",
+                        "start": ""
+                    },
+                    {
+                        "function": "ToggleLED",
+                        "text": "",
+                        "min": "",
+                        "max": "",
+                        "step": "",
+                        "unit": "",
+                        "start": ""
+                    }
+                ],
+                "discountTable": [{
+                    "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                    "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                    "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                }]
+            }],
+            "childs2": []
+        },
+        {
+            "id": "Entwässerung",
+            "name": "Entwässerung",
+            "type": "",
+            "subline": "",
+            "menuType": "Ausstattung",
+            "element": {},
+            "childs": [{
+                    "id": "Entwässerung-0",
+                    "type": "2col",
+                    "isCheckbox": "",
+                    "name": "Kunstoffrinne, weiß",
+                    "price": "0",
+                    "img": "./img/conf/dachrinne-weiss.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": true,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "ChangeRin",
+                    "functionParam": "0xffffff",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        }
+                    ],
+                    "extraPrice": "undefined",
+                    "hasExtraPrice": false,
+                    "toggleExtraPrice": false,
+                    "showPrice": true,
+                    "priceTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }]
+                },
+                {
+                    "id": "Entwässerung-1",
+                    "type": "2col",
+                    "isCheckbox": "",
+                    "name": "Kunstoffrinne, Braun",
+                    "price": "0",
+                    "img": "./img/conf/dachrinne-braun.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": false,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "ChangeRin",
+                    "functionParam": "0x260a05",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        }
+                    ],
+                    "extraPrice": "undefined",
+                    "hasExtraPrice": false,
+                    "toggleExtraPrice": false,
+                    "showPrice": true,
+                    "priceTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }]
+                },
+                {
+                    "id": "Entwässerung-2",
+                    "type": "2col",
+                    "isCheckbox": "",
+                    "name": "Kunstoffrinne, anthrazit",
+                    "price": "0",
+                    "img": "./img/conf/dachrinne-anthrazit.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": false,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "ChangeRin",
+                    "functionParam": "0x50505",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        }
+                    ],
+                    "extraPrice": "undefined",
+                    "hasExtraPrice": false,
+                    "toggleExtraPrice": false,
+                    "showPrice": true,
+                    "priceTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }]
+                },
+                {
+                    "id": "Entwässerung-3",
+                    "type": "2col",
+                    "isCheckbox": "",
+                    "name": "Alu Designrinne",
+                    "price": "745",
+                    "img": "./img/conf/dachrinne-alu.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": true,
+                    "background": "",
+                    "infoHeadline": "Alu Designrinne",
+                    "infoText": "Diese leichte Dachrinnen-Variante lässt sich genauso einfacher montieren wie die anderen Modelle aus Kunststoff. Vorteilhaft bei Aluminium ist die vollständige Korrosionsfestigkeit, sodass sämtliche Teile der Dachentwässerung stets rostfrei bleiben. Damit einher geht eine lange Haltbarkeit. ",
+                    "infoImage": "./img/conf/dachrinne-alu.jpg",
+                    "selected": false,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "ChangeRin",
+                    "functionParam": "alu",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        }
+                    ],
+                    "extraPrice": "undefined",
+                    "hasExtraPrice": false,
+                    "toggleExtraPrice": false,
+                    "showPrice": true,
+                    "priceTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }]
+                }
+            ],
+            "childs2": []
+        },
+        {
+            "id": "Fertigstellung",
+            "name": "Fertigstellung",
+            "type": "",
+            "subline": "",
+            "menuType": "Ausstattung",
+            "element": {},
+            "childs": [{
+                    "id": "Fertigstellung-4",
+                    "type": "2col",
+                    "isCheckbox": false,
+                    "name": "Selbstaufbau",
+                    "price": "0",
+                    "img": "./img/conf/montage.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": true,
+                    "extra": true,
+                    "extraText1": "Aufbau und Montage bei Ihnen vor Ort",
+                    "extraText2": "Qualifiziertes Fachpersonal",
+                    "extraText3": "Inkl. Lieferung des Terrassendachs",
+                    "function": "ChangeShippingState",
+                    "functionParam": "true",
+                    "tooltipText": "Profitieren Sie von unseren erfahrenen Montage Teams.",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        }
+                    ],
+                    "extraPrice": "undefined",
+                    "hasExtraPrice": false,
+                    "toggleExtraPrice": false,
+                    "showPrice": true,
+                    "priceTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }],
+                    "discountTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }]
+                },
+                {
+                    "id": "Fertigstellung-5",
+                    "type": "2col",
+                    "isCheckbox": false,
+                    "name": "Montage",
+                    "price": "2000",
+                    "img": "./img/conf/montage.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": true,
+                    "background": "",
+                    "infoHeadline": "Montage",
+                    "infoText": "Aufbau und Montage bei Ihnen vor Ort  Qualifiziertes Fachpersonal  Inkl. Lieferung des Terrassendachs (Umkreis von 100km)",
+                    "infoImage": "./img/conf/montage.jpg",
+                    "selected": false,
+                    "extra": true,
+                    "extraText1": "Aufbau und Montage bei Ihnen vor Ort",
+                    "extraText2": "Qualifiziertes Fachpersonal",
+                    "extraText3": "Inkl. Lieferung des Terrassendachs",
+                    "function": "ChangeShippingState",
+                    "functionParam": "false",
+                    "tooltipText": "Profitieren Sie von unseren erfahrenen Montage Teams.",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        }
+                    ],
+                    "extraPrice": "undefined",
+                    "hasExtraPrice": false,
+                    "toggleExtraPrice": false,
+                    "showPrice": true,
+                    "priceTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }],
+                    "discountTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }]
+                }
+            ],
+            "childs2": []
+        },
+        {
+            "id": "Versand",
+            "name": "Abhohlung",
+            "type": "",
+            "subline": "",
+            "menuType": "Ausstattung",
+            "element": {},
+            "childs": [{
+                    "id": "Versand-0",
+                    "type": "2col",
+                    "isCheckbox": true,
+                    "name": "Mit eigenem Anhänger",
+                    "price": "0",
+                    "img": "./img/conf/abholung.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "#cecdef",
+                    "infoHeadline": "Abholung",
+                    "infoText": "Mit eigenem Hänger \n Mit Maderos Anhänger \n Lieferung, bis 100 Km",
+                    "infoImage": "./img/conf/abholung.jpg",
+                    "selected": true,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "",
+                    "functionParam": "",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        }
+                    ],
+                    "extraPrice": "undefined",
+                    "hasExtraPrice": false,
+                    "toggleExtraPrice": false,
+                    "showPrice": true,
+                    "priceTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }],
+                    "discountTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }],
+                    "displayCheckbox": true
+                },
+                {
+                    "id": "Versand-1",
+                    "type": "2col",
+                    "isCheckbox": true,
+                    "name": "Mit Maderos Anhänger",
+                    "price": "0",
+                    "img": "./img/conf/lieferung.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": true,
+                    "background": "#cecdef",
+                    "infoHeadline": "Mit Maderos Anhänger",
+                    "infoText": "Kaution von X €",
+                    "infoImage": "./img/conf/lieferung.png",
+                    "selected": false,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "",
+                    "functionParam": "",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        }
+                    ],
+                    "extraPrice": "undefined",
+                    "hasExtraPrice": false,
+                    "toggleExtraPrice": false,
+                    "showPrice": true,
+                    "priceTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }],
+                    "discountTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }]
+                }
+            ],
+            "childs2": [],
+            "isShippingElement": true
+        },
+        {
+            "id": "Fassade",
+            "name": "Fassade",
+            "type": "",
+            "subline": "Nur zur Visualisierung, nicht im Lieferumfang enthalten.",
+            "menuType": "Umgebung",
+            "element": {},
+            "childs": [{
+                    "id": "Fassade-0",
+                    "type": "3col",
+                    "isCheckbox": "",
+                    "name": "Neutral",
+                    "price": "",
+                    "img": "./img/conf/fassade-neutral.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": true,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "ChangeFassade",
+                    "functionParam": "neutral",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        }
+                    ]
+                },
+                {
+                    "id": "Fassade-1",
+                    "type": "3col",
+                    "isCheckbox": "",
+                    "name": "Klinker, Grau",
+                    "price": "",
+                    "img": "./img/conf/fassade-klinker-grau.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": false,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "ChangeFassade",
+                    "functionParam": "KlinkerGrau",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        }
+                    ]
+                },
+                {
+                    "id": "Fassade-2",
+                    "type": "3col",
+                    "isCheckbox": "",
+                    "name": "Klinker, rot",
+                    "price": "",
+                    "img": "./img/conf/fassade-klinker-rot.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": false,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "ChangeFassade",
+                    "functionParam": "KlinkerRot",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        }
+                    ]
+                },
+                {
+                    "id": "Fassade-3",
+                    "type": "3col",
+                    "isCheckbox": "",
+                    "name": "Putz, weiß",
+                    "price": "",
+                    "img": "./img/conf/fassade-putz-weiss.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": false,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "ChangeFassade",
+                    "functionParam": "PutzWeiß",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        }
+                    ]
+                },
+                {
+                    "id": "Fassade-4",
+                    "type": "3col",
+                    "isCheckbox": "",
+                    "name": "Putz, grau",
+                    "price": "",
+                    "img": "./img/conf/fassade-putz-grau.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": false,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "ChangeFassade",
+                    "functionParam": "PutzGrau",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        }
+                    ]
+                }
+            ],
+            "childs2": []
+        },
+        {
+            "id": "Boden",
+            "name": "Boden",
+            "type": "",
+            "subline": "Nur zur Visualisierung, nicht im Lieferumfang enthalten.",
+            "menuType": "Umgebung",
+            "element": {},
+            "childs": [{
+                    "id": "Boden-0",
+                    "type": "3col",
+                    "isCheckbox": "",
+                    "name": "Dielen, hell",
+                    "price": "",
+                    "img": "./img/conf/boden-holz-hell.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": true,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "ChangeFloor",
+                    "functionParam": "DielenHell",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        }
+                    ]
+                },
+                {
+                    "id": "Boden-1",
+                    "type": "3col",
+                    "isCheckbox": "",
+                    "name": "Dielen, dunkel",
+                    "price": "",
+                    "img": "./img/conf/boden-holz-dunkel.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": false,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "ChangeFloor",
+                    "functionParam": "DielenDunkel",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        }
+                    ]
+                },
+                {
+                    "id": "Boden-2",
+                    "type": "3col",
+                    "isCheckbox": "",
+                    "name": "Fliesen, grau",
+                    "price": "",
+                    "img": "./img/conf/boden-fliesen-grau.jpg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": false,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "ChangeFloor",
+                    "functionParam": "FliesenGrau",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": ""
+                        }
+                    ]
+                }
+            ],
+            "childs2": []
+        },
+        {
+            "id": "Licht",
+            "name": "Licht",
+            "type": "",
+            "subline": "",
+            "menuType": "Umgebung",
+            "element": {},
+            "childs": [{
+                    "id": "Licht-0",
+                    "type": "3col",
+                    "isCheckbox": "",
+                    "name": "Morgen",
+                    "price": "",
+                    "img": "./img/conf/sunrise.svg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "#fff",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": true,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "ChangeLight",
+                    "functionParam": "morgen",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "hasExtraPrice": false,
+                    "extraPrice": "",
+                    "toggleExtraPrice": false,
+                    "showPrice": false,
+                    "priceTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }],
+                    "discountTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }],
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        }
+                    ]
+                },
+                {
+                    "id": "Licht-1",
+                    "type": "3col",
+                    "isCheckbox": "",
+                    "name": "Mittag",
+                    "price": "",
+                    "img": "./img/conf/sun.svg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "#fff",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": false,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "ChangeLight",
+                    "functionParam": "mittag",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "hasExtraPrice": false,
+                    "extraPrice": "",
+                    "toggleExtraPrice": false,
+                    "showPrice": false,
+                    "priceTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }],
+                    "discountTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }],
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        }
+                    ]
+                },
+                {
+                    "id": "Licht-2",
+                    "type": "3col",
+                    "isCheckbox": "",
+                    "name": "Abend",
+                    "price": "",
+                    "img": "./img/conf/sunset.svg",
+                    "hover": true,
+                    "fixed": false,
+                    "single": true,
+                    "upgrade": false,
+                    "info": false,
+                    "background": "#fff",
+                    "infoHeadline": "",
+                    "infoText": "",
+                    "infoImage": "",
+                    "selected": false,
+                    "extra": false,
+                    "extraText1": "",
+                    "extraText2": "",
+                    "extraText3": "",
+                    "function": "ChangeLight",
+                    "functionParam": "abend",
+                    "element": {
+                        "jQuery360076171342808810241": {
+                            "events": {
+                                "click": [{
+                                    "type": "click",
+                                    "origType": "click",
+                                    "data": null,
+                                    "guid": 31,
+                                    "namespace": ""
+                                }]
+                            }
+                        }
+                    },
+                    "hasExtraPrice": false,
+                    "extraPrice": "",
+                    "toggleExtraPrice": false,
+                    "showPrice": false,
+                    "priceTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }],
+                    "discountTable": [{
+                        "2959": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3457": [{ "4020": "", "4810": "", "5600": "", "6390": "" }],
+                        "3955": [{ "4020": "", "4810": "", "5600": "", "6390": "" }]
+                    }],
+                    "LED": [
+                        { "info1": "", "unit": "", "min": "", "max": "", "step": "" }
+                    ],
+                    "slider": [{
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        },
+                        {
+                            "function": "",
+                            "text": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "unit": "",
+                            "start": ""
+                        }
+                    ]
+                }
+            ],
+            "childs2": []
+        }
+    ]
+}

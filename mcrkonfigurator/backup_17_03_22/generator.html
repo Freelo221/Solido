@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <style>
+        /* [draggable="true"] {
+                  user-select: none;
+                  -moz-user-select: none;
+                  -webkit-user-select: none;
+                  -ms-user-select: none;
+              } */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100vh;
+            /* overflow: hidden; */
+        }
+        
+        .listWrapper {
+            border: 1px solid black;
+            padding: 15px;
+            overflow: scroll;
+            height: 100vh;
+            /* border-radius: 12px; */
+        }
+        
+        .listWrapper::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        
+        .listWrapper {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+        
+        .InfoEditor {
+            border: 1px solid black;
+            padding: 15px;
+        }
+        
+        ul.moveable {
+            list-style: none;
+            /* margin: 0px; */
+        }
+        
+        ul {
+            list-style-image: none;
+            border: 1px solid #ccc;
+            padding: 6px;
+            border-radius: 4px;
+            color: #666;
+            height: fit-content;
+            margin-bottom: 5px;
+        }
+        
+        li {
+            list-style-image: none;
+            margin: 5px;
+            border: 2px solid #ccc;
+            padding: 6px;
+            border-radius: 4px;
+            color: #666;
+            cursor: move;
+            height: fit-content;
+            margin-left: 50px !important;
+            cursor: move;
+        }
+        
+        ul.moveable li:hover {
+            border: 2px solid rgb(255, 166, 0);
+        }
+        
+        .activeElement {
+            border: 2px solid rgb(255, 166, 0);
+            color: rgb(255, 166, 0);
+        }
+        
+        ul span {
+            padding-left: 10px;
+            height: 30px;
+            display: inline-block;
+        }
+        
+        .positionbutton {
+            padding: 5px;
+            border: 3px solid rgb(184, 184, 184);
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .positionbutton:hover {
+            border: 3px solid rgb(255, 166, 0);
+        }
+        
+        ul.moveable li:hover {
+            background-color: #eee;
+        }
+        
+        .addNewChild,
+        .addNewParent,
+        .addNewMenuElement {
+            opacity: 0.3;
+            transition: 0.3s;
+            cursor: pointer !important;
+        }
+        
+        .addNewChild:hover,
+        .addNewParent:hover,
+        .addNewMenuElement:hover {
+            opacity: 1;
+        }
+        
+        .parent {}
+        
+        .child {}
+        
+        .MenuEditor,
+        .ChildNodeEditor,
+        .ParentNodeEditor,
+        .SettingsEditor {
+            display: none;
+            position: relative;
+            height: 100vh;
+            overflow: scroll;
+            padding-top: 2rem;
+        }
+        
+        #SliderOptions,
+        #LEDOption,
+        #ExtraOption,
+        #InfoOption,
+        #inputChildNodePriceExtraContainer,
+        .extraOptionContainer,
+        .ModalInfo_container,
+        .ModalImage_container {
+            display: none;
+        }
+        
+        .menuEditorClose,
+        .childEditorClose,
+        .parentEditorClose {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 15px;
+            width: 15px;
+            background: black;
+            cursor: pointer;
+        }
+        
+        .color-output {
+            display: block;
+            width: 100%;
+            height: 38px;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+        
+        .priceChartContainer {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.493);
+            height: 100%;
+            width: 100%;
+            display: none;
+        }
+        
+        .priceChartContainer .modalContainer {
+            position: absolute;
+            height: 80vh;
+            width: 70vw;
+            border: 1px solid black;
+            z-index: 500;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            background: white;
+        }
+        
+        .removeBtn {
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            display: flex;
+            right: 13px;
+            top: 0;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .PriceTableEditor_container {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 5000;
+            display: none;
+        }
+        
+        .PriceTableEditor_container .PriceTableEditor_blur {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.432);
+        }
+        
+        .PriceTableEditor_container .PriceTableEditor_content {
+            position: absolute;
+            height: fit-content;
+            width: 70%;
+            background-color: rgb(255, 255, 255);
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+        
+        .PriceTableEditor_container .PriceTableEditor_content .PriceTableEditor_closeBtn {
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            height: 20px;
+            width: 20px;
+            background-color: #000;
+        }
+        
+        .DiscountTableEditor_container {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 5000;
+            display: none;
+        }
+        
+        .DiscountTableEditor_container .DiscountTableEditor_blur {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.432);
+        }
+        
+        .DiscountTableEditor_container .DiscountTableEditor_content {
+            position: absolute;
+            height: fit-content;
+            width: 70%;
+            background-color: rgb(255, 255, 255);
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+        
+        .DiscountTableEditor_container .DiscountTableEditor_content .DiscountTableEditor_closeBtn {
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            height: 20px;
+            width: 20px;
+            background-color: #000;
+        }
+        
+        .ModalInfo_container {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 5000;
+            /* display: none; */
+        }
+        
+        .ModalInfo_container .ModalInfo_blur {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.432);
+        }
+        
+        .ModalInfo_container .ModalInfo_content {
+            position: absolute;
+            height: fit-content;
+            width: 70%;
+            background-color: rgb(255, 255, 255);
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+        
+        .ModalInfo_container .ModalInfo_content .ModalInfo_closeBtn {
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            height: 20px;
+            width: 20px;
+            background-color: #000;
+        }
+        
+        .ModalInfo_container .modal_infoImage {
+            /* width: 300px; */
+            width: 100%;
+            height: 200px;
+            /* height: 180px; */
+            border: 1px solid black;
+        }
+        
+        .functionOptions i {
+            cursor: pointer;
+        }
+        
+        .menuLabel {
+            font-weight: bold;
+            color: #666;
+            /* text-align: center; */
+            /* width: 100%; */
+            padding-left: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .menuBlockStyle {
+            padding: 20px 20px;
+            border: 1px solid #999;
+            box-shadow: 1px 1px 5px #111;
+            margin: 10px;
+        }
+        
+        #imgPicker,
+        #imgPicker_info {
+            cursor: pointer;
+        }
+        
+        #fileInput {
+            display: none;
+        }
+        
+        .ModalImage_container {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 5000;
+            /* display: none; */
+        }
+        
+        .ModalImage_container .ModalImage_blur {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.432);
+        }
+        
+        .ModalImage_container .ModalImage_content {
+            position: absolute;
+            height: 80%;
+            width: 70%;
+            background-color: rgb(255, 255, 255);
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            overflow: scroll;
+        }
+        
+        .ModalImage_container .ModalImage_content .ModalImage_closeBtn {
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            height: 20px;
+            width: 20px;
+            background-color: #000;
+        }
+        
+        .ModalImage_container .modal_infoImage {
+            /* width: 300px; */
+            width: 100%;
+            height: 200px;
+            /* height: 180px; */
+            border: 1px solid black;
+        }
+        
+        .imgPicker_imageContainer {
+            cursor: pointer;
+            border: 1px solid transparent;
+            padding: 2rem;
+            position: relative;
+            height: 200px;
+            display: flex;
+            align-items: flex-end;
+            /* margin: 0 20px; */
+        }
+        
+        .imgPicker_imageContainer:hover img {
+            border: 2px solid black;
+        }
+        
+        .imgPicker_imageContainer img {
+            margin: auto;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            border: 2px solid transparent;
+            /* top: 20px; */
+        }
+        
+        .imgPicker_imageContainer p {
+            margin: auto;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: fit-content;
+        }
+    </style>
+    <!-- <script type="module" src="./js/modalText.js"></script> -->
+    <script src="./js/generatemenu.js"></script>
+</head>
+
+<body>
+    <div class="priceChartContainer">
+        <div class="modalContainer">
+            <div class="container-fluid modalTableContainer"></div>
+        </div>
+    </div>
+
+    <!-- Price Table -->
+    <div class="PriceTableEditor_container">
+        <div class="PriceTableEditor_blur"></div>
+        <div class="PriceTableEditor_content">
+            <div class="PriceTableEditor_closeBtn"></div>
+            <div class="PriceTableEditor_table container-fluid p-5"></div>
+        </div>
+    </div>
+
+    <!-- Price Table discount -->
+    <div class="DiscountTableEditor_container">
+        <div class="DiscountTableEditor_blur"></div>
+        <div class="DiscountTableEditor_content">
+            <div class="DiscountTableEditor_closeBtn"></div>
+            <div class="DiscountTableEditor_table container-fluid p-5"></div>
+        </div>
+    </div>
+
+    <!-- Info Box -->
+    <div class="ModalInfo_container">
+        <div class="ModalInfo_blur"></div>
+        <div class="ModalInfo_content">
+            <div class="ModalInfo_closeBtn"></div>
+            <div class="ModalInfo_table container-fluid p-5"></div>
+        </div>
+    </div>
+
+    <!-- Image Box -->
+    <div class="ModalImage_container">
+        <div class="ModalImage_blur"></div>
+        <div class="ModalImage_content">
+            <div class="ModalImage_closeBtn"></div>
+            <div class="ModalImage_table container-fluid p-5"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- <div class="mt-5"></div> -->
+        <div class="row">
+            <div class="col-6 listWrapper">
+                <div id="SettingsContainer">
+                    <button class="openSettingsButton btn btn-success m-1">
+              Settings
+            </button>
+                </div>
+                <!-- <div id="PriceTableContainer">
+                    <button class="openPriceTableButton btn btn-success m-1">Open Price Table</button>
+                </div> -->
+                <ul id="mainMenuContainer" class="menuContainer">
+                    <span>MainMenu</span>
+                    <li class="addNewMenuElement">
+                        <i class="fas fa-plus-circle"></i> Add New
+                    </li>
+                </ul>
+                <ul class="addNewParent">
+                    <i class="fas fa-plus-circle"></i> Add New
+                </ul>
+                <a onclick="GetOutput();" class="btn btn-primary">Output</a>
+            </div>
+
+            <!-- Settings -->
+            <div class="col-6 SettingsEditor">
+                <div class="menuEditorClose"></div>
+                <p class="text-center mt-5">Settings</p>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-6 h-100">
+                            <div class="PriceTableRowsElementContainer"></div>
+                            <button class="btn btn-primary" id="PriceTableRows">
+                  PriceTableRows +
+                </button>
+                            <button class="btn btn-danger" id="PriceTableRowsRemove">
+                  Remove
+                </button>
+                        </div>
+                        <div class="col-6 h-100">
+                            <div class="PriceTableColsElementContainer"></div>
+                            <button class="btn btn-primary" id="PriceTableCols">
+                  PriceTableCols +
+                </button>
+                            <button class="btn btn-danger" id="PriceTableColsRemove">
+                  Remove
+                </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 btn btn-primary">Save</div>
+            </div>
+
+            <!-- Menu Item Editor -->
+            <div class="col-6 MenuEditor">
+                <div class="menuEditorClose"></div>
+                <div class="menuBlockStyle">
+                    <label class="menuLabel" for="inputMenuNodeId">MenuItem Id</label>
+                    <input disabled id="inputMenuNodeId" class="form-control mb-2" type="text" />
+
+                    <label class="menuLabel" for="inputMenuNodeName">MenuItem Name</label
+            >
+            <input
+              id="inputMenuNodeName"
+              class="form-control mb-2"
+              type="text"
+            />
+
+            <label class="menuLabel" for="inputMenuNodeIcon">MenuIcon</label>
+                    <input id="inputMenuNodeIcon" class="form-control mb-2" type="text" />
+                </div>
+
+                <div onclick="UpdateMainMenuElement();" class="btn btn-primary">
+                    Save
+                </div>
+            </div>
+
+            <!-- ChildElementEditor -->
+            <!-- ##################################################################################################################################### -->
+            <div class="col-6 ChildNodeEditor">
+                <div class="childEditorClose"></div>
+                <!-- <h5 class="text-center">Box Konfiguration</h5> -->
+                <div class="menuBlockStyle">
+                    <h5 class="text-center">Box Konfiguration</h5>
+                    <label class="menuLabel" for="inputChildNodeId">ID</label>
+                    <input id="inputChildNodeId" class="form-control mb-3" type="text" />
+
+                    <!-- <label for="inputChildNodeType">Type</label>
+                        <input
+                            id="inputChildNodeType"
+                            class="form-control mb-2"
+                            type="text"
+                        /> -->
+                    <label class="menuLabel" for="inputChildNodeType">Box Type
+              <i id="elementTypeHelper" class="far fa-question-circle"></i
+            ></label>
+                    <!-- <i id="elementTypeHelper" class="far fa-question-circle"></i> -->
+                    <select name="" class="form-control mb-3" id="inputChildNodeType">
+              <option value="1col">1col</option>
+              <option value="2col">2col</option>
+              <option value="3col">3col</option>
+              <option value="x-slider">Slider-Block</option>
+              <option value="x-LED">LED-Block</option>
+            </select>
+
+                    <input class="form-check-input mb-2" type="checkbox" value="" id="inputChildNodeDisplayCheckbox" />
+                    <label class="form-check-label menuLabel" for="inputChildNodeDisplayCheckbox">
+              Display as Checkbox?
+            </label>
+                    <br />
+                    <label class="menuLabel" for="inputChildNodeName">Name</label>
+                    <input id="inputChildNodeName" class="form-control mb-3" type="text" />
+                </div>
+
+                <div class="menuBlockStyle">
+                    <h5 class="text-center">Price</h5>
+                    <label class="menuLabel" for="inputChildNodePrice">Base Price</label
+            >
+            <input
+              id="inputChildNodePrice"
+              class="form-control mb-3"
+              type="text"
+            />
+
+            <button class="openPriceTableButton btn btn-outline-dark m-1">
+              Open Price Table
+            </button>
+
+            <button class="openDiscountTableButton btn btn-outline-dark m-1">
+              Open Discount Table
+            </button>
+            <br />
+          </div>
+          <div class="menuBlockStyle">
+            <h5 class="text-center">Visual</h5>
+            <label class="menuLabel" for="inputChildNodeImg">Image</label>
+                    <input id="inputChildNodeImg" class="form-control mb-3" type="text" />
+
+                    <img id="imgPicker" class="mb-3" style="background-color: #666; height: 135px; width: 260px" src="" alt="" />
+                    <!-- <label class="menuLabel" for="logo">Image</label> -->
+                    <br />
+                    <label class="menuLabel" for="inputChildNodeBackground">BackgroundColor</label
+            >
+            <div class="row">
+              <div class="col-5">
+                <input
+                  id="inputChildNodeBackground"
+                  class="form-control mb-3 col-10"
+                  type="text"
+                />
+              </div>
+              <div class="col-2"><div class="color-output"></div></div>
+            </div>
+          </div>
+          <!-- ######################################################################################################################### -->
+
+          <div class="menuBlockStyle">
+            <h5 class="text-center">Check States</h5>
+            <input
+              class="form-check-input mb-2"
+              type="checkbox"
+              value=""
+              id="inputChildNodeFixed"
+            />
+            <label class="form-check-label menuLabel" for="inputChildNodeFixed">
+              Fixed?
+            </label>
+
+                    <!-- <label for="inputChildNodeFixed">fixed</label>
+                <input
+                    id="inputChildNodeFixed"
+                    class="form-control mb-2"
+                    type="text"
+                /> -->
+                    <br />
+                    <input class="form-check-input mb-2" type="checkbox" value="" id="inputChildNodeSingle" />
+                    <label class="form-check-label menuLabel" for="inputChildNodeSingle">
+              Single?
+            </label>
+                    <!-- <label for="inputChildNodeSingle">single</label>
+                <input
+                    id="inputChildNodeSingle"
+                    class="form-control mb-2"
+                    type="text"
+                /> -->
+                    <br />
+                    <input class="form-check-input mb-2" type="checkbox" value="" id="inputChildNodeUpgrade" />
+                    <label class="form-check-label menuLabel" for="inputChildNodeUpgrade">
+              Upgrade?
+            </label>
+                    <!--                     
+                <label for="inputChildNodeUpgrade">Upgrade</label>
+                <input
+                    id="inputChildNodeUpgrade"
+                    class="form-control mb-2"
+                    type="text"
+                /> -->
+                    <br />
+                    <input class="form-check-input mb-2" type="checkbox" value="" id="inputChildNodeSelected" />
+                    <label class="form-check-label menuLabel" for="inputChildNodeSelected">
+              Preselect?
+            </label>
+
+                    <!-- <label for="inputChildNodeInfo">Info</label>
+                <input
+                    id="inputChildNodeInfo"
+                    class="form-control mb-2"
+                    type="text"
+                /> -->
+                </div>
+
+                <div class="menuBlockStyle">
+                    <h5 class="text-center">Extras</h5>
+                    <input class="form-check-input mb-2" type="checkbox" value="" id="inputChildNodeHover" />
+                    <label class="form-check-label menuLabel" for="inputChildNodeHover">
+              Show Hover Effect?
+            </label>
+                    <br />
+                    <input class="form-check-input mb-2" type="checkbox" value="" id="inputChildNodeTogglePrice" />
+                    <label class="form-check-label menuLabel" for="inputChildNodeTogglePrice">
+              Show Price?
+            </label>
+                    <br />
+
+                    <input class="form-check-input mb-2" type="checkbox" value="" id="inputChildNodeInfo" />
+                    <label class="form-check-label menuLabel" for="inputChildNodeInfo">
+              Show Info?
+            </label>
+
+                    <div id="InfoOption" class="row">
+                        <div class="row">
+                            <div class="col-12">
+                                <label class="menuLabel" for="inputChildNodeInfoHeadline">InfoHeadline</label
+                  >
+                  <input
+                    id="inputChildNodeInfoHeadline"
+                    class="form-control mb-2"
+                    type="text"
+                  />
+
+                  <label class="menuLabel" for="inputChildNodeInfoText"
+                    >InfoText</label
+                  >
+                  <input
+                    id="inputChildNodeInfoText"
+                    class="form-control mb-2"
+                    type="text"
+                  />
+
+                  <label class="menuLabel" for="inputChildNodeInfoImage"
+                    >InfoImage</label
+                  >
+                  <input
+                    id="inputChildNodeInfoImage"
+                    class="form-control mb-2"
+                    type="text"
+                  />
+                  <img
+                    id="imgPicker_info"
+                    class="mb-3"
+                    style="background-color: #666; height: 135px; width: 260px"
+                    src=""
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div id="ExtraOption" class="row">
+              <div class="row">
+                <div class="col-12">
+                  <input
+                    class="form-check-input mb-2"
+                    type="checkbox"
+                    value=""
+                    id="inputChildNodeExtra"
+                  />
+                  <!-- <label class="form-check-label" for="inputChildNodeExtra"> -->
+                  <label class="menuLabel" for="inputChildNodeExtra"
+                    >Extra</label
+                  >
+                  <i id="ExtraHelper" class="far fa-question-circle"></i>
+                  <br />
+                  <!-- <input id="inputChildNodeExtra" class="form-control mb-2" type="text" /> -->
+                  <div class="extraOptionContainer">
+                    <label class="menuLabel" for="inputChildNodeExtra1"
+                      >Extra1</label
+                    >
+                    <input
+                      id="inputChildNodeExtra1"
+                      class="form-control mb-2"
+                      type="text"
+                    />
+
+                    <label class="menuLabel" for="inputChildNodeExtra2"
+                      >Extra2</label
+                    >
+                    <input
+                      id="inputChildNodeExtra2"
+                      class="form-control mb-2"
+                      type="text"
+                    />
+
+                    <label class="menuLabel" for="inputChildNodeExtra3"
+                      >Extra3</label
+                    >
+                    <input
+                      id="inputChildNodeExtra3"
+                      class="form-control mb-2"
+                      type="text"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="menuBlockStyle">
+            <h5 class="text-center">Functions</h5>
+            <div class="functionOptions">
+              <label class="menuLabel" for="inputChildNodeFunction"
+                >Function</label
+              >
+              <i id="functionHelper" class="far fa-question-circle"></i>
+              <select
+                name=""
+                class="form-control mb-2"
+                id="inputChildNodeFunction"
+              >
+                <option value="SwitchColor">SwitchColor</option>
+                <option value="ChangePoleState">ChangePoleState</option>
+                <option value="ChangeOverhangState">ChangeOverhangState</option>
+                <option value="ChangeRoofExtensionState">
+                  ChangeRoofExtensionState
+                </option>
+                <option value="ChangeFassade">ChangeFassade</option>
+                <option value="ChangeFloor">ChangeFloor</option>
+                <option value="ChangeRin">ChangeRin</option>
+                <option value="ChangeRoofGlas">ChangeRoofGlas</option>
+                <option value="ChangeLight">ChangeLight</option>
+                <option value="ChangeStoffbahn">ChangeStoffbahn</option>
+                <option value="ChangeRoofMaterial">ChangeRoofMaterial</option>
+                <option value="ChangeLedState">ChangeLedState</option>
+                <option value="ChangeRafterState">ChangeRafterState</option>
+                <option value="ChangeShippingState">Toggle Shipping Box</option>
+              </select>
+              <!-- <input id="inputChildNodeFunction" class="form-control mb-2" type="text" /> -->
+
+              <label class="menuLabel" for="inputChildNodeFunctionParam"
+                >FunctionParam</label
+              >
+              <!-- <i id="functionParameterHelper" class="far fa-question-circle"></i> -->
+              <input
+                id="inputChildNodeFunctionParam"
+                class="form-control mb-2"
+                type="text"
+              />
+
+              <div id="functionParamInfo"></div>
+            </div>
+          </div>
+
+          <div class="menuBlockStyle">
+            <h5 class="text-center">Other Settings</h5>
+
+            <input
+              class="form-check-input mb-2"
+              type="checkbox"
+              value=""
+              id="inputChildNodeToggleExtraPrice"
+            />
+            <label
+              class="form-check-label menuLabel"
+              for="inputChildNodeToggleExtraPrice"
+            >
+              Toggle Extra Pole?
+            </label>
+                                <i id="ToggleExtraPoleHelper" class="far fa-question-circle"></i>
+                                <br />
+
+                                <input class="form-check-input mb-2" type="checkbox" value="" id="inputChildNodePriceExtraCheck" />
+                                <label class="form-check-label menuLabel" for="inputChildNodePriceExtraCheck">
+              PriceExtraCheck? (€/Pole)
+            </label>
+                                <i id="ExtraPolePriceHelper" class="far fa-question-circle"></i>
+                                <br />
+
+                                <div id="inputChildNodePriceExtraContainer">
+                                    <label class="menuLabel" for="inputChildNodePriceExtra">Extra Price</label
+              >
+              <input
+                id="inputChildNodePriceExtra"
+                class="form-control mb-2"
+                type="text"
+              />
+            </div>
+          </div>
+
+          <div id="LEDOption" class="">
+            <div class="menuBlockStyle row">
+              <h5 class="text-center">LED-Block-Settings</h5>
+              <!-- <div class="row"> -->
+              <div class="col-12">
+                <label class="menuLabel" for="inputChildNodeLEDText"
+                  >LEDText</label
+                >
+                <input
+                  id="inputChildNodeLEDText"
+                  class="form-control mb-2"
+                  type="text"
+                />
+
+                <label class="menuLabel" for="inputChildNodeLEDMin"
+                  >LED Min</label
+                >
+                <input
+                  id="inputChildNodeLEDMin"
+                  class="form-control mb-2"
+                  type="text"
+                />
+
+                <label class="menuLabel" for="inputChildNodeLEDMax"
+                  >LED Max</label
+                >
+                <input
+                  id="inputChildNodeLEDMax"
+                  class="form-control mb-2"
+                  type="text"
+                />
+
+                <label class="menuLabel" for="inputChildNodeLEDStep"
+                  >LED Step</label
+                >
+                <input
+                  id="inputChildNodeLEDStep"
+                  class="form-control mb-2"
+                  type="text"
+                />
+
+                <label class="menuLabel" for="inputChildNodeLEDUnit"
+                  >LED Unit</label
+                >
+                <input
+                  id="inputChildNodeLEDUnit"
+                  class="form-control mb-2"
+                  type="text"
+                />
+              </div>
+              <!-- </div> -->
+            </div>
+          </div>
+
+          <div id="SliderOptions" class="">
+            <div class="menuBlockStyle row">
+              <h5 class="text-center">Slider-Block-Settings</h5>
+              <div class="col-6">
+                <label class="menuLabel" for="inputChildNodeSliderFunction1"
+                  >SliderFunction</label
+                >
+                <select
+                  class="form-control mb-2"
+                  name=""
+                  id="inputChildNodeSliderFunction1"
+                >
+                  <option value="ChangeWidth">Width</option>
+                  <option value="ChangeHeight">Height</option>
+                </select>
+
+                <label class="menuLabel" for="inputChildNodeSliderText1"
+                  >SliderText</label
+                >
+                <input
+                  id="inputChildNodeSliderText1"
+                  class="form-control mb-2"
+                  type="text"
+                />
+
+                <label class="menuLabel" for="inputChildNodeSliderMin1"
+                  >Slider Min</label
+                >
+                <input
+                  id="inputChildNodeSliderMin1"
+                  class="form-control mb-2 UpdateStartValues1"
+                  type="text"
+                />
+
+                <label class="menuLabel" for="inputChildNodeSliderMax1"
+                  >Slider Max</label
+                >
+                <input
+                  id="inputChildNodeSliderMax1"
+                  class="form-control mb-2 UpdateStartValues1"
+                  type="text"
+                />
+
+                <label class="menuLabel" for="inputChildNodeSliderStep1"
+                  >Slider Step</label
+                >
+                <input
+                  id="inputChildNodeSliderStep1"
+                  class="form-control mb-2 UpdateStartValues1"
+                  type="text"
+                />
+
+                <label class="menuLabel" for="inputChildNodeSliderStartValue1"
+                  >Start value</label
+                >
+                <select
+                  class="form-control mb-2"
+                  name=""
+                  id="inputChildNodeSliderStartValue1"
+                  disabled
+                ></select>
+
+                <label class="menuLabel" for="inputChildNodeSliderUnit1"
+                  >Slider Unit</label
+                >
+                <input
+                  id="inputChildNodeSliderUnit1"
+                  class="form-control mb-2"
+                  type="text"
+                />
+              </div>
+              <div class="col-6">
+                <label class="menuLabel" for="inputChildNodeSliderFunction2"
+                  >SliderFunction</label
+                >
+                <select
+                  class="form-control mb-2"
+                  name=""
+                  id="inputChildNodeSliderFunction2"
+                >
+                  <option value="ChangeWidth">Width</option>
+                  <option value="ChangeHeight">Height</option>
+                </select>
+
+                <label class="menuLabel" for="inputChildNodeSliderText2"
+                  >SliderText</label
+                >
+                <input
+                  id="inputChildNodeSliderText2"
+                  class="form-control mb-2"
+                  type="text"
+                />
+
+                <label class="menuLabel" for="inputChildNodeSliderMin2"
+                  >Slider Min</label
+                >
+                <input
+                  id="inputChildNodeSliderMin2"
+                  class="form-control mb-2 UpdateStartValues2"
+                  type="text"
+                />
+
+                <label class="menuLabel" for="inputChildNodeSliderMax2"
+                  >Slider Max</label
+                >
+                <input
+                  id="inputChildNodeSliderMax2"
+                  class="form-control mb-2 UpdateStartValues2"
+                  type="text"
+                />
+
+                <label class="menuLabel" for="inputChildNodeSliderStep2"
+                  >Slider Step</label
+                >
+                <input
+                  id="inputChildNodeSliderStep2"
+                  class="form-control mb-2 UpdateStartValues2"
+                  type="text"
+                />
+
+                <label class="menuLabel" for="inputChildNodeSliderStartValue2"
+                  >Start value</label
+                >
+                <select
+                  class="form-control mb-2"
+                  name=""
+                  id="inputChildNodeSliderStartValue2"
+                  disabled
+                ></select>
+
+                <label class="menuLabel" for="inputChildNodeSliderUnit2"
+                  >Slider Unit</label
+                >
+                <input
+                  id="inputChildNodeSliderUnit2"
+                  class="form-control mb-2"
+                  type="text"
+                />
+              </div>
+            </div>
+          </div>
+
+          <a onclick="UpdateChildElement();" class="btn btn-primary">Save</a>
+          <a onclick="RemoveChildElement();" class="btn btn-danger">Remove</a>
+          <!-- <div id="PriceTableContainer"> -->
+
+          <!-- </div> -->
+        </div>
+
+        <!-- Parent Editor -->
+
+        <div class="col-6 ParentNodeEditor">
+          <div class="parentEditorClose"></div>
+          <div class="menuBlockStyle">
+            <label class="menuLabel" for="inputParentNodeId">ID</label>
+                                    <input disabled id="inputParentNodeId" class="form-control mb-2" type="text" />
+
+                                    <label class="menuLabel" for="inputParentNodeName">ParentName</label
+            >
+            <input
+              id="inputParentNodeName"
+              class="form-control mb-2"
+              type="text"
+            />
+
+            <label class="menuLabel" for="inputParentNodeType"
+              >Parent type</label
+            >
+            <input
+              disabled
+              id="inputParentNodeType"
+              class="form-control mb-2"
+              type="text"
+            />
+
+            <label class="menuLabel" for="inputParentNodeSubline"
+              >Parent subline</label
+            >
+            <input
+              id="inputParentNodeSubline"
+              class="form-control mb-2"
+              type="text"
+            />
+            <!-- 
+<label for="inputParentNodeMenuType">Parent menuType</label>
+                                    <input id="inputParentNodeMenuType" class="form-control mb-2" type="text" /> -->
+                                    <label class="menuLabel" for="selectParentNodeMenuType">MenuType</label
+            >
+            <select
+              class="form-control mb-2"
+              name=""
+              id="selectParentNodeMenuType"
+            ></select>
+
+            <input
+              class="form-check-input mb-2"
+              type="checkbox"
+              value=""
+              id="inputParentNodeShipping"
+            />
+            <label
+              class="form-check-label menuLabel"
+              for="inputParentNodeShipping"
+            >
+              is Shipping Element
+            </label>
+                                </div>
+
+                                <a onclick="UpdateParentElement()" class="btn btn-primary">Save</a>
+                                <a onclick="RemoveParentElement();" class="btn btn-danger">Remove</a>
+                            </div>
+                        </div>
+                    </div>
+</body>
+
+</html>

@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konfigurator</title>
+    <!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> -->
+    <!-- <script src="js/require.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/form.css" />
+
+    <!-- <script src="//cdn.rawgit.com/mrdoob/three.js/master/build/three.js"></script> -->
+    <!-- <script src="//cdn.rawgit.com/mrdoob/three.js/master/examples/js/controls/OrbitControls.js"></script> -->
+
+    <!-- <script src="js/orbit.js"></script> -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <script src="./js/Tween.min.js"></script>
+    <script type="module" src="./js/dynamic.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/summary.js"></script>
+</head>
+
+<body>
+    <div class="tooltip">
+        <p class="tooltipText">test</p>
+        <!-- <i class="fas fa-chevron-down"></i> -->
+        <div class="arrowBubbleBox"></div>
+    </div>
+
+    <!-- <span class="info" data-bs-toggle="tooltip" data-bs-placement="top" title="Some Information"></span> -->
+
+    <div class="mainContent">
+        <div class="mainContentInner">
+            <div class="confContainer">
+                <div class="menu list-group float-start" id="list-example">
+                    <!-- <a href="#scroll-section-1" class="menuItem list-group-item list-group-item-action">
+                        <div>
+                            <div class="menu-icon menu-icon-ruler"></div>
+                            <p>Form</p>
+                        </div>
+                    </a>
+
+
+                    <a href="#scroll-section-2" class="menuItem list-group-item list-group-item-action">
+                        <div>
+                            <div class="menu-icon menu-icon-can"></div>
+                            <p>Farbe</p>
+                        </div>
+                    </a>
+
+
+                    <a href="#scroll-section-3" class="menuItem list-group-item list-group-item-action">
+                        <div>
+                            <div class="menu-icon menu-icon-link"></div>
+                            <p>Optionen</p>
+                        </div>
+                    </a>
+
+                    <a href="#scroll-section-4" class="menuItem list-group-item list-group-item-action">
+                        <div>
+                            <div class="menu-icon menu-icon-env"></div>
+                            <p>Umgebung</p>
+                        </div>
+                    </a> -->
+                </div>
+
+                <!-- 
+                    <a href="#sec3" class="menuItem list-group-item list-group-item-action">
+                        <img src="./img/external-link-alt-solid.svg" alt="">
+                        <p>Ausstattung</p>
+                    </a>
+                    <a href="#sec4" class="menuItem list-group-item list-group-item-action">
+                        <img src="./img/external-link-alt-solid.svg" alt="">
+                        <p>Umgebung</p>
+                    </a>
+					-->
+
+                <div class="openMenu">
+                    <div>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <div class="blurBG"></div>
+
+                <div class="closeMenu-mobile">
+                    <div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div id="OptionList" class="menu-option">
+                    <div class="closeMenu">
+                        <div>
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                    </div>
+
+                    <!-- <div id="click-stoffbahnen-toggle">click-stoffbahnen-toggle</div> -->
+                    <!-- <div id="click-terrassendachmainmaterial-gebuerstet">click-terrassendachmainmaterial-gebuerstet</div> -->
+                    <!-- <div id="click-terrassendachmainmaterial-glatt">click-terrassendachmainmaterial-glatt</div> -->
+
+                    <div class="opt-item" id="sec15">
+                        <h3>Eigenes Bild hochladen</h3>
+                        <div class="kat-wrapper">
+                            <div class="kat-item fullWidth">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 mt-3 mt-sm-0 p-0">
+                                            <a href="#" id="imageUploaderPre" class="btn btn-secondary">Bild Hochladen</a
+                        >
+                      </div>
+
+                      <div class="col-12 p-0">
+                        <div class="userImageModeVisible">
+                          <div class="col-12 col-sm-12 mt-3 mt-sm-3 p-0">
+                            <a href="#" id="imagedelete" class="btn btn-link"
+                              >Bild entfernen</a
+                            >
+                          </div>
+
+                          <div class="col-12">
+                            <input
+                              style="display: none"
+                              id="userImage"
+                              type="file"
+                            />
+                          </div>
+                          <div class="col-12 userImageLoadedVisible">
+                            <div
+                              class="col-12 col-sm-4 justify-content-center align-items-center d-flex"
+                            >
+                              <p class="text-bold heading text-left">Zoom</p>
+                            </div>
+                            <div
+                              class="col-12 col-sm-8 justify-content-center align-items-center d-flex"
+                            >
+                              <input
+                                class="w-100"
+                                type="range"
+                                min="100"
+                                max="200"
+                                step="1"
+                                value="100"
+                                id="ui-userimage-x"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="col-12 userImageLoadedVisible">
+                            <div
+                              class="col-12 col-sm-4 justify-content-center align-items-center d-flex"
+                            >
+                              <p class="text-bold heading text-left">
+                                Sichtfeld
+                              </p>
+                            </div>
+                            <div
+                              class="col-12 col-sm-8 justify-content-center align-items-center d-flex"
+                            >
+                              <input
+                                class="w-100"
+                                type="range"
+                                min="30"
+                                max="90"
+                                step="1"
+                                value="40"
+                                id="ui-fov-slider"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- <div
+                            class="row userImageLoadedVisible text-center mt-3"
+                          > -->
+                          <!-- <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                              <a
+                                href="#"
+                                id="ui-toggle-userimagehelper"
+                                class="btn btn-outline-secondary"
+                                >Toggle Helper Lines</a
+                              >
+                            </div> -->
+                          <!-- <div class="col-12 col-sm-6">
+                              <a
+                                href="#"
+                                id="ui-takeScreenshot"
+                                class="btn btn-outline-secondary"
+                                >Screenshot</a
+                              >
+                            </div> -->
+                          <!-- </div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="opt-item opt-item-last" id="sec15">
+              <h3>Ihre Konfiguration</h3>
+              <div class="kat-wrapper">
+                <div class="kat-item fullWidth">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-12 col-sm-6 g-0 centerElement">
+                        <p class="w-100 text-start">
+                          Gesamtpreis: <span class="sumText">22.000 €</span>
+                        </p>
+                        <p class="discText text-start w-100">
+                          Sie sparen: 2.768 €
+                        </p>
+                        <!-- <a href="" class="btn btn-primary mt-2">Angebot anfordern</a> -->
+                                        </div>
+                                        <div class="col-12 col-sm-6 mt-3 mt-sm-0 centerElement">
+                                            <!-- <p>Sparen sie bis zu 20%</p> -->
+                                            <a href="./anfrage.html" class="btn btn-primary">Angebot anfordern</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-3">
+                <a
+                  href="./stueckliste.html"
+                  class="w-100 w-sm-50 d-block ps-sm-0 text-center text-sm-start config-link"
+                  >Übersicht</a
+                >
+              </div>
+              <div class=" ">
+                <a
+                  class="w-100 w-sm-50 d-block ps-sm-0 text-center text-sm-start config-link"
+                  >Infomaterial</a
+                >
+              </div>
+            </div>
+
+            <div class="bottomElement">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6 centerElement">
+                    <p class="w-100 text-start ps-3">
+                      Gesamtpreis: <span class="sumText">22.000 €</span>
+                    </p>
+                    <p class="discText text-start ps-3 w-100">
+                      Sie sparen: 2.768 €
+                    </p>
+                    <!-- <a href="" class="btn btn-primary mt-2">Angebot anfordern</a> -->
+                                        </div>
+                                        <div class="col-6 centerElement">
+                                            <!-- <p>Sparen sie bis zu 20%</p> -->
+                                            <a href="./anfrage.html" class="btn btn-primary">Angebot anfordern</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="visual float-end d-none d-lg-block"> -->
+          <div class="visual float-end">
+            <div id="gui_container"></div>
+
+            <div class="visual-topContent">
+              <!-- <div class="bgFade"></div> -->
+              <div class="container-fluid h-100">
+                <div class="row h-100">
+                  <div class="col-4"></div>
+                  <div class="col-4 h-100 Logo-fix">
+                    <div class="logoContainer h-100 Logo-fix"></div>
+                  </div>
+                  <div class="col-4 h-100 hide-on-mobile">
+                    <div class="row">
+                      <div class="col-4 h-100"></div>
+                      <div class="col-8 h-100">
+                        <a
+                          id="tb_indi_plan"
+                          class="btn btn-secondary tb-individual"
+                          href="#"
+                          >Individuelle Planung</a
+                        >
+                        <a
+                          class="btn btn-secondary tb-kontakt"
+                          href="./kontakt.html"
+                          >Kontakt</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="visual-mainContent">
+              <div id="treeLoadingContainer" class="treeLoadingContainer">
+                <div class="preloadFilter"></div>
+                <div class="container">
+                  <div class="row justify-content-center">
+                    <div
+                      class="col-6 offset-3 d-flex flex-column justify-content-center align-items-center vh-100"
+                    >
+                      <div class="loadingText text-center">
+                        <i class="fas fa-circle-notch fa-spin"></i><br />
+                        &nbsp;&nbsp;&nbsp;Lade ...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="threecontainer"></div>
+              <div id="ThreeOverlay">
+                <div class="wrappercontai">
+                  <div class="wrapper5by4">
+                    <div class="innerCont">
+                      <img id="tz_img" src="./img/tz_glatt.svg" alt="" />
+                      <p>1100</p>
+                      <p>1100</p>
+                      <p>1100</p>
+                      <p>1100</p>
+                      <p>1100</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div style=" position: absolute; z-index: 100; left: 500px; bottom: 0; right: 0; height: 50px; background-color: rgba(0, 0, 0, 0.33); color: #fff; display: block; " > -->
+              <!--
+					<button id="Cam1">Cam1</button>
+					<button id="Cam2">Cam2</button>
+					<button id="Farbe1">Farbe1</button>
+					<button id="Farbe2">Farbe2</button>
+					<button id="Farbe3">Farbe3</button>
+					-->
+              <!-- <div style="display: inline-block; width: 400px"> -->
+              <!-- <input type="range" min="200" max="260" value="235" class="slider" id="testHeightSlider" /> -->
+              <!-- </div> -->
+              <!-- </div> -->
+            </div>
+
+            <div
+              id="userImageControlsContainer"
+              class="userImageControlsContainer"
+            >
+              <div class="imgUploadContainer2">
+                <a id="enableUserImageMode" class="icon_imgUpload"></a>
+                                            <a id="disableUserImageMode" class="icon_imgUpload"></a>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="zoomRangeSliderContainer">
+                        <div class="closeMenu_zoomSlider">
+                            <div>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <label>FOV <input class="w-100" type="range" min="30" max="90" step="1" value="40" id="ui-fov-slider"></label>
+                        <label>Bild Zoom <input class="w-100" type="range" min="100" max="200" step="1" value="100" id="ui-userimage-x"></label>
+                    </div>
+
+
+                    <div class="imgUploadContainer">
+                        <div class="closeMenu_imgUpload">
+                            <div>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="iconContDiv">
+                            <span id="enableUserImageMode" class="icon_imgUpload"></span>
+                        </div>
+                        <div class="iconContDiv">
+                            <span id="enableUserImageMode" class="icon_imgUpload"></span>
+                        </div>
+                        <div class="iconContDiv">
+                            <span id="enableUserImageMode" class="icon_imgUpload"></span>
+                        </div>
+                        <div id="enableUserImageZoomSettings" class="iconContDiv">
+                            <span id="enableUserImageMode" class="icon_imgUpload"></span>
+                        </div>
+                         <div class="rangeSliderContainer">
+                            <input type="range" name="" id="">
+                            <input type="range" name="" id="">
+                        </div> -->
+                                </div>
+
+                                <div class="iconContDivainer-other">
+                                    <!-- <div id="enableUserImageMode_cont" class="iconContDiv ">
+                            <span id="enableUserImageMode_Pre" class="icon_imgUpload"></span>
+                        </div> -->
+                                    <div class="iconContDiv">
+                                        <span id="btn_showDimensions" class="icon-size"></span>
+                                    </div>
+                                    <div class="iconContDiv">
+                                        <span id="btn_zoomIn" class="icon-plus"></span>
+                                    </div>
+                                    <div class="iconContDiv">
+                                        <span id="btn_zoomOut" class="icon-minus"></span>
+                                    </div>
+                                    <div class="iconContDiv">
+                                        <span class="icon-outer" id="click-campositionbtn-1"></span>
+                                    </div>
+                                    <div class="iconContDiv">
+                                        <span class="icon-inner" id="click-campositionbtn-2"></span>
+                                    </div>
+
+                                    <!-- <div>
+					<span class="icon-undo"></span>
+				</div> -->
+                                    <!-- <div>
+					<span class="icon-redo"></span>
+				</div> -->
+                                    <!-- <div>
+					<span class="icon-save"></span>
+				</div>
+				<div>
+					<span class="icon-user"></span>
+				</div> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modalOption">
+                            <div class="blackOut"></div>
+                            <div class="modalContent">
+                                <div class="container-fluid">
+                                    <div class="row mt-5">
+                                        <div class="col-12 col-sm-6">
+                                            <div class="visualBox">
+                                                <img id="modalOptionBox_img" src="./img/conf/dacherweiterung.jpg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <h3 id="modalOptionBox_headline" class="mt-3 mt-sm-0">
+                                                Glatter Wandanschluss
+                                            </h3>
+                                            <p id="modalOptionBox_text" class="mt-4">
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam era
+                                            </p>
+                                            <div class="col-12 mt-5">
+                                                <a value="" id="modalOptionBox_btn" class="btn btn-primary">Hinzufügen</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="closeBtn-modal"></div>
+        </div>
+      </div>
+
+      <div class="modalOption2">
+        <div class="blackOut"></div>
+        <div class="modalContent">
+          <div class="container-fluid">
+            <div class="row mt-5">
+              <div class="col-12 col-sm-6">
+                <div class="visualBox">
+                  <img
+                    id="modalOptionBox_img"
+                    src="./img/conf/dacherweiterung.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <h3 id="modalOptionBox_headline" class="mt-3 mt-sm-0">
+                  Ihr Dach ist nicht dabei?
+                </h3>
+                <p id="modalOptionBox_text" class="mt-4">
+                  Ob schwierige Winkel, ein tiefes Dach oder einfach wenig
+                  Platz: Wir finden die Lösung, die genau zu Ihrem Haus passt.
+                  Wir fertigen Terrassendächer maßgeschneidert nach Ihren
+                  Vorstellungen. Lassen Sie sich gerne zu Ihrem individuellen
+                  Bauprojekt von uns beraten.
+                  <a
+                    href="https://www.maderos.de/"
+                    value=""
+                    id="modalOptionBox_btn"
+                    class="btn btn-link"
+                    >Maderos.de</a
+                  >
+                </p>
+                <!-- <div class="col-12 mt-5">
+                  <a
+                    value=""
+                    id="modalOptionBox_btn"
+                    class="btn btn-primary-outline"
+                    >KontaktFormular</a
+                  >
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="closeBtn-modal2"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet"> -->
+
+    <script>
+      // Our Javascript will go here.
+    </script>
+
+    <div class="modal_getAllInfo">
+      <div class="blackOut"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 m-auto">
+            <!-- <div class="logoContainer">
+              <img src="./img/logo.svg" alt="" />
+            </div> -->
+
+            <h2 class="mb-4">Ihre Konfiguration 2938182</h2>
+            <div class="row gx-5 mt-3">
+              <div class="col-12 m-auto">
+                <div class="row">
+                  <div class="col-6 previewImage">
+                    <div class="aspect-container">
+                      <img src="./img/Preview01.png" alt="" srcset="" />
+                    </div>
+                  </div>
+
+                  <div class="col-6 previewImage">
+                    <div class="aspect-container">
+                      <img src="./img/Preview02.png" alt="" srcset="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row SummaryContainer">
+              <div class="col-12">
+                <div class="row listContainer">
+                  <div class="col-7">WDVS Wandanschluss</div>
+                  <div class="col-1 text-end">10</div>
+                  <div class="col-2 text-end">8.700,00 €</div>
+                  <div class="col-2 text-end">80.700,00 €</div>
+                </div>
+                <div class="row listContainer_descrition">
+                  <div class="col-7 mt-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolores, et odio sunt doloribus iure provident vitae quam
+                    molestias nobis dicta libero corporis consequuntur aut cum
+                    eaque suscipit repudiandae ullam eveniet.
+                  </div>
+                </div>
+              </div>
+
+              <!-- <table>
+                <tbody>
+                  <tr>
+                    <th>Artikel Nr.</th>
+                    <th class="td-big">Beschreibung</th>
+                    <th class="textRight">Anzahl</th>
+                    <th class="textRight">Preis</th>
+                    <th class="textRight">Betrag</th>
+                  </tr>
+
+                  <tr>
+                    <td>123456</td>
+                    <td class="td-big">
+                      Solido Terrassenüberdachung 5600 x 3457 mm Rorem ut que
+                      quas ratendis et fugiatis il inimus sant volorpores
+                      doluptures
+                    </td>
+                    <td class="textRight">1</td>
+                    <td class="textRight">8.700,00 €</td>
+                    <td class="textRight">8.700,00 €</td>
+                  </tr>
+
+                  <tr>
+                    <td>123456</td>
+                    <td class="td-big">WDVS Wandanschluss</td>
+                    <td class="textRight">1</td>
+                    <td class="textRight">1.120,00 €</td>
+                    <td class="textRight">1.120,00 €</td>
+                  </tr>
+
+                  <tr>
+                    <td>123456</td>
+                    <td class="td-big">Peddy Shield Stoffbahnen</td>
+                    <td class="textRight">7</td>
+                    <td class="textRight">305,00 €</td>
+                    <td class="textRight">2.135,00 €</td>
+                  </tr>
+
+                  <tr>
+                    <td>123456</td>
+                    <td class="td-big">Lichtsparren a 2 LED Spots</td>
+                    <td class="textRight">7</td>
+                    <td class="textRight">240,00 €</td>
+                    <td class="textRight">1.680,00 €</td>
+                  </tr>
+                  <tr>
+                    <td>123456</td>
+                    <td class="td-big">Alu Dachrinne</td>
+                    <td class="textRight">1</td>
+                    <td class="textRight">745,00 €</td>
+                    <td class="textRight">745,00 €</td>
+                  </tr>
+                  <tr>
+                    <td>123456</td>
+                    <td class="td-big">Bauantrag</td>
+                    <td class="textRight">1</td>
+                    <td class="textRight">700,00 €</td>
+                    <td class="textRight">700,00 €</td>
+                  </tr>
+                  <tr>
+                    <td>123456</td>
+                    <td class="td-big">Lieferung</td>
+                    <td class="textRight">1</td>
+                    <td class="textRight">70,00 €</td>
+                    <td class="textRight">70,00 €</td>
+                  </tr>
+                </tbody>
+              </table> -->
+              <p class="finalSum">Gesamtpreis: 15.150,00 €</p>
+            </div>
+            <div class="infoText mt-5 mb-5">
+              <p>
+                Die Lieferzeit beträgt ca. 3 - 4 Wochen. Alle konfigurierbaren
+                Terrassendächer sind auf eine Schneelast von mindestens sk= 0,65
+                kN/m² (Schneelastzone1) ausgelegt. Bei höheren Schneelastzonen
+                ist ggf. eine statische Anpassung des Dachs notwendig.
+              </p>
+              <p>
+                Die statische Berechnung gilt für den privaten Bereich (0,5
+                KN/m). Der maximale Pfostenabstand darf 1m nicht überschreiten.
+                Dies stellt einen unverbindlichen Konfigurationsvorschlag dar.
+                Je nach örtlichen Begebenheiten oder der Art der
+                Zusammenstellung kann es im Auftragsfall zu Abweichungen kommen.
+              </p>
+              <p>
+                Alle Maße sind ca. Angaben ohne Gewähr. Da es sich um
+                theoretische Werte handelt, müssen bauseits Toleranzen
+                einkalkuliert werden.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

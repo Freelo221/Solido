@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Passwortgeschützter Bereich"
+AuthUserFile /www/htdocs/w010b4ab/aktiv-partner/wwwroot.maderos.de.bs5/mcrkonfigurator/.htpasswd
+Require valid-user

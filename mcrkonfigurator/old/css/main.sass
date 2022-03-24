@@ -1,0 +1,662 @@
+
+
+@font-face 
+	font-family: 'roboto'
+	src: url('../font/Roboto-Regular.eot')
+	src: local('☺'), url('../font/Roboto-Regular.woff') format('woff'), url('../font/Roboto-Regular.ttf') format('truetype'), url('../font/Roboto-Regular.svg') format('svg')
+	font-weight: normal
+	font-style: normal
+
+
+@font-face 
+	font-family: 'roboto-bold'
+	src: url('../font/Roboto-Bold.eot')
+	src: local('☺'), url('../font/Roboto-Bold.woff') format('woff'), url('../font/Roboto-Bold.ttf') format('truetype'), url('fonts/Roboto-Bold.svg') format('svg')
+	font-weight: normal
+	font-style: normal
+
+input
+    &[type="range"]
+        appearance: none
+        &:hover
+            cursor: pointer
+        &::-moz-range-track
+            background: #ecedef
+        &::-webkit-slider-runnable-track 
+            background: #ecedef
+            border-radius: 20px            
+
+        &::-moz-range-progress
+            background: #606b71
+
+
+        &::-moz-range-thumb 
+            background: white
+            border: 3px solid #606b71
+            border-radius: 50%
+
+        &::-webkit-slider-thumb
+            height: 0px
+            width: 0px
+            border: 3px solid #606b71
+            padding: 8px
+            border-radius: 50px
+            background: #fff
+            cursor: pointer
+            -webkit-appearance: none
+            margin-top: 0px
+
+
+html, body
+    padding: 0px
+    margin: 0px
+    overflow: hidden
+    box-sizing: border-box
+    font-family: roboto
+
+canvas
+    width: 80% !important
+    height: auto !important
+    margin: auto !important
+
+
+ul
+    // list-style: none
+    padding: 0px
+    margin: 0px
+    padding-left: 12px
+    color: #606b71
+
+
+p, a
+    font-size: 16px
+    margin: 0px
+    padding: 0px
+    color: #606b71
+    @media screen and ( max-width: 500px )
+        font-size: 14px
+
+.text-bold
+    font-family: roboto-bold
+    // font-weight: bold
+
+h3, .h3 
+    font-size: 20px
+    text-transform: uppercase
+    margin-bottom: 20px
+    color: #606b71
+    @media screen and ( max-width: 500px )
+        font-size: 16px
+
+.list-group-item
+    background: transparent
+    border: none
+    &:hover
+        background: #fff
+        p
+            color: #606b71 !important
+        .menu-icon-ruler
+            background-image: url("../img/ruler_gray.svg") !important
+        .menu-icon-can
+            background-image: url("../img/spray-can_gray.svg") !important
+        .menu-icon-link
+            background-image: url("../img/external-link-alt_gray.svg") !important
+        // background-color: #000
+        // filter: invert(1)
+        // background-color: #666
+
+.blurBG
+    display: block 
+    z-index: 1
+    position: absolute
+    height: 100vh
+    width: 475px
+    background-color: #ecedef
+    bottom: 0
+    // filter: blur(15px)
+    opacity: 0.6
+    left: 140px
+    @media screen and ( max-width: 1100px )
+        display: none !important
+.centerElement
+    display: flex
+    justify-content: center
+    align-items: center
+.rangeSlider, .inputField
+    width: 100%
+    apperance: none
+
+.closeMenu
+    display: block
+    height: 50px
+    width: 50px
+    position: fixed
+    top: 10px
+    left: 605px
+    z-index: 1
+    background: white
+    @media screen and ( max-width: 1100px )
+        display: none !important
+    div
+        display: flex
+        width: 100%
+        height: 100%
+        justify-content: center
+        align-items: center
+        cursor: pointer
+.openMenu
+    display: none
+    height: 50px
+    width: 50px
+    position: absolute
+    top: 10px
+    left: 140px
+    z-index: 1
+    background: white
+    @media screen and ( max-width: 1100px )
+        display: none !important
+    div
+        display: flex
+        width: 100%
+        height: 100%
+        justify-content: center
+        align-items: center
+        cursor: pointer
+
+.btn-primary
+    background: #007e41
+    border-radius: 20px
+    border: 2px solid transparent
+    &:hover
+        background: #fff
+        border: 2px solid #007e41
+        color: #007e41
+
+
+.mainContent
+    // background: #6f6f6f
+    background: linear-gradient(180deg, #f7f9f8, #d0d4d7)
+    height: 100vh
+    width: 100vw
+    .bottomElement
+        position: sticky
+        // bottom: 0
+        bottom: -20px
+        background: #fff
+        // height: 110px
+        height: 90px
+        display: flex
+        align-items: center
+        text-align: center
+        box-shadow: 0px -1px 6px -3px black
+        @media screen and ( max-width: 1100px )
+            bottom: -5px
+    .visual
+        width: calc(100% - 140px)
+        height: 100vh
+        @media screen and ( max-width: 1100px )
+            width: 100% !important
+            height: 30vh !important
+            position: absolute
+            top: 2%
+        .visual-topContent
+            width: 100%
+            height: 15%
+            padding-top: 2%
+            @media screen and ( max-width: 1100px )
+                height: 20%
+                margin-top: 0
+                padding-top: 0px
+                // display: none
+            .hide-on-mobile
+                display: block
+                @media screen and ( max-width: 1100px )
+                    display: none
+        .visual-mainContent
+            width: 100%
+            height: 65%
+            margin-top: 2%
+            // width: calc(100% - 140px)
+            // height: 100vh
+            background-image: url(../img/Layout_Solido_Konfigurator.png)
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            padding: 0
+            @media screen and ( max-width: 1100px )
+                height: 100%
+                // width: 100% !important
+                // height: 30vh !important
+                // position: absolute
+                // top: 0
+                margin-top: 5%
+        .visual-botContent
+            margin-top: 2%
+            width: 100%
+            height: 10%
+            @media screen and ( max-width: 1100px )
+                display: none
+            
+    .menu
+        z-index: 4
+        height: 100vh
+        width: 140px
+        background: #606b71
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        display: flex
+        padding: 100px 0px 100px 0px
+        // gap: 30px
+        position: relative
+        border-radius: 0px
+        @media screen and ( max-width: 1100px )
+            width: 100%
+            background: transparent
+            display: none
+        .active 
+            background-color: #fff !important
+            p
+                color: #606b71 !important
+            .menu-icon-ruler
+                background-image: url("../img/ruler_gray.svg") !important
+            .menu-icon-can
+                background-image: url("../img/spray-can_gray.svg") !important
+            .menu-icon-link
+                background-image: url("../img/external-link-alt_gray.svg") !important
+            .menu-icon-env
+                background-image: url("../img/ico_surround.svg") !important
+        .menuItem
+            height: 140px
+            width: 100%
+            color: white
+            display: flex
+            padding: 0
+            flex-direction: column
+            cursor: pointer
+            @media screen and ( max-width: 1100px )
+                display: none
+            div
+                height: 100%
+                width: 100%
+                display: flex
+                justify-content: center
+                align-items: center
+                flex-direction: column
+                
+                .menu-icon-ruler
+                    background-image: url("../img/ruler.svg") 
+                    background-position: center
+                    background-repeat: no-repeat
+                    background-size: contain
+                    width: 50px
+                    height: 50px
+                    margin-top: 15px
+                    &:hover
+                        background-image: url("../img/ruler_gray.svg") 
+                .menu-icon-can
+                    background-image: url("../img/spray-can.svg") 
+                    background-position: center
+                    background-repeat: no-repeat
+                    background-size: contain
+                    width: 50px
+                    height: 50px
+                    margin-top: 15px
+                    &:hover
+                        background-image: url("../img/spray-can_gray.svg") 
+                .menu-icon-link
+                    background-image: url("../img/external-link-alt.svg") 
+                    background-position: center
+                    background-repeat: no-repeat
+                    background-size: contain
+                    width: 50px
+                    height: 50px
+                    margin-top: 15px
+                    &:hover
+                        background-image: url("../img/external-link-alt_gray.svg") 
+                .menu-icon-env
+                    background-image: url("../img/ico_surround_white.svg") 
+                    background-position: center
+                    background-repeat: no-repeat
+                    background-size: contain
+                    width: 50px
+                    height: 50px
+                    margin-top: 15px
+                    &:hover
+                        background-image: url("../img/ico_surround.svg") 
+                img
+                    object-fit: contain
+                    object-position: center
+                    width: 40%
+                    height: auto
+                    // margin: auto
+                    margin-top: 15px
+                p
+                    text-transform: uppercase
+                    text-align: center
+                    font-weight: bold
+                    margin: 0
+                    padding: 0
+                    color: white
+                    margin-top: 10px
+    .menu-option
+        scroll-behavior: smooth
+        z-index: 2
+        color: black
+        display: block
+        position: absolute
+        width: 475px
+        height: 100%
+        left: 140px
+        overflow-y: scroll
+        // background: #eaeaea
+        padding: 10px       
+        scrollbar-width: none  
+        @media screen and ( max-width: 1100px )
+            display: block !important
+            width: 100%
+            left: 0 !important
+            position: absolute
+            padding: 10px
+            padding-bottom: 0px
+            // height: 70vh
+            // top: 20%
+            height: 55vh
+            top: 45%
+            border-top: 10px solid #ecedef
+        .opt-item
+            background: white
+            width: 100%
+            height: auto
+            padding: 30px
+            // border: 1px solid 
+            margin-bottom: 10px
+            .kat-wrapper
+                display: flex
+                width: 100%
+                gap: 20px
+                justify-content: center
+                // align-items: center
+                flex-wrap: wrap
+                .kat-item
+                    flex: 1
+                    width: 100%
+                    min-width: 45%
+                    &:hover
+                        cursor: pointer
+                    &:hover > .kat-visual
+                        box-shadow: 3px 3px 5px -2px rgba(0,0,0,0.5)
+
+                    .kat-visual
+                        padding-bottom: 63.15%
+                        background-color: #cecfcf
+                        width: 100%
+                        position: relative
+                        cursor: pointer
+                        transition: 0.2s
+                        overflow: hidden
+                        img
+                            height: 100%
+                            width: 100%
+                            // object-fit: contain
+                            position: absolute
+                        .kat-select
+                            display: none
+                            position: absolute
+                            top: 0
+                            right: 0
+                            height: 30px
+                            width: 30px
+                            border-left: 2px solid #fff
+                            border-bottom: 2px solid #fff
+                            background-image: url("../img/check_gray.svg")
+                            background-position: center
+                            background-size: 65% 65%
+                            background-repeat: no-repeat
+                            background-color: #f3f4f4
+                        .isActive
+                            display: block
+                    .heading
+                        margin-top: 5px
+                    p
+                        span
+                            margin-left: 5px
+                    // .rangeSlider
+                    //     width: 100%
+                    //     position: relative
+                    //     bottom: -50%
+                .kat-item-3col
+                    min-width: 29%
+                    max-width: 30%
+                    .kat-visual
+                        padding-bottom: 100%
+
+.transform-numbers
+    border: 2px solid #606b71   
+    color: #606b71
+    text-align: right
+
+
+.color1
+    background-color: #F1F0EA !important
+.color2
+    background-color: #A1A1A0 !important
+.color3
+    background-color: #383E42 !important
+
+.iconContainer
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    // gap: 20px
+    
+    div
+        padding: 10px
+        background-color: #fff 
+    
+        &:not(.activeBtn)
+            background: #ecedef
+        &:first-child
+            border-radius: 8px 0px 0px 8px
+        &:last-child
+            border-radius: 0px 8px 8px 0px
+        &:hover
+            background: #606b71
+        
+        &:hover > .icon-save
+            background-image: url("../img/icon_td_innen_white.svg")
+        &:hover > .icon-user
+            background-image: url("../img/icon_td_aussen_white.svg")
+    span
+        height: 35px
+        width: 35px
+        display: block
+        cursor: pointer
+        
+    .icon-undo
+        background-image: url("../img/undo_gray.svg")
+        background-position: center
+        background-repeat: no-repeat
+        background-size: contain
+    .icon-redo
+        background-image: url("../img/redo_gray.svg")
+        background-position: center
+        background-repeat: no-repeat
+        background-size: contain
+    .icon-save
+        background-image: url("../img/icon_td_innen.svg")
+        background-position: center
+        background-repeat: no-repeat
+        background-size: contain
+            
+    .icon-user
+        background-image: url("../img/icon_td_aussen.svg")
+        background-position: center
+        background-repeat: no-repeat
+        background-size: contain
+            
+.logoContainer
+    background-image: url("../img/logo.svg")
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
+    &:hover
+        cursor: pointer
+
+.iconContainer-other
+    height: fit-content
+    // padding: 2px
+    // padding: 15px 20px 15px 20px
+    border-radius: 8px
+    width: fit-content
+    display: flex
+    justify-content: center
+    align-items: center
+    background: #fff
+    div
+        height: 100%
+        width: 100%
+        padding: 15px 20px
+        cursor: pointer
+        background: white
+        &:first-child
+            border-radius: 8px 0px 0px 8px
+        &:last-child
+            border-radius: 0px 8px 8px 0px
+        &:hover
+            background: #606b71
+        &:hover > .icon-undo
+            background-image: url("../img/search_white.svg")
+        &:hover > .icon-redo
+            background-image: url("../img/sync_white.svg")
+        &:hover > .icon-save
+            background-image: url("../img/save_white.svg")
+        &:hover > .icon-user
+            background-image: url("../img/info-square_white.svg")
+            
+        span
+            height: 30px
+            width: 30px
+            display: block
+            
+            
+        .icon-undo
+            background-image: url("../img/search_gray.svg")
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            
+
+        .icon-redo
+            background-image: url("../img/sync_gray.svg")
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+
+        .icon-save
+            background-image: url("../img/save_gray.svg")
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+
+            
+        .icon-user
+            background-image: url("../img/info-square_gray.svg")
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            
+    .logoContainer
+        background-image: url("../img/logo.png")
+        background-position: center
+        background-repeat: no-repeat
+        background-size: contain
+
+
+.info
+    height: 20px
+    width: 20px
+    display: inline-block
+    background-image: url("../img/info-circle_gray.svg")
+    transform: translateY(4px)
+    background-position: center
+    background-size: contain
+    background-repeat: no-repeat
+    margin-left: 10px
+
+
+.Logo-fix
+    @media screen and ( max-width: 1100px )
+        width: 100%
+
+.config-link
+    color: #606b71
+    cursor: pointer
+    &:hover
+        color: #606b71
+
+.tb-individual
+    float: left !important
+    border-radius: 40px
+    // height: 50px
+    border: 2px solid #606b71
+    background: transparent
+    padding: 13px 20px
+    text-align: center
+    outline: none
+    color: #606b71
+    &:hover
+        background: #606060 !important
+
+
+
+.modalOption
+    display: none
+    position: absolute
+    height: 100%
+    width: 100%
+    z-index: 1000
+    .blackOut
+        background: rgba(0,0,0,0.3)
+        height: 100%
+        width: 100%
+    .modalContent
+        height: 85%
+        width: 70%
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        margin: auto
+        background: white
+        padding: 30px
+        @media screen and ( max-width: 1100px )
+            width: 90%
+        .visualBox
+            width: 100%
+            height: 100%
+            padding-bottom: 63.18%
+            background-color: #606b71
+            overflow: hidden
+            position: relative
+            img
+                position: absolute
+                width: 100%
+                height: 100%
+
+        .closeBtn-modal
+            position: absolute
+            top: 18px
+            right: 18px
+            height: 20px
+            width: 20px
+            background-image: url(../img/window-close.svg)
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center
+            cursor: pointer
+
+.grayScale
+    filter: grayScale(0.6)

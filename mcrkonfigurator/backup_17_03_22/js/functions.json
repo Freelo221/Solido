@@ -1,0 +1,69 @@
+{
+    "SwitchColor": {
+        "name": "SwitchColor",
+        "param": "hex",
+        "text": "Ändert Dachfarbe",
+        "functionCall": "main.js -> Action_SwitchColor(colorHex)"
+    },
+    "ChangePoleState": {
+        "name": "ChangePoleState",
+        "param": "eingerückt | bündig",
+        "text": "Ändert Pfosten Position",
+        "functionCall": "main.js -> Action_ChangePoleState()"
+    },
+    "functionCall": "main.js -> Action_ChangePoleState(_state)",
+    "ChangeOverhangState": {
+        "name": "ChangeOverhangState",
+        "param": "-",
+        "text": "Schaltet Glasdachüberstand ein|aus",
+        "functionCall": "main.js -> Action_RoofOverhang()"
+    },
+    "ChangeRoofExtensionState": {
+        "name": "ChangeRoofExtensionState",
+        "param": "-",
+        "text": "Schaltet Glasdachüberstand ein|aus",
+        "functionCall": "main.js -> Action_RoofExtension()"
+    },
+    "ChangeFassade": {
+        "name": "ChangeFassade",
+        "param": "neutral | KlinkerGrau | KlinkerRot | PutzWeiß | PutzGrau",
+        "text": "Ändert Textur der Fassade",
+        "functionCall": "main.js -> Action_SwitchFassde(_state)"
+    },
+    "ChangeFloor": {
+        "name": "ChangeFloor",
+        "param": "DielenHell | DielenDunkel | FliesenGrau",
+        "text": "Ändert Terrassen Boden Textur",
+        "functionCall": "main.js -> Action_FloorColor(_state)"
+    },
+    "ChangeRin": {
+        "name": "ChangeRin",
+        "param": "0xffffff | 0x260a05 | 0x50505 | alu",
+        "text": "Ändert Regenrinne Weiß/Braun/Anthrazit/Alu",
+        "functionCall": "main.js -> Action_ChangeRinColor(_color)"
+    },
+    "ChangeRoofGlas": {
+        "name": "ChangeRoofGlas",
+        "param": "fest | schiebe",
+        "text": "Ändert Dachverglasung",
+        "functionCall": "main.js -> Action_ChangeRoofGlas(_state)"
+    },
+    "ChangeLight": {
+        "name": "ChangeLight",
+        "param": "morgen | mittag | abend",
+        "text": "Ändert globale beleuchtung",
+        "functionCall": "main.js -> Action_ChangeLight(_state)"
+    },
+    "ChangeStoffbahn": {
+        "name": "ChangeStoffbahn",
+        "param": "-",
+        "text": "Schaltet Stoffbahnen ein|aus",
+        "functionCall": "main.js -> Action_StoffbahnenToggle()"
+    },
+    "ChangeRoofMaterial": {
+        "name": "ChangeRoofMaterial",
+        "param": "gebuerstet | glatt",
+        "text": "Ändert Textur des Terassendachs",
+        "functionCall": "main.js -> Action_SwitchRoofMaterial(state)"
+    }
+}
