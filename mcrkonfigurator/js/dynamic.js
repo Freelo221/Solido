@@ -29,14 +29,14 @@ import {
 
 
 } from "./main.js";
-
+import { CreateSummary } from "./summary.js"
 import { MenuElement, ParentElement, MainMenuElement } from "./ElementClasses.js";
 
 function readTextFile(file) {
     var allText;
     var rawFile = new XMLHttpRequest(); // XMLHttpRequest (often abbreviated as XHR) is a browser object accessible in JavaScript that provides data in XML, JSON, but also HTML format, or even a simple text using HTTP requests.
     rawFile.open("GET", file, false); // open with method GET the file with the link file ,  false (synchronous)
-    rawFile.onreadystatechange = function() {
+    rawFile.onreadystatechange = function () {
         if (rawFile.readyState === 4) // readyState = 4: request finished and response is ready
         {
             if (rawFile.status === 200) // status 200: "OK"
@@ -71,7 +71,7 @@ var gHeight;
 var gWidth;
 
 
-var maxWidth, maxDepth, minWidth, minDepth, curWidth, curDepth
+export var maxWidth, maxDepth, minWidth, minDepth, curWidth, curDepth
 
 
 function checkFlag() {
@@ -94,7 +94,7 @@ let UserImagePreButton,
     UserImageZoomContainerStateChanger,
     userImage_isUploaded = false;
 
-$(document).ready(function() {
+$(document).ready(function () {
 
 
 
@@ -105,6 +105,40 @@ $(document).ready(function() {
     document.querySelector("#tb_indi_plan").addEventListener("click", () => {
         // preventDefault();
         document.querySelector(".modalOption2").style.display = "block";
+    })
+    document.querySelector(".closeBtn-summaryContainer").addEventListener("click", () => {
+        // preventDefault();
+        document.querySelector(".modal_getAllInfo").style.display = "none";
+    })
+    document.querySelector(".config-link").addEventListener("click", () => {
+        // preventDefault();
+        document.querySelector(".modal_getAllInfo").style.display = "block";
+        CreateConfiguration();
+    })
+
+
+    document.querySelector(".closeBtn-contactContainer").addEventListener("click", () => {
+        // preventDefault();
+        document.querySelector(".modal_contact").style.display = "none";
+    })
+    document.querySelector(".tb-kontakt").addEventListener("click", () => {
+        // preventDefault();
+        document.querySelector(".modal_contact").style.display = "block";
+        CreateConfiguration();
+    })
+
+    document.querySelector(".closeBtn-anfrageContainer").addEventListener("click", () => {
+        // preventDefault();
+        document.querySelector(".modal_anfrage").style.display = "none";
+    })
+    document.querySelector(".btn_angebotAnfordernSmall").addEventListener("click", () => {
+        // preventDefault();
+        document.querySelector(".modal_anfrage").style.display = "block";
+    })
+    document.querySelector(".btn_angebotAnfordernBig").addEventListener("click", () => {
+        // preventDefault();
+        document.querySelector(".modal_anfrage").style.display = "block";
+        CreateConfiguration();
     })
 
 
@@ -125,10 +159,10 @@ $(document).ready(function() {
     let tempBElem = document.querySelector(".bottomElement");
     let tempBElem2 = document.querySelector("#sec15");
 
-    $(".icon-save").click(function() {
+    $(".icon-save").click(function () {
         SaveConfiguration();
     })
-    $(".icon-redo").click(function() {
+    $(".icon-redo").click(function () {
         LoadConfiguration();
     })
 
@@ -149,10 +183,10 @@ $(document).ready(function() {
     obj.optionItems.forEach(element2 => {
         AddNewOptionItem(element2);
         element2.childs.forEach(element3 => {
-                // console.log(element3.priceTable);
-                AddNewElementItem(element3, element2);
-            })
-            // CalcPrice();
+            // console.log(element3.priceTable);
+            AddNewElementItem(element3, element2);
+        })
+        // CalcPrice();
     });
 
     // obj.Optionitems.forEach(element1 => {
@@ -181,7 +215,7 @@ $(document).ready(function() {
 
     // CheckConfiguration() ? LoadConfiguration() : null;
     console.log(ElementMapper);
-    CreateConfiguration()
+    // CreateConfiguration()
     test.ShowHeightSlider(false);
     UserImagePreButton = document.querySelector("#imageUploaderPre");
     // UserImagePreButton = document.querySelector("#enableUserImageMode_Pre")
@@ -201,12 +235,12 @@ $(document).ready(function() {
         document.querySelector("#enableUserImageMode").click();
     })
     document.querySelector("#imagedelete").addEventListener("click", () => {
-            document.querySelector("#disableUserImageMode").click();
-        })
-        // UserImagePreButton.addEventListener('click', (e) => {
-        //     console.log(e.target);
-        //     console.log("first");
-        //     if (!userImage_isUploaded) {
+        document.querySelector("#disableUserImageMode").click();
+    })
+    // UserImagePreButton.addEventListener('click', (e) => {
+    //     console.log(e.target);
+    //     console.log("first");
+    //     if (!userImage_isUploaded) {
 
     //         document.querySelector("#enableUserImageMode").click();
     //         //switch class
@@ -387,7 +421,7 @@ function AddNewElementItem(item, parent) {
     } else if (item.type == "x-LED") {
         let container = CreateCustomLedBlock(item, OptionMap.get(parent.name));
         ElementItem.element = container
-            // OptionMap.get(parent.name).appendChild(container);
+        // OptionMap.get(parent.name).appendChild(container);
         return;
     }
 
@@ -524,7 +558,7 @@ function AddNewElementItem(item, parent) {
             let ttWidth = ttElem.offsetWidth;
 
             let pos = GetScreenCordinates(e.target)
-                // + full widht/2   +ownwidth/2
+            // + full widht/2   +ownwidth/2
             pos.left += ((targetWidth / 2) - (ttWidth / 2));
             pos.top -= ttElem.offsetHeight;
 
@@ -578,6 +612,7 @@ function AddNewElementItem(item, parent) {
             if (!ElementItem.isSelected) {
                 ActiveExtraPrice = !ActiveExtraPrice;
                 SetPoleCount()
+
             }
         }
         console.log(ElementItem)
@@ -867,7 +902,7 @@ function CreateCustomLedBlock(item, parent) {
                 let ttWidth = ttElem.offsetWidth;
 
                 let pos = GetScreenCordinates(e.target)
-                    // + full widht/2   +ownwidth/2
+                // + full widht/2   +ownwidth/2
                 pos.left += ((targetWidth / 2) - (ttWidth / 2));
                 pos.top -= ttElem.offsetHeight;
 
@@ -962,7 +997,6 @@ function CreateCustomLedBlock(item, parent) {
     let bottomSlider = document.createElement("input")
     bottomSlider.classList.add("rangeSlider");
     bottomSlider.addEventListener("change", (e) => {
-        console.log("asdsadsadsadsadhsadsadsad")
         if (!checkElement.classList.contains("isActive")) {
             visualElement.click();
         }
@@ -971,6 +1005,8 @@ function CreateCustomLedBlock(item, parent) {
         containerInfo3.innerText = (e.target.value * item.price) + " €";
         checkElement.setAttribute("price", `${(e.target.value * item.price)}`);
         checkElement.setAttribute("disc", `0`);
+        item.currentPrice = e.target.value * item.price
+        item.currentCount = LEDCount
         configuration[2] = bottomSlider.value;
         console.log(configuration[2])
         CalcPrice();
@@ -1019,8 +1055,8 @@ function countProperties(obj) {
 const SwitchSurfaceColor = (_color) => {
     // console.log("switch other color to" + _color);
     let elems = document.querySelectorAll(".change-by-color")
-        // console.log(elems)
-        // let hexColor = "#" + _color.substring(2);
+    // console.log(elems)
+    // let hexColor = "#" + _color.substring(2);
     elems.forEach((e) => {
         //./img/conf/oberflaeche-gebuerstet.jpg
         let src = e.getAttribute("src")
@@ -1037,7 +1073,7 @@ const SwitchSurfaceColor = (_color) => {
         let finalPath = `${filePath}${fileName}_${_color}${fileType}`
 
         e.setAttribute("src", finalPath)
-            // e.parentNode.style.background = hexColor
+        // e.parentNode.style.background = hexColor
     })
 }
 
@@ -1117,13 +1153,15 @@ var ActiveExtraPrice = false;
 
 var extraPoleCount = 0;
 //Calc Stuff
+
 function SetNewPrices() {
-    // console.log("asdasdasd")
     let elems = document.querySelectorAll(".kat-item");
-    // console.log(elems)
     elems.forEach((e) => {
         if (e.getAttribute("id") != "") {
             let curElem = ElementMapper.get(e.getAttribute("id"));
+            // if (curElem.currentCount)
+
+
             if (document.querySelector("#Pfosten-2")) {
                 let tempElem = document.querySelector("#Pfosten-2 .kat-item-col1 p")
                 let info = document.createElement("span");
@@ -1137,8 +1175,18 @@ function SetNewPrices() {
                 } else {
                     tempElem.innerText = `2 ${tempElem.innerText.split(" ").pop()}`
                     tempElem.append(info)
-
                 }
+
+                if (e.getAttribute("id") == "Pfosten-2") {
+                    if (ExtraPoleEnabled) {
+                        curElem.currentCount = extraPoleCount + 2
+                    }
+                    else {
+                        curElem.currentCount = 2
+
+                    }
+                }
+
             }
             // PriceTableArray[0][2959][0][4020]
             let ExtraPrice = 0;
@@ -1155,7 +1203,7 @@ function SetNewPrices() {
                         extraPrice = 0;
                     }
 
-                } catch {}
+                } catch { }
                 try {
 
                     let price = curElem.priceTable[0][height][0][width];
@@ -1167,17 +1215,28 @@ function SetNewPrices() {
                     curElem.priceElement.innerText = price + " €"
                     curElem.element.querySelector(".kat-visual").querySelector(".kat-select").setAttribute("price", price)
                     curElem.element.querySelector(".kat-visual").querySelector(".kat-select").setAttribute("disc", disc)
+                    if (ExtraPrice > 0) {
+                        curElem.currentPrice = extraPrice
+                    }
+                    else {
+                        curElem.currentPrice = price
+                    }
+                    curElem.currentDiscount = disc
                 } catch {
                     let price = curElem.price;
                     // console.log(price);
                     // console.log(ExtraPrice)
                     ActiveExtraPrice ? price = parseFloat(price) + parseFloat(ExtraPrice) : "";
                     curElem.priceElement.innerText = price + " €";
+                    curElem.currentPrice = price
                     curElem.element.querySelector(".kat-visual").querySelector(".kat-select").setAttribute("price", price)
                     try {
                         let disc = curElem.discountTable[0][height][0][width];
+                        curElem.currentDiscount = disc
                         curElem.element.querySelector(".kat-visual").querySelector(".kat-select").setAttribute("disc", disc)
-                    } catch {}
+                    } catch {
+                        curElem.currentDiscount = 0
+                    }
                 }
             }
             // console.log(ActiveExtraPrice)
@@ -1207,7 +1266,7 @@ function CalcPrice() {
 
     let priceSum = 0;
     let discountSum = 0;
-    $(elems).each(function(i, obj) {
+    $(elems).each(function (i, obj) {
         if ($(obj).hasClass("isActive")) {
             let x = parseInt($(obj).attr("price"));
             let y = parseInt($(obj).attr("disc"));
@@ -1231,7 +1290,7 @@ function CalcPrice() {
 }
 
 
-function GetConstPrice(width, height) {
+export function GetConstPrice(width, height) {
 
     let sliderPrices = ElementMapper.get("Slider-0").priceTable;
     // let sliderDiscounts = ElementMapper.get("Slider-0").discountTable;
@@ -1356,9 +1415,9 @@ function updateLedOption() {
 //     }
 // })
 
-const GetElementContentHeight = function(elem) { //add height of all child elements
+const GetElementContentHeight = function (elem) { //add height of all child elements
     var cc = 0;
-    $(elem).children().each(function() {
+    $(elem).children().each(function () {
         cc += $(this).outerHeight();
     });
     return cc;
@@ -1366,7 +1425,7 @@ const GetElementContentHeight = function(elem) { //add height of all child eleme
 let camPos = "normal"
 
 
-$(".menu-option").on('scroll', (function() {
+$(".menu-option").on('scroll', (function () {
     var OptionHeight = GetElementContentHeight($(this));
     // $(this).height())
     // console.log(GetElementContentHeight($(this)));
@@ -1436,7 +1495,7 @@ $(".menu-option").on('scroll', (function() {
 }));
 
 
-var UpdateActiveMenu = function(i) {
+var UpdateActiveMenu = function (i) {
     let array = Array.from(siteMenuMap, ([name, value]) => ({ name, value }));
     array.forEach((item, index) => {
         item.value.classList.remove("active");
@@ -1459,7 +1518,7 @@ function RecalcMenu() {
 }
 
 
-$(window).resize(function() {
+$(window).resize(function () {
     RecalcMenu();
 })
 
@@ -1490,9 +1549,9 @@ function GetCurrentConfiguration(elem) {
 }
 
 function SaveConfiguration() {
-    navigator.clipboard.writeText(configuration.toString()).then(function() {
+    navigator.clipboard.writeText(configuration.toString()).then(function () {
         alert('Copying to clipboard was successful!');
-    }, function(err) {
+    }, function (err) {
         console.error('Could not copy text: ', err);
     });
     console.log(desiredWidthElements)
@@ -1500,7 +1559,7 @@ function SaveConfiguration() {
 
 export function LoadConfiguration(arr) {
 
-    if (typeof(arr) !== 'undefined') {
+    if (typeof (arr) !== 'undefined') {
         let Elements = [];
         arr.forEach((e, index) => {
             if (index === 0) {
@@ -1508,7 +1567,7 @@ export function LoadConfiguration(arr) {
                 let x = Math.floor(parseFloat(e) / 790);
                 console.log(x)
                 UpdateDWEExtern(x)
-                    // desiredWidthElements = 5;
+                // desiredWidthElements = 5;
                 updateLedOption();
                 console.log("width")
                 CalcPrice();
@@ -1583,7 +1642,7 @@ function AddToolTipToElement(_elem, _text) {
         let ttWidth = ttElem.offsetWidth;
 
         let pos = GetScreenCordinates(e.target)
-            // + full widht/2   +ownwidth/2
+        // + full widht/2   +ownwidth/2
         pos.left += ((targetWidth / 2) - (ttWidth / 2));
         pos.top -= ttElem.offsetHeight;
 
@@ -1620,11 +1679,13 @@ const Action_ToggleVersand = (_state) => {
 }
 
 
-let configuration_string = []; //send via post on click - safe to... db?
+let configuration_Elements = []; //send via post on click - safe to... db?
+let configuration_Container = []
 const CreateConfiguration = () => {
 
 
-    configuration_string = []
+    configuration_Elements = []
+    configuration_Container = []
 
 
     const arr = [...ElementMapper].map(([name, value]) => ({ name, value }));
@@ -1638,11 +1699,11 @@ const CreateConfiguration = () => {
             FindElementByNode(xqwe).then((node) => {
                 if (node.classList.contains("Slider-0")) {
                     console.log("Dimensional slider")
-                        //save slider data and return
+                    //save slider data and return
                 }
                 if (node.classList.contains("Beleuchtung-0")) {
                     console.log("LedBlock")
-                        //save Led data and return
+                    //save Led data and return
                 }
 
                 let node2 = node.querySelector(".kat-select.isActive")
@@ -1654,7 +1715,8 @@ const CreateConfiguration = () => {
                 }
 
                 if (e.isSelected) {
-                    configuration_string.push(node2.id)
+                    configuration_Elements.push(node2.id)
+                    configuration_Container.push(node2.parentNode.parentNode.id)
                     resolve()
                 } else {
                     resolve()
@@ -1670,7 +1732,8 @@ const CreateConfiguration = () => {
     })
     Promise.all(requests).then(() => {
         //code after all promises are resolved
-        console.log(configuration_string)
+        console.log(configuration_Container)
+        CreateSummary(ElementMapper, configuration_Container)
     });
 }
 

@@ -26,18 +26,18 @@ try {
     window.addEventListener("test", null,
         Object.defineProperty({},
             "passive", {
-                get: function() { passiveIfSupported = { passive: true }; }
-            }
+            get: function () { passiveIfSupported = { passive: true }; }
+        }
         )
     );
-} catch (err) {}
+} catch (err) { }
 
 
-var mixcolor = function(color_1, color_2, weight) {
+var mixcolor = function (color_1, color_2, weight) {
     function d2h(d) { return d.toString(16); } // convert a decimal value to hex
     function h2d(h) { return parseInt(h, 16); } // convert a hex value to decimal 
 
-    weight = (typeof(weight) !== 'undefined') ? weight : 50; // set the weight to 50%, if that argument is omitted
+    weight = (typeof (weight) !== 'undefined') ? weight : 50; // set the weight to 50%, if that argument is omitted
 
     var color = "";
 
@@ -652,7 +652,7 @@ function init() {
 
 
 
-    const getCubemapTextureUrls_helper_genCubeUrls = function(prefix, postfix) {
+    const getCubemapTextureUrls_helper_genCubeUrls = function (prefix, postfix) {
         return [
             prefix + 'px' + postfix, prefix + 'nx' + postfix,
             prefix + 'py' + postfix, prefix + 'ny' + postfix,
@@ -666,7 +666,7 @@ function init() {
     // const getCubemapTextureUrls = getCubemapTextureUrls_helper_genCubeUrls('textures/maderos/Park2/', '.jpg');
     // const getCubemapTextureUrls = getCubemapTextureUrls_helper_genCubeUrls('textures/maderos/wasteland_clouds/', '.jpg');
     const getCubemapTextureUrls = getCubemapTextureUrls_helper_genCubeUrls('textures/maderos/kloofendal/', '.jpg');
-    sceneEnvCubemapTexture = new THREE.CubeTextureLoader().load(getCubemapTextureUrls, function(cubeTexture) {
+    sceneEnvCubemapTexture = new THREE.CubeTextureLoader().load(getCubemapTextureUrls, function (cubeTexture) {
         cubeTexture.encoding = THREE.sRGBEncoding;
         if (highQuality_lightprobe) {
             lightProbe.copy(LightProbeGenerator.fromCubeTexture(cubeTexture));
@@ -711,7 +711,7 @@ function init() {
         Promise.all(e).then(() => {
             EnvObjectsAll.forEach((e) => {
                 console.log(scene.add(e))
-                    // console.log(e)
+                // console.log(e)
             })
             threecontainer.style.opacity = 1; // loadingscreen done
             threecontainer.style.filter = "blur(0)"; // loadingscreen done
@@ -726,7 +726,7 @@ function init() {
             console.log("#treeLoadingContainer animation start");
             $("#treeLoadingContainer").animate({
                 opacity: 0.0,
-            }, 100, function() {
+            }, 100, function () {
                 // Animation complete.
                 console.log("#treeLoadingContainer animation done");
                 $("#treeLoadingContainer").hide();
@@ -816,7 +816,7 @@ function init() {
                 'Beauty': SSAOPass.OUTPUT.Beauty,
                 'Depth': SSAOPass.OUTPUT.Depth,
                 'Normal': SSAOPass.OUTPUT.Normal
-            }).onChange(function(value) {
+            }).onChange(function (value) {
 
                 ssaoPass.output = parseInt(value);
 
@@ -834,12 +834,12 @@ function init() {
 
 
         if (highQuality_lightprobe) {
-            folderdirectionallight.add(API, 'lightProbeIntensity', 0, 1, 0.02).onChange(function() {
+            folderdirectionallight.add(API, 'lightProbeIntensity', 0, 1, 0.02).onChange(function () {
                 lightProbe.intensity = API.lightProbeIntensity;
                 render();
             });
         }
-        folderdirectionallight.add(API, 'envMapIntensity', 0, 2, 0.02).onChange(function() {
+        folderdirectionallight.add(API, 'envMapIntensity', 0, 2, 0.02).onChange(function () {
             // directionalLight.material.envMapIntensity = API.envMapIntensity; 
             /*
             envMapIntensity
@@ -873,7 +873,7 @@ function init() {
             // materialSkysphere.needsUpdate = true;
             render();
         });
-        folderdirectionallight.add(API, 'envMapIntensityTd', 0, 2, 0.02).onChange(function() {
+        folderdirectionallight.add(API, 'envMapIntensityTd', 0, 2, 0.02).onChange(function () {
             materialTerrassendach.envMapIntensity = API.envMapIntensityTd;
             materialBoden.envMapIntensity = API.envMapIntensity;
             materialGrass.envMapIntensity = API.envMapIntensity;
@@ -898,7 +898,7 @@ function init() {
             materialEmissive.envMapIntensity = API.envMapIntensity;
             render();
         });
-        folderdirectionallight.add(API, 'envMapIntensityMetal', 0, 2, 0.02).onChange(function() {
+        folderdirectionallight.add(API, 'envMapIntensityMetal', 0, 2, 0.02).onChange(function () {
             materialTerrassendach.envMapIntensity = API.envMapIntensityTd;
             materialBoden.envMapIntensity = API.envMapIntensity;
             materialGrass.envMapIntensity = API.envMapIntensity;
@@ -923,7 +923,7 @@ function init() {
             materialEmissive.envMapIntensity = API.envMapIntensity;
             render();
         });
-        folderdirectionallight.add(API, 'envMapIntensityGlas', 0, 2, 0.02).onChange(function() {
+        folderdirectionallight.add(API, 'envMapIntensityGlas', 0, 2, 0.02).onChange(function () {
             materialTerrassendach.envMapIntensity = API.envMapIntensityTd;
             materialBoden.envMapIntensity = API.envMapIntensity;
             materialGrass.envMapIntensity = API.envMapIntensity;
@@ -950,14 +950,14 @@ function init() {
         });
 
 
-        folderdirectionallight.add(API, 'directionalLightIntensity', 0, 2, 0.02).onChange(function() {
+        folderdirectionallight.add(API, 'directionalLightIntensity', 0, 2, 0.02).onChange(function () {
             directionalLight.intensity = API.directionalLightIntensity;
             render();
         });
 
 
 
-        folderdirectionallight.add(API, 'directionalLightHeight', 10, 100, 1).onChange(function() {
+        folderdirectionallight.add(API, 'directionalLightHeight', 10, 100, 1).onChange(function () {
             ////console.log("rot: " + API.directionalLightRotation + " dist: " + API.directionalLightDistance);
             var tempPositionToRotate = [API.directionalLightDistance, API.directionalLightHeight, API.directionalLightDistance];
             var tempResult = rotateAroundY(API.directionalLightRotation, tempPositionToRotate);
@@ -968,7 +968,7 @@ function init() {
             directionalLight.position.z = tempResult[2];
             render();
         });
-        folderdirectionallight.add(API, 'directionalLightDistance', 10, 500, 1).onChange(function() {
+        folderdirectionallight.add(API, 'directionalLightDistance', 10, 500, 1).onChange(function () {
             ////console.log("rot: " + API.directionalLightRotation + " dist: " + API.directionalLightDistance);
             var tempPositionToRotate = [API.directionalLightDistance, API.directionalLightHeight, API.directionalLightDistance];
             var tempResult = rotateAroundY(API.directionalLightRotation, tempPositionToRotate);
@@ -979,7 +979,7 @@ function init() {
             directionalLight.position.z = tempResult[2];
             render();
         });
-        folderdirectionallight.add(API, 'directionalLightRotation', 0, 6.5, 0.001).onChange(function() {
+        folderdirectionallight.add(API, 'directionalLightRotation', 0, 6.5, 0.001).onChange(function () {
             ////console.log("rot: " + API.directionalLightRotation + " dist: " + API.directionalLightDistance);
             var tempPositionToRotate = [API.directionalLightDistance, API.directionalLightHeight, API.directionalLightDistance];
             var tempResult = rotateAroundY(API.directionalLightRotation, tempPositionToRotate);
@@ -992,11 +992,11 @@ function init() {
         });
 
 
-        folderdirectionallight.addColor(API, 'directionalLightColor').onChange(function(val) {
+        folderdirectionallight.addColor(API, 'directionalLightColor').onChange(function (val) {
             directionalLight.color.setHex(val);
             render();
         });
-        folderdirectionallight.add(API, 'gammaFactor', 0, 10, 0.1).onChange(function(val) {
+        folderdirectionallight.add(API, 'gammaFactor', 0, 10, 0.1).onChange(function (val) {
             renderer.gammaFactor = API.gammaFactor;
             render();
         });
@@ -1059,26 +1059,26 @@ function init() {
         if (highQuality_pointlights) {
 
             const flight1 = gui.addFolder('light1')
-            flight1.add(light1.position, 'x', -100, 100).listen().onChange(function() {
+            flight1.add(light1.position, 'x', -100, 100).listen().onChange(function () {
                 ////console.log(light1.position.x)
             });
-            flight1.add(light1.position, 'y', -100, 100).listen().onChange(function() {
+            flight1.add(light1.position, 'y', -100, 100).listen().onChange(function () {
                 ////console.log(light1.position.y)
             });
-            flight1.add(light1.position, 'z', -100, 100).listen().onChange(function() {
+            flight1.add(light1.position, 'z', -100, 100).listen().onChange(function () {
                 ////console.log(light1.position.z)
             })
-            flight1.add(API, 'light1intensity', 0, 5, 0.01).onChange(function() {
+            flight1.add(API, 'light1intensity', 0, 5, 0.01).onChange(function () {
                 ////console.log(light1.intensity)
                 light1.intensity = API.light1intensity;
                 render();
             });
-            flight1.add(API, 'light1distance', 0, 500, 0.1).onChange(function() {
+            flight1.add(API, 'light1distance', 0, 500, 0.1).onChange(function () {
                 ////console.log(light1.distance)
                 light1.distance = API.light1distance;
                 render();
             });
-            flight1.addColor(API, 'light1color').onChange(function(val) {
+            flight1.addColor(API, 'light1color').onChange(function (val) {
                 light1.color.setHex(val);
                 render();
             });
@@ -1090,26 +1090,26 @@ function init() {
 
 
             const flight2 = gui.addFolder('light2')
-            flight2.add(light2.position, 'x', -100, 100).listen().onChange(function() {
+            flight2.add(light2.position, 'x', -100, 100).listen().onChange(function () {
                 ////console.log(light2.position.x)
             });
-            flight2.add(light2.position, 'y', -100, 100).listen().onChange(function() {
+            flight2.add(light2.position, 'y', -100, 100).listen().onChange(function () {
                 ////console.log(light2.position.y)
             });
-            flight2.add(light2.position, 'z', -100, 100).listen().onChange(function() {
+            flight2.add(light2.position, 'z', -100, 100).listen().onChange(function () {
                 ////console.log(light2.position.z)
             })
-            flight2.add(API, 'light2intensity', 0, 5, 0.01).onChange(function() {
+            flight2.add(API, 'light2intensity', 0, 5, 0.01).onChange(function () {
                 ////console.log(light2.intensity)
                 light2.intensity = API.light2intensity;
                 render();
             });
-            flight2.add(API, 'light2distance', 0, 500, 0.1).onChange(function() {
+            flight2.add(API, 'light2distance', 0, 500, 0.1).onChange(function () {
                 ////console.log(light2.distance)
                 light2.distance = API.light2distance;
                 render();
             });
-            flight2.addColor(API, 'light2color').onChange(function(val) {
+            flight2.addColor(API, 'light2color').onChange(function (val) {
                 light2.color.setHex(val);
                 render();
             });
@@ -1168,29 +1168,29 @@ function init() {
 
         const foldermaterialsrest = gui.addFolder('MaterialsRest')
 
-        foldermaterialsrest.addColor(API, 'materialGrassColor').onChange(function(val) {
+        foldermaterialsrest.addColor(API, 'materialGrassColor').onChange(function (val) {
             materialGrass.color.setHex(val);
             render();
         });
-        foldermaterialsrest.add(API, 'materialGrassMetalness', 0, 1, 0.001).onChange(function() {
+        foldermaterialsrest.add(API, 'materialGrassMetalness', 0, 1, 0.001).onChange(function () {
             materialGrass.metalness = API.materialGrassMetalness;
             render();
         });
-        foldermaterialsrest.add(API, 'materialGrassRoughness', 0, 1, 0.001).onChange(function() {
+        foldermaterialsrest.add(API, 'materialGrassRoughness', 0, 1, 0.001).onChange(function () {
             materialGrass.roughness = API.materialGrassRoughness;
             render();
         });
 
 
-        foldermaterialsrest.addColor(API, 'materialCityColor').onChange(function(val) {
+        foldermaterialsrest.addColor(API, 'materialCityColor').onChange(function (val) {
             materialCity.color.setHex(val);
             render();
         });
-        foldermaterialsrest.add(API, 'materialCityMetalness', 0, 1, 0.001).onChange(function() {
+        foldermaterialsrest.add(API, 'materialCityMetalness', 0, 1, 0.001).onChange(function () {
             materialCity.metalness = API.materialCityMetalness;
             render();
         });
-        foldermaterialsrest.add(API, 'materialCityRoughness', 0, 1, 0.001).onChange(function() {
+        foldermaterialsrest.add(API, 'materialCityRoughness', 0, 1, 0.001).onChange(function () {
             materialCity.roughness = API.materialCityRoughness;
             render();
         });
@@ -1199,23 +1199,23 @@ function init() {
 
 
 
-        foldermaterialsrest.addColor(API, 'materialSkysphereColor').onChange(function(val) {
+        foldermaterialsrest.addColor(API, 'materialSkysphereColor').onChange(function (val) {
             materialSkysphere.color.setHex(val);
             render();
         });
-        foldermaterialsrest.add(API, 'materialSkysphereMetalness', 0, 1, 0.001).onChange(function() {
+        foldermaterialsrest.add(API, 'materialSkysphereMetalness', 0, 1, 0.001).onChange(function () {
             materialSkysphere.metalness = API.materialSkysphereMetalness;
             render();
         });
-        foldermaterialsrest.add(API, 'materialSkysphereRoughness', 0, 1, 0.001).onChange(function() {
+        foldermaterialsrest.add(API, 'materialSkysphereRoughness', 0, 1, 0.001).onChange(function () {
             materialSkysphere.roughness = API.materialSkysphereRoughness;
             render();
         });
-        foldermaterialsrest.add(API, 'materialSkysphereenvMapIntensity', 0, 10, 0.001).onChange(function() {
+        foldermaterialsrest.add(API, 'materialSkysphereenvMapIntensity', 0, 10, 0.001).onChange(function () {
             materialSkysphere.envMapIntensity = API.materialSkysphereenvMapIntensity;
             render();
         });
-        foldermaterialsrest.add(API, 'materialSkysphereEmissive', 0, 10, 0.1).onChange(function() {
+        foldermaterialsrest.add(API, 'materialSkysphereEmissive', 0, 10, 0.1).onChange(function () {
             materialSkysphere.emissiveIntensity = API.materialSkysphereEmissive;
             render();
         });
@@ -1225,93 +1225,93 @@ function init() {
 
         const foldermaterials = gui.addFolder('Materials')
 
-        foldermaterials.addColor(API, 'materialTerrassendachColor').onChange(function(val) {
+        foldermaterials.addColor(API, 'materialTerrassendachColor').onChange(function (val) {
             materialTerrassendach.color.setHex(val);
             render();
         });
-        foldermaterials.add(API, 'materialTerrassendachMetalness', 0, 1, 0.001).onChange(function() {
+        foldermaterials.add(API, 'materialTerrassendachMetalness', 0, 1, 0.001).onChange(function () {
             materialTerrassendach.metalness = API.materialTerrassendachMetalness;
             render();
         });
-        foldermaterials.add(API, 'materialTerrassendachRoughness', 0, 1, 0.001).onChange(function() {
+        foldermaterials.add(API, 'materialTerrassendachRoughness', 0, 1, 0.001).onChange(function () {
             materialTerrassendach.roughness = API.materialTerrassendachRoughness;
             render();
         });
-        foldermaterials.add(API, 'materialTerrassendachEmissive', 0, 1, 0.001).onChange(function() {
+        foldermaterials.add(API, 'materialTerrassendachEmissive', 0, 1, 0.001).onChange(function () {
             materialTerrassendach.emissiveIntensity = API.materialTerrassendachEmissive;
             render();
         });
 
 
-        foldermaterials.addColor(API, 'materialBodenColor').onChange(function(val) {
+        foldermaterials.addColor(API, 'materialBodenColor').onChange(function (val) {
             materialBoden.color.setHex(val);
             render();
         });
-        foldermaterials.add(API, 'materialBodenMetalness', 0, 1, 0.001).onChange(function() {
+        foldermaterials.add(API, 'materialBodenMetalness', 0, 1, 0.001).onChange(function () {
             materialBoden.metalness = API.materialBodenMetalness;
             render();
         });
-        foldermaterials.add(API, 'materialBodenRoughness', 0, 1, 0.001).onChange(function() {
+        foldermaterials.add(API, 'materialBodenRoughness', 0, 1, 0.001).onChange(function () {
             materialBoden.roughness = API.materialBodenRoughness;
             render();
         });
 
 
 
-        foldermaterials.addColor(API, 'materialMetallColor').onChange(function(val) {
+        foldermaterials.addColor(API, 'materialMetallColor').onChange(function (val) {
             materialMetall.color.setHex(val);
             render();
         });
-        foldermaterials.add(API, 'materialMetallMetalness', 0, 1, 0.001).onChange(function() {
+        foldermaterials.add(API, 'materialMetallMetalness', 0, 1, 0.001).onChange(function () {
             materialMetall.metalness = API.materialMetallMetalness;
             render();
         });
-        foldermaterials.add(API, 'materialMetallRoughness', 0, 1, 0.001).onChange(function() {
+        foldermaterials.add(API, 'materialMetallRoughness', 0, 1, 0.001).onChange(function () {
             materialMetall.roughness = API.materialMetallRoughness;
             render();
         });
 
 
-        foldermaterials.addColor(API, 'materialRinneColor').onChange(function(val) {
+        foldermaterials.addColor(API, 'materialRinneColor').onChange(function (val) {
             materialRinne.color.setHex(val);
             render();
         });
-        foldermaterials.add(API, 'materialRinneMetalness', 0, 1, 0.001).onChange(function() {
+        foldermaterials.add(API, 'materialRinneMetalness', 0, 1, 0.001).onChange(function () {
             materialRinne.metalness = API.materialRinneMetalness;
             render();
         });
-        foldermaterials.add(API, 'materialRinneRoughness', 0, 1, 0.001).onChange(function() {
+        foldermaterials.add(API, 'materialRinneRoughness', 0, 1, 0.001).onChange(function () {
             materialRinne.roughness = API.materialRinneRoughness;
             render();
         });
 
 
-        foldermaterials.addColor(API, 'materialDullColor').onChange(function(val) {
+        foldermaterials.addColor(API, 'materialDullColor').onChange(function (val) {
             materialDull.color.setHex(val);
             materialZaun.color.setHex(val);
             render();
         });
-        foldermaterials.add(API, 'materialDullMetalness', 0, 1, 0.001).onChange(function() {
+        foldermaterials.add(API, 'materialDullMetalness', 0, 1, 0.001).onChange(function () {
             materialDull.metalness = API.materialDullMetalness;
             materialZaun.metalness = API.materialDullMetalness;
             render();
         });
-        foldermaterials.add(API, 'materialDullRoughness', 0, 1, 0.001).onChange(function() {
+        foldermaterials.add(API, 'materialDullRoughness', 0, 1, 0.001).onChange(function () {
             materialDull.roughness = API.materialDullRoughness;
             materialZaun.roughness = API.materialDullRoughness;
             render();
         });
 
 
-        foldermaterials.addColor(API, 'materialMoebelColor').onChange(function(val) {
+        foldermaterials.addColor(API, 'materialMoebelColor').onChange(function (val) {
             materialMoebel.color.setHex(val);
             render();
         });
-        foldermaterials.add(API, 'materialMoebelMetalness', 0, 1, 0.001).onChange(function() {
+        foldermaterials.add(API, 'materialMoebelMetalness', 0, 1, 0.001).onChange(function () {
             materialMoebel.metalness = API.materialMoebelMetalness;
             render();
         });
-        foldermaterials.add(API, 'materialMoebelRoughness', 0, 1, 0.001).onChange(function() {
+        foldermaterials.add(API, 'materialMoebelRoughness', 0, 1, 0.001).onChange(function () {
             materialMoebel.roughness = API.materialMoebelRoughness;
             render();
         });
@@ -1323,37 +1323,37 @@ function init() {
 
 
 
-        foldermaterials.addColor(API, 'materialGlassColor').onChange(function(val) {
+        foldermaterials.addColor(API, 'materialGlassColor').onChange(function (val) {
             materialGlass.color.setHex(val);
             render();
         });
-        foldermaterials.add(API, 'materialGlassMetalness', 0, 1, 0.001).onChange(function() {
+        foldermaterials.add(API, 'materialGlassMetalness', 0, 1, 0.001).onChange(function () {
             materialGlass.metalness = API.materialGlassMetalness;
             render();
         });
-        foldermaterials.add(API, 'materialGlassRoughness', 0, 1, 0.001).onChange(function() {
+        foldermaterials.add(API, 'materialGlassRoughness', 0, 1, 0.001).onChange(function () {
             materialGlass.roughness = API.materialGlassRoughness;
             render();
         });
-        foldermaterials.add(API, 'materialGlassTransmission', 0, 1, 0.001).onChange(function() {
+        foldermaterials.add(API, 'materialGlassTransmission', 0, 1, 0.001).onChange(function () {
             materialGlass.transmission = API.materialGlassTransmission;
             render();
         });
 
 
-        foldermaterials.addColor(API, 'materialGlassBorderColor').onChange(function(val) {
+        foldermaterials.addColor(API, 'materialGlassBorderColor').onChange(function (val) {
             materialGlassBorder.color.setHex(val);
             render();
         });
-        foldermaterials.add(API, 'materialGlassBorderMetalness', 0, 1, 0.001).onChange(function() {
+        foldermaterials.add(API, 'materialGlassBorderMetalness', 0, 1, 0.001).onChange(function () {
             materialGlassBorder.metalness = API.materialGlassBorderMetalness;
             render();
         });
-        foldermaterials.add(API, 'materialGlassBorderRoughness', 0, 1, 0.001).onChange(function() {
+        foldermaterials.add(API, 'materialGlassBorderRoughness', 0, 1, 0.001).onChange(function () {
             materialGlassBorder.roughness = API.materialGlassBorderRoughness;
             render();
         });
-        foldermaterials.add(API, 'materialGlassBorderTransmission', 0, 1, 0.001).onChange(function() {
+        foldermaterials.add(API, 'materialGlassBorderTransmission', 0, 1, 0.001).onChange(function () {
             materialGlassBorder.transmission = API.materialGlassBorderTransmission;
             render();
         });
@@ -1367,142 +1367,142 @@ function init() {
 
         const foldermaterialshaus = gui.addFolder('Materials Haus')
 
-        foldermaterialshaus.addColor(API, 'materialHauswandColor').onChange(function(val) {
+        foldermaterialshaus.addColor(API, 'materialHauswandColor').onChange(function (val) {
             materialHauswand.color.setHex(val);
             render();
         });
-        foldermaterialshaus.add(API, 'materialHauswandMetalness', 0, 1, 0.001).onChange(function() {
+        foldermaterialshaus.add(API, 'materialHauswandMetalness', 0, 1, 0.001).onChange(function () {
             materialHauswand.metalness = API.materialHauswandMetalness;
             render();
         });
-        foldermaterialshaus.add(API, 'materialHauswandRoughness', 0, 1, 0.001).onChange(function() {
+        foldermaterialshaus.add(API, 'materialHauswandRoughness', 0, 1, 0.001).onChange(function () {
             materialHauswand.roughness = API.materialHauswandRoughness;
             render();
         });
-        foldermaterialshaus.add(API, 'materialHauswandEmissive', 0, 1, 0.001).onChange(function() {
+        foldermaterialshaus.add(API, 'materialHauswandEmissive', 0, 1, 0.001).onChange(function () {
             materialHauswand.emissiveIntensity = API.materialHauswandEmissive;
             render();
         });
 
 
-        foldermaterialshaus.addColor(API, 'materialHausinnenColor').onChange(function(val) {
+        foldermaterialshaus.addColor(API, 'materialHausinnenColor').onChange(function (val) {
             materialHausinnen.color.setHex(val);
             render();
         });
-        foldermaterialshaus.add(API, 'materialHausinnenMetalness', 0, 1, 0.001).onChange(function() {
+        foldermaterialshaus.add(API, 'materialHausinnenMetalness', 0, 1, 0.001).onChange(function () {
             materialHausinnen.metalness = API.materialHausinnenMetalness;
             render();
         });
-        foldermaterialshaus.add(API, 'materialHausinnenRoughness', 0, 1, 0.001).onChange(function() {
+        foldermaterialshaus.add(API, 'materialHausinnenRoughness', 0, 1, 0.001).onChange(function () {
             materialHausinnen.roughness = API.materialHausinnenRoughness;
             render();
         });
-        foldermaterialshaus.add(API, 'materialHausinnenEmissive', 0, 20, 0.001).onChange(function() {
+        foldermaterialshaus.add(API, 'materialHausinnenEmissive', 0, 20, 0.001).onChange(function () {
             materialHausinnen.emissiveIntensity = API.materialHausinnenEmissive;
             render();
         });
 
 
 
-        foldermaterialshaus.addColor(API, 'materialHausdachziegelColor').onChange(function(val) {
+        foldermaterialshaus.addColor(API, 'materialHausdachziegelColor').onChange(function (val) {
             materialHausdachziegel.color.setHex(val);
             render();
         });
-        foldermaterialshaus.add(API, 'materialHausdachziegelMetalness', 0, 1, 0.001).onChange(function() {
+        foldermaterialshaus.add(API, 'materialHausdachziegelMetalness', 0, 1, 0.001).onChange(function () {
             materialHausdachziegel.metalness = API.materialHausdachziegelMetalness;
             render();
         });
-        foldermaterialshaus.add(API, 'materialHausdachziegelRoughness', 0, 1, 0.001).onChange(function() {
+        foldermaterialshaus.add(API, 'materialHausdachziegelRoughness', 0, 1, 0.001).onChange(function () {
             materialHausdachziegel.roughness = API.materialHausdachziegelRoughness;
             render();
         });
 
 
 
-        foldermaterialshaus.addColor(API, 'materialHausblechColor').onChange(function(val) {
+        foldermaterialshaus.addColor(API, 'materialHausblechColor').onChange(function (val) {
             materialHausblech.color.setHex(val);
             render();
         });
-        foldermaterialshaus.add(API, 'materialHausblechMetalness', 0, 1, 0.001).onChange(function() {
+        foldermaterialshaus.add(API, 'materialHausblechMetalness', 0, 1, 0.001).onChange(function () {
             materialHausblech.metalness = API.materialHausblechMetalness;
             render();
         });
-        foldermaterialshaus.add(API, 'materialHausblechRoughness', 0, 1, 0.001).onChange(function() {
+        foldermaterialshaus.add(API, 'materialHausblechRoughness', 0, 1, 0.001).onChange(function () {
             materialHausblech.roughness = API.materialHausblechRoughness;
             render();
         });
 
 
-        foldermaterialshaus.addColor(API, 'materialHausfensterrahmenColor').onChange(function(val) {
+        foldermaterialshaus.addColor(API, 'materialHausfensterrahmenColor').onChange(function (val) {
             materialHausfensterrahmen.color.setHex(val);
             render();
         });
-        foldermaterialshaus.add(API, 'materialHausfensterrahmenMetalness', 0, 1, 0.001).onChange(function() {
+        foldermaterialshaus.add(API, 'materialHausfensterrahmenMetalness', 0, 1, 0.001).onChange(function () {
             materialHausfensterrahmen.metalness = API.materialHausfensterrahmenMetalness;
             render();
         });
-        foldermaterialshaus.add(API, 'materialHausfensterrahmenRoughness', 0, 1, 0.001).onChange(function() {
+        foldermaterialshaus.add(API, 'materialHausfensterrahmenRoughness', 0, 1, 0.001).onChange(function () {
             materialHausfensterrahmen.roughness = API.materialHausfensterrahmenRoughness;
             render();
         });
 
 
-        foldermaterialshaus.addColor(API, 'materialHausfensterglasColor').onChange(function(val) {
+        foldermaterialshaus.addColor(API, 'materialHausfensterglasColor').onChange(function (val) {
             materialHausfensterglas.color.setHex(val);
             render();
         });
-        foldermaterialshaus.add(API, 'materialHausfensterglasMetalness', 0, 1, 0.001).onChange(function() {
+        foldermaterialshaus.add(API, 'materialHausfensterglasMetalness', 0, 1, 0.001).onChange(function () {
             materialHausfensterglas.metalness = API.materialHausfensterglasMetalness;
             render();
         });
-        foldermaterialshaus.add(API, 'materialHausfensterglasRoughness', 0, 1, 0.001).onChange(function() {
+        foldermaterialshaus.add(API, 'materialHausfensterglasRoughness', 0, 1, 0.001).onChange(function () {
             materialHausfensterglas.roughness = API.materialHausfensterglasRoughness;
             render();
         });
-        foldermaterialshaus.add(API, 'materialHausfensterglasEmissive', 0, 100, 0.001).onChange(function() {
+        foldermaterialshaus.add(API, 'materialHausfensterglasEmissive', 0, 100, 0.001).onChange(function () {
             materialHausfensterglas.emissiveIntensity = API.materialHausfensterglasEmissive;
             render();
         });
-        foldermaterialshaus.add(API, 'materialHausfensterglasTransmission', 0, 1, 0.001).onChange(function() {
+        foldermaterialshaus.add(API, 'materialHausfensterglasTransmission', 0, 1, 0.001).onChange(function () {
             materialHausfensterglas.transmission = API.materialHausfensterglasTransmission;
             render();
         });
 
-        foldermaterialshaus.addColor(API, 'materialHausholzColor').onChange(function(val) {
+        foldermaterialshaus.addColor(API, 'materialHausholzColor').onChange(function (val) {
             materialHausholz.color.setHex(val);
             render();
         });
-        foldermaterialshaus.add(API, 'materialHausholzMetalness', 0, 1, 0.001).onChange(function() {
+        foldermaterialshaus.add(API, 'materialHausholzMetalness', 0, 1, 0.001).onChange(function () {
             materialHausholz.metalness = API.materialHausholzMetalness;
             render();
         });
-        foldermaterialshaus.add(API, 'materialHausholzRoughness', 0, 1, 0.001).onChange(function() {
+        foldermaterialshaus.add(API, 'materialHausholzRoughness', 0, 1, 0.001).onChange(function () {
             materialHausholz.roughness = API.materialHausholzRoughness;
             render();
         });
 
-        foldermaterialshaus.addColor(API, 'materialHausfundamentColor').onChange(function(val) {
+        foldermaterialshaus.addColor(API, 'materialHausfundamentColor').onChange(function (val) {
             materialHausfundament.color.setHex(val);
             render();
         });
-        foldermaterialshaus.add(API, 'materialHausfundamentMetalness', 0, 1, 0.001).onChange(function() {
+        foldermaterialshaus.add(API, 'materialHausfundamentMetalness', 0, 1, 0.001).onChange(function () {
             materialHausfundament.metalness = API.materialHausfundamentMetalness;
             render();
         });
-        foldermaterialshaus.add(API, 'materialHausfundamentRoughness', 0, 1, 0.001).onChange(function() {
+        foldermaterialshaus.add(API, 'materialHausfundamentRoughness', 0, 1, 0.001).onChange(function () {
             materialHausfundament.roughness = API.materialHausfundamentRoughness;
             render();
         });
 
-        foldermaterialshaus.addColor(API, 'materialHausvorhangColor').onChange(function(val) {
+        foldermaterialshaus.addColor(API, 'materialHausvorhangColor').onChange(function (val) {
             materialHausvorhang.color.setHex(val);
             render();
         });
-        foldermaterialshaus.add(API, 'materialHausvorhangMetalness', 0, 1, 0.001).onChange(function() {
+        foldermaterialshaus.add(API, 'materialHausvorhangMetalness', 0, 1, 0.001).onChange(function () {
             materialHausvorhang.metalness = API.materialHausvorhangMetalness;
             render();
         });
-        foldermaterialshaus.add(API, 'materialHausvorhangRoughness', 0, 1, 0.001).onChange(function() {
+        foldermaterialshaus.add(API, 'materialHausvorhangRoughness', 0, 1, 0.001).onChange(function () {
             materialHausvorhang.roughness = API.materialHausvorhangRoughness;
             render();
         });
@@ -1529,7 +1529,7 @@ function init() {
 
 var counterX = 0;
 const LoadFBXFile = (file) => {
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
         //console.log(counterX + " - " + file)
         counterX++;
         fbxloader.load('models/maderos/' + file, (dummy) => resolve(dummy));
@@ -1544,211 +1544,211 @@ const LoadFBXFile = (file) => {
 
 
 function LoadJpgTextures() {
-    aoMapZaun = textureLoader.load("textures/maderos/zaunShadowmapTexture.jpg", function(texture) {
+    aoMapZaun = textureLoader.load("textures/maderos/zaunShadowmapTexture.jpg", function (texture) {
         texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
         texture.offset.set(0, 0);
         texture.repeat.set(1, 1);
         texture.encoding = THREE.sRGBEncoding;
     })
-    diffuseMapTerrassendach = textureLoader.load("textures/maderos/terrassendach_gebuerstet_albedo.jpg", function(texture) {
+    diffuseMapTerrassendach = textureLoader.load("textures/maderos/terrassendach_gebuerstet_albedo.jpg", function (texture) {
         texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
         texture.offset.set(0, 0);
         texture.repeat.set(11, 10);
         texture.encoding = THREE.sRGBEncoding;
     })
     if (isDesktop) {
-        roughnessMapTerrassendach = textureLoader.load("textures/maderos/terrassendach_gebuerstet_roughness.jpg", function(texture) {
+        roughnessMapTerrassendach = textureLoader.load("textures/maderos/terrassendach_gebuerstet_roughness.jpg", function (texture) {
             texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
             texture.offset.set(0, 0);
             texture.repeat.set(11, 10);
             texture.encoding = THREE.sRGBEncoding;
         });
-        normalMapTerrassendach = textureLoader.load("textures/maderos/terrassendach_gebuerstet_normal.jpg", function(texture) {
+        normalMapTerrassendach = textureLoader.load("textures/maderos/terrassendach_gebuerstet_normal.jpg", function (texture) {
             texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
             texture.offset.set(0, 0);
             texture.repeat.set(11, 10);
         })
     }
-    diffuseMapTerrassendachGlatt = textureLoader.load("textures/maderos/terrassendach_glatt_albedo.jpg", function(texture) {
+    diffuseMapTerrassendachGlatt = textureLoader.load("textures/maderos/terrassendach_glatt_albedo.jpg", function (texture) {
         texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
         texture.offset.set(0, 0);
         texture.repeat.set(10, 10);
         texture.encoding = THREE.sRGBEncoding;
     });
     if (isDesktop) {
-        roughnessMapTerrassendachGlatt = textureLoader.load("textures/maderos/terrassendach_glatt_roughness.jpg", function(texture) {
+        roughnessMapTerrassendachGlatt = textureLoader.load("textures/maderos/terrassendach_glatt_roughness.jpg", function (texture) {
             texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
             texture.offset.set(0, 0);
             texture.repeat.set(10, 10);
             texture.encoding = THREE.sRGBEncoding;
         });
-        normalMapTerrassendachGlatt = textureLoader.load("textures/maderos/terrassendach_glatt_normal.jpg", function(texture) {
+        normalMapTerrassendachGlatt = textureLoader.load("textures/maderos/terrassendach_glatt_normal.jpg", function (texture) {
             texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
             texture.offset.set(0, 0);
             texture.repeat.set(10, 10);
         });
     }
-    diffuseMapBodenDielen = textureLoader.load("textures/maderos/woodfloor_albedo.jpg", function(texture) {
+    diffuseMapBodenDielen = textureLoader.load("textures/maderos/woodfloor_albedo.jpg", function (texture) {
         texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
         texture.offset.set(0, 0);
         texture.repeat.set(4, 2);
         texture.encoding = THREE.sRGBEncoding;
     });
     if (isDesktop) {
-        roughnessMapBodenDielen = textureLoader.load("textures/maderos/woodfloor_roughness.jpg", function(texture) {
+        roughnessMapBodenDielen = textureLoader.load("textures/maderos/woodfloor_roughness.jpg", function (texture) {
             texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
             texture.offset.set(0, 0);
             texture.repeat.set(4, 2);
             texture.encoding = THREE.sRGBEncoding;
         });
-        normalMapBodenDielen = textureLoader.load("textures/maderos/woodfloor_normal.jpg", function(texture) {
+        normalMapBodenDielen = textureLoader.load("textures/maderos/woodfloor_normal.jpg", function (texture) {
             texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
             texture.offset.set(0, 0);
             texture.repeat.set(4, 2);
         });
     }
-    diffuseMapBodenFliesen = textureLoader.load("textures/maderos/stonetile_albedo.jpg", function(texture) {
+    diffuseMapBodenFliesen = textureLoader.load("textures/maderos/stonetile_albedo.jpg", function (texture) {
         texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
         texture.offset.set(0, 0);
         texture.repeat.set(4, 2);
         texture.encoding = THREE.sRGBEncoding;
     });
     if (isDesktop) {
-        roughnessMapBodenFliesen = textureLoader.load("textures/maderos/stonetile_roughness.jpg", function(texture) {
+        roughnessMapBodenFliesen = textureLoader.load("textures/maderos/stonetile_roughness.jpg", function (texture) {
             texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
             texture.offset.set(0, 0);
             texture.repeat.set(4, 2);
             texture.encoding = THREE.sRGBEncoding;
         });
-        normalMapBodenFliesen = textureLoader.load("textures/maderos/stonetile_normal.jpg", function(texture) {
+        normalMapBodenFliesen = textureLoader.load("textures/maderos/stonetile_normal.jpg", function (texture) {
             texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
             texture.offset.set(0, 0);
             texture.repeat.set(4, 2);
         });
     }
-    diffuseMapGrass = textureLoader.load("textures/maderos/grass_albedo.jpg", function(texture) {
+    diffuseMapGrass = textureLoader.load("textures/maderos/grass_albedo.jpg", function (texture) {
         texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
         texture.offset.set(0, 0);
         texture.repeat.set(15, 15);
         texture.encoding = THREE.sRGBEncoding;
     });
     if (isDesktop) {
-        roughnessMapGrass = textureLoader.load("textures/maderos/grass_roughness.jpg", function(texture) {
+        roughnessMapGrass = textureLoader.load("textures/maderos/grass_roughness.jpg", function (texture) {
             texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
             texture.offset.set(0, 0);
             texture.repeat.set(15, 15);
             texture.encoding = THREE.sRGBEncoding;
         });
-        normalMapGrass = textureLoader.load("textures/maderos/grass_normal.jpg", function(texture) {
+        normalMapGrass = textureLoader.load("textures/maderos/grass_normal.jpg", function (texture) {
             texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
             texture.offset.set(0, 0);
             texture.repeat.set(15, 15);
         });
     }
-    diffuseMapHausinnen = textureLoader.load("textures/maderos/gradient.jpg", function(texture) {
+    diffuseMapHausinnen = textureLoader.load("textures/maderos/gradient.jpg", function (texture) {
         texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
         texture.offset.set(0, 0);
         texture.repeat.set(1, 1);
         texture.encoding = THREE.sRGBEncoding;
     });
 
-    diffuseMapHauswandPutzWeiss = textureLoader.load("textures/maderos/stucco_albedo.jpg", function(texture) {
+    diffuseMapHauswandPutzWeiss = textureLoader.load("textures/maderos/stucco_albedo.jpg", function (texture) {
         texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
         texture.offset.set(0, 0);
         texture.repeat.set(4, 4);
         texture.encoding = THREE.sRGBEncoding;
     });
     if (isDesktop) {
-        roughnessMapHauswandPutzWeiss = textureLoader.load("textures/maderos/stucco_roughness.jpg", function(texture) {
+        roughnessMapHauswandPutzWeiss = textureLoader.load("textures/maderos/stucco_roughness.jpg", function (texture) {
             texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
             texture.offset.set(0, 0);
             texture.repeat.set(4, 4);
             texture.encoding = THREE.sRGBEncoding;
         });
-        normalMapHauswandPutzWeiss = textureLoader.load("textures/maderos/stucco_normal.jpg", function(texture) {
+        normalMapHauswandPutzWeiss = textureLoader.load("textures/maderos/stucco_normal.jpg", function (texture) {
             texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
             texture.offset.set(0, 0);
             texture.repeat.set(4, 4);
         });
     }
 
-    diffuseMapHauswandKlinkerRot = textureLoader.load("textures/maderos/brick_red_albedo.jpg", function(texture) {
+    diffuseMapHauswandKlinkerRot = textureLoader.load("textures/maderos/brick_red_albedo.jpg", function (texture) {
         texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
         texture.offset.set(0, 0);
         texture.repeat.set(5, 5);
         texture.encoding = THREE.sRGBEncoding;
     });
     if (isDesktop) {
-        roughnessMapHauswandKlinkerRot = textureLoader.load("textures/maderos/brick_roughness.jpg", function(texture) {
+        roughnessMapHauswandKlinkerRot = textureLoader.load("textures/maderos/brick_roughness.jpg", function (texture) {
             texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
             texture.offset.set(0, 0);
             texture.repeat.set(5, 5);
             texture.encoding = THREE.sRGBEncoding;
         });
-        normalMapHauswandKlinkerRot = textureLoader.load("textures/maderos/brick_normal.jpg", function(texture) {
+        normalMapHauswandKlinkerRot = textureLoader.load("textures/maderos/brick_normal.jpg", function (texture) {
             texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
             texture.offset.set(0, 0);
             texture.repeat.set(5, 5);
         });
     }
-    diffuseMapHauswandKlinkerGrau = textureLoader.load("textures/maderos/brick_grey_albedo.jpg", function(texture) {
+    diffuseMapHauswandKlinkerGrau = textureLoader.load("textures/maderos/brick_grey_albedo.jpg", function (texture) {
         texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
         texture.offset.set(0, 0);
         texture.repeat.set(5, 5);
         texture.encoding = THREE.sRGBEncoding;
     });
-    diffuseMapHausdachziegelRot = textureLoader.load("textures/maderos/roof_albedo.jpg", function(texture) {
+    diffuseMapHausdachziegelRot = textureLoader.load("textures/maderos/roof_albedo.jpg", function (texture) {
         texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
         texture.offset.set(0, 0);
         texture.repeat.set(5, 5);
         texture.encoding = THREE.sRGBEncoding;
     });
     if (isDesktop) {
-        roughnessMapHausdachziegelRot = textureLoader.load("textures/maderos/roof_roughness.jpg", function(texture) {
+        roughnessMapHausdachziegelRot = textureLoader.load("textures/maderos/roof_roughness.jpg", function (texture) {
             texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
             texture.offset.set(0, 0);
             texture.repeat.set(5, 5);
             texture.encoding = THREE.sRGBEncoding;
         });
-        normalMapHausdachziegelRot = textureLoader.load("textures/maderos/roof_normal.jpg", function(texture) {
+        normalMapHausdachziegelRot = textureLoader.load("textures/maderos/roof_normal.jpg", function (texture) {
             texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
             texture.offset.set(0, 0);
             texture.repeat.set(5, 5);
         });
     }
-    lightSpriteTexture = textureLoader.load("textures/maderos/lensflare0.png", function(texture) {});
+    lightSpriteTexture = textureLoader.load("textures/maderos/lensflare0.png", function (texture) { });
 }
 
 /*
 alle aterials: 
 
-	materialTerrassendach
-	materialBoden
-	materialGrass
-	materialHedge
-	materialHauswand
-	materialHausinnen
-	materialHausdachziegel
-	materialHausblech
-	materialHausfensterrahmen
-	materialHausfensterglas
-	materialHausholz
-	materialHausfundament
-	materialHausvorhang
-	materialMetall
-	materialMetallDark
-	materialRinne
-	materialDull
-	materialZaun
-	materialMoebel
-	materialCity
-	materialUserimage
-	materialSkysphere
-	materialGlass
-	materialGlassBorder
-	materialStoffbahn
-	materialEmissive
-	materialLightSprite
+    materialTerrassendach
+    materialBoden
+    materialGrass
+    materialHedge
+    materialHauswand
+    materialHausinnen
+    materialHausdachziegel
+    materialHausblech
+    materialHausfensterrahmen
+    materialHausfensterglas
+    materialHausholz
+    materialHausfundament
+    materialHausvorhang
+    materialMetall
+    materialMetallDark
+    materialRinne
+    materialDull
+    materialZaun
+    materialMoebel
+    materialCity
+    materialUserimage
+    materialSkysphere
+    materialGlass
+    materialGlassBorder
+    materialStoffbahn
+    materialEmissive
+    materialLightSprite
 */
 // highQuality_reflections
 
@@ -1924,7 +1924,7 @@ function LoadMaterials() {
             envMap: null,
             envMapIntensity: API.envMapIntensity,
         });
-		*/
+        */
         materialZaun = new THREE.MeshStandardMaterial({
             color: API.materialDullColor,
             metalness: API.materialDullMetalness,
@@ -1995,7 +1995,7 @@ function LoadMaterials() {
             side: THREE.DoubleSide
                 //side: THREE.DoubleSide,
         });
-		*/
+        */
         // einfacheres Material statt phys
         materialGlass = new THREE.MeshBasicMaterial({
             // color: 0x636dd3,
@@ -2027,7 +2027,7 @@ function LoadMaterials() {
 
             transparent: true,
             side: THREE.DoubleSide
-                //side: THREE.DoubleSide,
+            //side: THREE.DoubleSide,
         });
 
         materialStoffbahn = new THREE.MeshStandardMaterial({
@@ -2180,19 +2180,19 @@ function LoadMaterials() {
 
         /*
         materialGlass = new THREE.MeshPhysicalMaterial({
-        	color: API.materialGlassColor,
-        	metalness: API.materialGlassMetalness,
-        	roughness: API.materialGlassRoughness,
-        	transmission: API.materialGlassTransmission,
-        	// color: 0xffffff, 
-        	// metalness: 0, 
-        	// roughness: 0.1, 
-        	// transmission: 0.9, 
-        	transparent: true,
-        	envMap: sceneEnvmapTexture,
-        	envMapIntensity: API.envMapIntensityGlas,
-        	depthWrite: false,
-        	side: THREE.DoubleSide
+            color: API.materialGlassColor,
+            metalness: API.materialGlassMetalness,
+            roughness: API.materialGlassRoughness,
+            transmission: API.materialGlassTransmission,
+            // color: 0xffffff, 
+            // metalness: 0, 
+            // roughness: 0.1, 
+            // transmission: 0.9, 
+            transparent: true,
+            envMap: sceneEnvmapTexture,
+            envMapIntensity: API.envMapIntensityGlas,
+            depthWrite: false,
+            side: THREE.DoubleSide
         });
         */
         materialGlass = new THREE.MeshBasicMaterial({
@@ -2225,7 +2225,7 @@ function LoadMaterials() {
 
             transparent: true,
             side: THREE.DoubleSide
-                //side: THREE.DoubleSide,
+            //side: THREE.DoubleSide,
         });
 
 
@@ -2287,7 +2287,7 @@ async function LoadEnvirnomentObjects() {
 
         EnvObjects.push(fbxCollection.GetInternFile("smBoden.fbx").then((object) => {
             // const smBoden = fbxloader.load('models/maderos/smBoden.fbx', function(object) {
-            object.traverse(function(child) {
+            object.traverse(function (child) {
                 if (child.isMesh) {
                     child.material = materialBoden;
                     child.castShadow = false;
@@ -2303,7 +2303,7 @@ async function LoadEnvirnomentObjects() {
         }));
 
         EnvObjects.push(fbxCollection.GetInternFile("smDeko.fbx").then((object) => {
-            object.traverse(function(child) {
+            object.traverse(function (child) {
                 // alert("");
                 if (child.isMesh) {
                     child.material = materialMoebel;
@@ -2320,7 +2320,7 @@ async function LoadEnvirnomentObjects() {
         }));
 
         EnvObjects.push(fbxCollection.GetInternFile("skysphere.fbx").then((object) => {
-            object.traverse(function(child) {
+            object.traverse(function (child) {
                 if (child.isMesh) {
                     child.material = materialSkysphere;
                     child.castShadow = false;
@@ -2339,7 +2339,7 @@ async function LoadEnvirnomentObjects() {
 
 
         EnvObjects.push(fbxCollection.GetInternFile("smZaun.fbx").then((object) => {
-            object.traverse(function(child) {
+            object.traverse(function (child) {
                 if (child.isMesh) {
                     // // child.material = materialHedge;
                     // // // child.material.transparent = true;
@@ -2361,7 +2361,7 @@ async function LoadEnvirnomentObjects() {
         EnvObjects.push(fbxCollection.GetInternFile("smCity.fbx").then((object) => {
             // const smCity = fbxloader.load('models/maderos/smCity.FBX', function(object) {
             // fbxCollection.GetFBXObject("smCity.fbx").then((object) => {
-            object.traverse(function(child) {
+            object.traverse(function (child) {
                 if (child.isMesh) {
                     child.material = materialCity;
                     child.castShadow = false;
@@ -2377,7 +2377,7 @@ async function LoadEnvirnomentObjects() {
         }));
 
         EnvObjects.push(fbxCollection.GetInternFile("smUserimage.fbx").then((object) => {
-            object.traverse(function(child) {
+            object.traverse(function (child) {
                 if (child.isMesh) {
                     // child.material = materialUserimage;
                     child.material = materialEmissive;
@@ -2609,7 +2609,7 @@ async function loadTerrassendachTeilMesh(meshfile, materialname, castShadowBool,
                 if (object.objecttype == "led_row") {
                     // console.log("existing - scale LED");
                     // console.log(object.children[0]); // led_row_grp // Object { uuid: "803436FF-8B51-4D3C-ABFA-FE7F9EA55C7F", name: "led_row_grp", type: "Group", parent: {…}, children: (2) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, scale: {…}, … }
-                    object.traverse(function(child) {
+                    object.traverse(function (child) {
                         if (child.isMesh) {
                             // console.log(child);
                             if (child.name == "led_row1" || child.name == "led_row2") {
@@ -2706,7 +2706,7 @@ async function loadTerrassendachTeilMesh(meshfile, materialname, castShadowBool,
         fbxCollection.GetInternFile(meshfile).then((object) => {
             // object = fbxCollection.GetFBXObject(meshfile);
 
-            object.traverse(function(child) {
+            object.traverse(function (child) {
                 if (child.isMesh) {
                     child.material = materialname;
                     child.castShadow = castShadowBool;
@@ -2793,7 +2793,7 @@ async function loadTerrassendachTeilMesh(meshfile, materialname, castShadowBool,
                 // ////console.log("default wert kathete "+ defaultkathete   );
                 // ////console.log("länge skaliert "+  (intialSizeZeroToWall-zoffset)*currentGlobalScale  );
                 var skaliertkathete = tan5 * ((intialSizeZeroToWall - zoffset) * currentGlobalScale)
-                    // ////console.log("skalierter wert kathete "+   skaliertkathete );
+                // ////console.log("skalierter wert kathete "+   skaliertkathete );
                 var differenzkathete = skaliertkathete - defaultkathete;
                 // ////console.log("differenz skaliertkathete - defaultkathete --- neuer offset: "+differenzkathete);
                 // ////console.log("------------------");
@@ -2825,7 +2825,7 @@ async function loadTerrassendachTeilMesh(meshfile, materialname, castShadowBool,
                 object.isAlreadyEingerueckt = currentPolePositionIsEingerueckt;
                 if (currentPolePositionIsEingerueckt == true) {
                     xoffset = xoffset + poleXOffset
-                        // console.log("CREATING objecttype " + object.objecttype + " startrepeatlast: " + object.startrepeatlast + " isAlreadyEingerueckt: " + object.isAlreadyEingerueckt + " currentPolePositionIsEingerueckt should be: " + currentPolePositionIsEingerueckt);
+                    // console.log("CREATING objecttype " + object.objecttype + " startrepeatlast: " + object.startrepeatlast + " isAlreadyEingerueckt: " + object.isAlreadyEingerueckt + " currentPolePositionIsEingerueckt should be: " + currentPolePositionIsEingerueckt);
                 } else {
                     // console.log("CREATING objecttype " + object.objecttype + " startrepeatlast: " + object.startrepeatlast + " isAlreadyEingerueckt: " + object.isAlreadyEingerueckt + " currentPolePositionIsEingerueckt should be: " + currentPolePositionIsEingerueckt);
                 }
@@ -2834,7 +2834,7 @@ async function loadTerrassendachTeilMesh(meshfile, materialname, castShadowBool,
                 object.isAlreadyEingerueckt = currentPolePositionIsEingerueckt;
                 if (currentPolePositionIsEingerueckt == true) {
                     xoffset = xoffset - poleXOffset
-                        // console.log("CREATING objecttype " + object.objecttype + " startrepeatlast: " + object.startrepeatlast + " isAlreadyEingerueckt: " + object.isAlreadyEingerueckt + " currentPolePositionIsEingerueckt should be: " + currentPolePositionIsEingerueckt);
+                    // console.log("CREATING objecttype " + object.objecttype + " startrepeatlast: " + object.startrepeatlast + " isAlreadyEingerueckt: " + object.isAlreadyEingerueckt + " currentPolePositionIsEingerueckt should be: " + currentPolePositionIsEingerueckt);
                 } else {
                     // console.log("CREATING objecttype " + object.objecttype + " startrepeatlast: " + object.startrepeatlast + " isAlreadyEingerueckt: " + object.isAlreadyEingerueckt + " currentPolePositionIsEingerueckt should be: " + currentPolePositionIsEingerueckt);
                 }
@@ -3030,7 +3030,7 @@ async function buildTerrassendachObjects() {
         }
 
         if (object.objecttype == "led_row") {
-            object.traverse(function(child) {
+            object.traverse(function (child) {
                 if (child.type == "PointLight") {
                     // console.log("light");
                     // console.log( child.position );
@@ -3156,7 +3156,7 @@ function animate(time) {
             animationFrameTimer = 1000; // 1 mal pro Sek tick
         }
 
-        setTimeout(function() {
+        setTimeout(function () {
             requestAnimationFrame(animate);
             render();
             controls.target = cameraLookAtTargetVector;
@@ -3228,10 +3228,10 @@ function render() {
 
 function tweenCamera(camera, position, duration) {
     new TWEEN.Tween(camera.position).to({
-            x: position[0],
-            y: position[1],
-            z: position[2]
-        }, duration)
+        x: position[0],
+        y: position[1],
+        z: position[2]
+    }, duration)
         .easing(TWEEN.Easing.Quadratic.InOut)
         .onUpdate((e) => {
             // console.log(e);
@@ -3242,10 +3242,10 @@ function tweenCamera(camera, position, duration) {
 
 function tweenObjectVectorPosition(vectorObject, targetpositionObj, duration) {
     new TWEEN.Tween(vectorObject).to({
-            x: targetpositionObj[0],
-            y: targetpositionObj[1],
-            z: targetpositionObj[2]
-        }, duration)
+        x: targetpositionObj[0],
+        y: targetpositionObj[1],
+        z: targetpositionObj[2]
+    }, duration)
         .easing(TWEEN.Easing.Quadratic.InOut)
         .start();
 }
@@ -3255,7 +3255,7 @@ function tweenCameraFov(camera, xstart, xend, duration) {
     new TWEEN.Tween({ x: xstart })
         .to({ x: xend }, duration)
         .easing(TWEEN.Easing.Quadratic.InOut)
-        .onUpdate(function(object) {
+        .onUpdate(function (object) {
             // console.log(object.x)
             camera.fov = object.x;
             camera.updateProjectionMatrix();
@@ -3266,14 +3266,14 @@ function tweenCameraFov(camera, xstart, xend, duration) {
 
 var tempCurrentCameraFov = cameraDefaultFov;
 export let selectedCamMode = "outside"
-    // default aussen
+// default aussen
 export function action_camposition_1() {
     console.log("action_camposition_1");
     selectedCamMode = "outside"
     document.querySelector("#click-campositionbtn-1").parentNode.classList.add("active")
     document.querySelector("#click-campositionbtn-2").parentNode.classList.remove("active")
-        ////console.log(camera);
-        ////console.log(controls);
+    ////console.log(camera);
+    ////console.log(controls);
     orbitSetRestrictions(true); // disable 360degree movement
 
     tweenCamera(camera, cameraPositionsArray[0][0], 1000);
@@ -3284,7 +3284,7 @@ export function action_camposition_1() {
     // ////console.log( controls.target );
     tweenCameraFov(camera, tempCurrentCameraFov, cameraDefaultFov, 1000); // cameraFirstpersonFov to cameraDefaultFov	
     setTimeout(
-        function() {
+        function () {
             tempCurrentCameraFov = cameraDefaultFov;
         }, 1100
     );
@@ -3301,7 +3301,7 @@ export function action_camposition_2() {
     tweenObjectVectorPosition(cameraLookAtTargetVector, cameraPositionsArray[1][1], 1250);
     tweenCameraFov(camera, tempCurrentCameraFov, cameraFirstpersonFov, 1000);
     setTimeout(
-        function() {
+        function () {
             tempCurrentCameraFov = cameraFirstpersonFov;
         }, 1100
     );
@@ -3314,7 +3314,7 @@ export function action_camposition_3() {
     tweenObjectVectorPosition(cameraLookAtTargetVector, cameraPositionsArray[2][1], 1250);
     tweenCameraFov(camera, tempCurrentCameraFov, cameraDefaultFov, 1000);
     setTimeout(
-        function() {
+        function () {
             tempCurrentCameraFov = cameraDefaultFov;
         }, 1100
     );
@@ -3327,7 +3327,7 @@ export function action_camposition_4() {
     tweenObjectVectorPosition(cameraLookAtTargetVector, cameraPositionsArray[3][1], 1250);
     tweenCameraFov(camera, tempCurrentCameraFov, cameraFirstpersonFov, 1000);
     setTimeout(
-        function() {
+        function () {
             tempCurrentCameraFov = cameraFirstpersonFov;
         }, 1100
     );
@@ -3340,7 +3340,7 @@ export function action_camposition_5() {
     tweenObjectVectorPosition(cameraLookAtTargetVector, cameraPositionsArray[4][1], 1250);
     tweenCameraFov(camera, tempCurrentCameraFov, cameraDefaultFov, 1000);
     setTimeout(
-        function() {
+        function () {
             tempCurrentCameraFov = cameraDefaultFov;
         }, 1100
     );
@@ -3432,12 +3432,12 @@ function action_moodlight_1() {
     var tween = new TWEEN.Tween(tweenpercent);
     tween.to({ x: 100 }, 1000);
     tween.start();
-    tween.onUpdate(function(object) {
+    tween.onUpdate(function (object) {
         var mixed = mixcolor(newColor, cachedGlobalCurrentDirectionalLightColor, object.x); // returns #bf002e
         API.directionalLightColor = "0x" + mixed;
         directionalLight.color.setHex(API.directionalLightColor);
     });
-    tween.onComplete(function() {
+    tween.onComplete(function () {
         cachedGlobalCurrentDirectionalLightColor = newColor;
     });
     render();
@@ -3511,12 +3511,12 @@ function action_moodlight_2() {
     var tween = new TWEEN.Tween(tweenpercent);
     tween.to({ x: 100 }, 1000);
     tween.start();
-    tween.onUpdate(function(object) {
+    tween.onUpdate(function (object) {
         var mixed = mixcolor(newColor, cachedGlobalCurrentDirectionalLightColor, object.x); // returns #bf002e
         API.directionalLightColor = "0x" + mixed;
         directionalLight.color.setHex(API.directionalLightColor);
     });
-    tween.onComplete(function() {
+    tween.onComplete(function () {
         cachedGlobalCurrentDirectionalLightColor = newColor;
     });
     render();
@@ -3595,12 +3595,12 @@ function action_moodlight_3() {
     var tween = new TWEEN.Tween(tweenpercent);
     tween.to({ x: 100 }, 1000);
     tween.start();
-    tween.onUpdate(function(object) {
+    tween.onUpdate(function (object) {
         var mixed = mixcolor(newColor, cachedGlobalCurrentDirectionalLightColor, object.x); // returns #bf002e
         API.directionalLightColor = "0x" + mixed;
         directionalLight.color.setHex(API.directionalLightColor);
     });
-    tween.onComplete(function() {
+    tween.onComplete(function () {
         cachedGlobalCurrentDirectionalLightColor = newColor;
     });
     render();
@@ -3933,7 +3933,7 @@ export function Action_ChangeRinColor(_color) {
 /*
 // kunststoff weiss
 function action_rinnefarbe_1() {
-	console.log("action_rinnefarbe_1");
+    console.log("action_rinnefarbe_1");
     API.materialRinneColor = 0xffffff;
     API.materialRinneMetalness = 0.17;
     API.materialRinneRoughness = 0.289;
@@ -3943,7 +3943,7 @@ function action_rinnefarbe_1() {
 }
 // kunststoff braun
 function action_rinnefarbe_2() {
-	console.log("action_rinnefarbe_2");
+    console.log("action_rinnefarbe_2");
     API.materialRinneColor = 0x260a05;
     API.materialRinneMetalness = 0.17;
     API.materialRinneRoughness = 0.289;
@@ -3953,7 +3953,7 @@ function action_rinnefarbe_2() {
 }
 // kunststoff anthrazit
 function action_rinnefarbe_3() {
-	console.log("action_rinnefarbe_3");
+    console.log("action_rinnefarbe_3");
     API.materialRinneColor = 0x50505;
     API.materialRinneMetalness = 0.17;
     API.materialRinneRoughness = 0.289;
@@ -3963,7 +3963,7 @@ function action_rinnefarbe_3() {
 }
 // alu
 function action_rinnefarbe_4() {
-	console.log("action_rinnefarbe_4");
+    console.log("action_rinnefarbe_4");
     API.materialRinneColor = 0xe0e0e0;
     API.materialRinneMetalness = 0.87;
     API.materialRinneRoughness = 0.48;
@@ -4308,13 +4308,13 @@ function removeObject3D(object) {
 // https://stackoverflow.com/questions/18544890/onchange-event-on-input-type-range-is-not-triggering-in-firefox-while-dragging
 function onRangeChange(r, f) {
     var n, c, m;
-    r.addEventListener("input", function(e) {
+    r.addEventListener("input", function (e) {
         n = 1;
         c = e.target.value;
         if (c != m) f(e);
         m = c;
     });
-    r.addEventListener("change", function(e) { if (!n) f(e); });
+    r.addEventListener("change", function (e) { if (!n) f(e); });
 }
 
 
@@ -4382,7 +4382,7 @@ function showBgOrUserImagePlane(showbgmeshes) {
         if (object.type == "Mesh" || object.type == "Group") {
 
             // Group objekte haben ggf nicht das spawny attribut, ist dann automatisch 0
-            if (typeof(object.spawny) === 'undefined') {
+            if (typeof (object.spawny) === 'undefined') {
                 object.spawny = object.position.y;
             }
             // console.log("spawny "+ object.spawny);
@@ -4447,11 +4447,11 @@ function userImageFileUpload(e) {
         var imgHtmlElement = new Image();
         imgHtmlElement.onload = function () {
             console.log(this.width + " " + this.height);
-			userImageHeightToWidthRatio =  this.width / this.height; 
-			.....
+            userImageHeightToWidthRatio =  this.width / this.height; 
+            .....
         };
         imgHtmlElement.src = userImageURL;
-		*/
+        */
 
         userImageRepeatX = 1; // reset
         userImageRepeatY = 1; // reset
@@ -4460,7 +4460,7 @@ function userImageFileUpload(e) {
 
         let loader = new THREE.TextureLoader();
         loader.setCrossOrigin("");
-        newUserimageMap = loader.load(userImageURL, function(texture) {
+        newUserimageMap = loader.load(userImageURL, function (texture) {
             texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
             texture.center.set(0.5, 0.5);
             texture.offset.set(0, 0);
@@ -4584,7 +4584,7 @@ function takeScreenshot() {
     // But maybe not because also calling createOjectURL.
     //
     renderer.render(scene, camera);
-    renderer.domElement.toBlob(function(blob) {
+    renderer.domElement.toBlob(function (blob) {
         var a = document.createElement('a');
         var url = URL.createObjectURL(blob);
         a.href = url;
@@ -4777,7 +4777,7 @@ export function Ready() {
     // var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
     //     return new bootstrap.Tooltip(tooltipTriggerEl)
     // })
-    $("#btn_zoomIn, .btnZoomIn").click(function(e) {
+    $("#btn_zoomIn, .btnZoomIn").click(function (e) {
         controls.dIn(controls.gzs(0.1));
         // zoomDistanceCur -= 3;
         // let currDistance = camera.position.length(),
@@ -4791,7 +4791,7 @@ export function Ready() {
     });
 
 
-    $("#btn_zoomOut, .btnZoomOut").click(function(e) {
+    $("#btn_zoomOut, .btnZoomOut").click(function (e) {
         controls.dOut(controls.gzs(0.1));
         // zoomDistanceCur += 3;
         // let currDistance = camera.position.length(),
@@ -4806,40 +4806,40 @@ export function Ready() {
     let OverlayActive = false
 
     var showDimensionsTimer;
-    $("#btn_showDimensions").click(function(e) {
-            console.log($(this));
-            let thisElement = $(this);
+    $("#btn_showDimensions").click(function (e) {
+        console.log($(this));
+        let thisElement = $(this);
 
-            clearTimeout(showDimensionsTimer);
-            if (OverlayActive) {
-                action_camposition_1();
-                $(thisElement).parent().removeClass("active");
-                OverlayActive = false;
-                $("#ThreeOverlay").hide();
-                ShowHeightSlider(false)
-                modalOpen = false
-                controls.SetWheelScrollActive(true);
-            } else {
-                action_camposition_5();
-                $(thisElement).parent().addClass("active");
-                showDimensionsTimer = setTimeout(function() {
-                    OverlayActive = true;
-                    $("#ThreeOverlay").show();
-                    ShowHeightSlider(true)
-                    controls.SetWheelScrollActive(false);
-                    modalOpen = true
-                    document.querySelector("#OptionList").scrollTo(0, 0);
-                }, 1000);
-            }
-            console.log("show dimension stuff");
-        })
-        /*
-    $(".visual").on('wheel', function(e) { //enable Fullscreen Scroll on sitemenu
-        e.preventDefault();
-        var x = $(".menu-option").scrollTop();
-        $(".menu-option").scrollTop(x + e["originalEvent"].deltaY);
-    });
-	*/
+        clearTimeout(showDimensionsTimer);
+        if (OverlayActive) {
+            action_camposition_1();
+            $(thisElement).parent().removeClass("active");
+            OverlayActive = false;
+            $("#ThreeOverlay").hide();
+            ShowHeightSlider(false)
+            modalOpen = false
+            controls.SetWheelScrollActive(true);
+        } else {
+            action_camposition_5();
+            $(thisElement).parent().addClass("active");
+            showDimensionsTimer = setTimeout(function () {
+                OverlayActive = true;
+                $("#ThreeOverlay").show();
+                ShowHeightSlider(true)
+                controls.SetWheelScrollActive(false);
+                modalOpen = true
+                document.querySelector("#OptionList").scrollTo(0, 0);
+            }, 1000);
+        }
+        console.log("show dimension stuff");
+    })
+    /*
+$(".visual").on('wheel', function(e) { //enable Fullscreen Scroll on sitemenu
+    e.preventDefault();
+    var x = $(".menu-option").scrollTop();
+    $(".menu-option").scrollTop(x + e["originalEvent"].deltaY);
+});
+*/
 
     //info Icon Modal
     // $(".info").click(function() {
@@ -4851,7 +4851,7 @@ export function Ready() {
 
     // })
 
-    $("#modalOptionBox_btn").click(function() {
+    $("#modalOptionBox_btn").click(function () {
         // CheckOptions($(this).parent().parent().children(".kat-visual"));
         let temp = $(this).attr("value");
         let elem = $("#" + temp).parent();
@@ -4862,14 +4862,14 @@ export function Ready() {
     })
 
 
-    $(".closeBtn-modal").click(function() {
+    $(".closeBtn-modal").click(function () {
         $(".modalOption").hide();
     })
 
 
     let menuOpen = true;
     //Menu animations
-    $(".menuItem").click(function(e) {
+    $(".menuItem").click(function (e) {
         if (!menuOpen) {
             menuOpen = true;
 
@@ -4877,7 +4877,7 @@ export function Ready() {
             $(".menu-option").animate({
                 left: "0",
                 opacity: 1
-            }, 500, function() {
+            }, 500, function () {
 
             });
             $(".blurBG").animate({
@@ -4887,13 +4887,13 @@ export function Ready() {
             $(".closeMenu").animate({
                 left: "475",
 
-            }, 500, function() {
+            }, 500, function () {
                 // Animation complete.
             });
 
             $({ deg: 180 }).animate({ deg: 0 }, {
                 duration: 500,
-                step: function(now) {
+                step: function (now) {
                     $(".closeMenu i").css({
                         transform: 'rotate(' + now + 'deg)',
                     });
@@ -4905,7 +4905,7 @@ export function Ready() {
 
     })
 
-    $(".closeMenu").click(function(e) {
+    $(".closeMenu").click(function (e) {
         if (menuOpen) {
 
             menuOpen = !menuOpen;
@@ -4915,7 +4915,7 @@ export function Ready() {
             $(".menu-option").animate({
                 left: "-465px",
                 // opacity: 0
-            }, 500, function() {
+            }, 500, function () {
                 // $(".menu-option").hide();
                 // $(".openMenu").show();
                 $(".menu-option").css("opacity", "1")
@@ -4924,7 +4924,7 @@ export function Ready() {
 
             $({ deg: 0 }).animate({ deg: 180 }, {
                 duration: 500,
-                step: function(now) {
+                step: function (now) {
                     $(".closeMenu i").css({
                         transform: 'rotate(' + now + 'deg)',
                     });
@@ -4935,14 +4935,14 @@ export function Ready() {
 
             $(".closeMenu").animate({
                 left: "10px",
-            }, 500, function() {});
+            }, 500, function () { });
         } else {
             menuOpen = !menuOpen;
             $(".menu-option").show();
             $(".menu-option").animate({
                 left: "0",
                 opacity: 1
-            }, 500, function() {
+            }, 500, function () {
 
             });
             $(".blurBG").animate({
@@ -4952,7 +4952,7 @@ export function Ready() {
 
             $({ deg: 180 }).animate({ deg: 0 }, {
                 duration: 500,
-                step: function(now) {
+                step: function (now) {
                     $(".closeMenu i").css({
                         transform: 'rotate(' + now + 'deg)',
                     });
@@ -4963,18 +4963,18 @@ export function Ready() {
 
             $(".closeMenu").animate({
                 left: "475",
-            }, 500, function() {});
+            }, 500, function () { });
         }
 
     })
 
-    $(".openMenu").click(function(e) {
+    $(".openMenu").click(function (e) {
 
     })
 
 
 
-    $(".closeMenu-mobile").click(function(e) {
+    $(".closeMenu-mobile").click(function (e) {
         if (menuOpen) {
             menuOpen = !menuOpen;
             // $("#threecontainer").css("height", "93vh");
@@ -4984,13 +4984,13 @@ export function Ready() {
             $(".menu-option").css("top", "unset")
             $(".menu-option").animate({
                 bottom: "-500px",
-            }, 500, function() {
+            }, 500, function () {
                 $(".menu-option").css("opacity", "1")
             });
 
             $({ deg: 0 }).animate({ deg: 180 }, {
                 duration: 500,
-                step: function(now) {
+                step: function (now) {
                     $(".closeMenu-mobile i").css({
                         transform: 'rotate(' + now + 'deg)',
                     });
@@ -5001,12 +5001,12 @@ export function Ready() {
             $(".closeMenu-mobile").css("top", "unset")
             $(".closeMenu-mobile").animate({
                 bottom: "0px",
-            }, 500, function() {});
+            }, 500, function () { });
 
 
             $(".iconContainer-other").animate({
                 bottom: "-92vh",
-            }, 500, function() {
+            }, 500, function () {
                 $(".iconContainer-other").css("top", "unset")
                 $(".iconContainer-other").css("bottom", "0")
             });
@@ -5024,14 +5024,14 @@ export function Ready() {
             $(".menu-option").animate({
                 bottom: "0px",
                 opacity: 1
-            }, 500, function() {
+            }, 500, function () {
                 $(".menu-option").css("top", "57%")
             });
             // $(".closeMenu").show();
 
             $({ deg: 180 }).animate({ deg: 0 }, {
                 duration: 500,
-                step: function(now) {
+                step: function (now) {
                     $(".closeMenu-mobile i").css({
                         transform: 'rotate(' + now + 'deg)',
                     });
@@ -5043,13 +5043,13 @@ export function Ready() {
             $(".closeMenu-mobile").css("top", "unset")
             $(".closeMenu-mobile").animate({
                 bottom: "42vh",
-            }, 500, function() {});
+            }, 500, function () { });
 
 
             $(".iconContainer-other").animate({
                 top: "0px",
                 bottom: "-60px",
-            }, 500, function() {});
+            }, 500, function () { });
         }
 
     })
@@ -5077,46 +5077,46 @@ export function Ready() {
 
 
     //Slider Change functions
-    $("#ui-obj-width").on("change", function() {
+    $("#ui-obj-width").on("change", function () {
         $("#obj-width-text").text($(this).val() + " mm")
         SetData("width", $(this).val());
         CalcPrice();
     })
 
-    $("#ui-obj-height").on("change", function() {
+    $("#ui-obj-height").on("change", function () {
         $("#obj-height-text").text($(this).val() + " mm")
         SetData("height", $(this).val());
         CalcPrice();
     })
 
 
-    $("#ui-obj-led").on("change", function() {
+    $("#ui-obj-led").on("change", function () {
         $("#obj-led-text").text($(this).val())
         SetData("light_count", $(this).val());
     })
 
     //Checkbox like function trigger
-    $(".kat-visual").click(function(e) {
+    $(".kat-visual").click(function (e) {
         // CheckOptions($(this));
         // CalcPrice();
     })
 
 
-    $(".naviconmenu").click(function() {
+    $(".naviconmenu").click(function () {
 
         var elem = $(".naviconmenu");
-        $(elem).each(function() {
+        $(elem).each(function () {
             $(this).toggleClass('activeBtn')
         })
     })
 
 
-    $("#click-campositionbtn-2").click(function() {
+    $("#click-campositionbtn-2").click(function () {
         $("#click-campositionbtn-2").parent().addClass("active")
         $("#click-campositionbtn-1").parent().removeClass("active")
     })
 
-    $("#click-campositionbtn-1").click(function() {
+    $("#click-campositionbtn-1").click(function () {
         $("#click-campositionbtn-1").parent().addClass("active")
         $("#click-campositionbtn-2").parent().removeClass("active")
     })
@@ -5169,12 +5169,11 @@ export function CheckOptions(elem) {
     if ($(Options).hasClass('isFixed')) return
     if ($(Options).hasClass('isSingle') && !$(Options).hasClass('isActive')) {
         var items = $(elem).parent().parent().children(".kat-item").children(".kat-visual").children(".kat-select");
-        $(items).each(function(index) {
+        $(items).each(function (index) {
             if ($(this).hasClass('isFixed')) {
                 return
             } else {
                 disabledOptionIds.push($(this).parent().parent().attr("id"))
-                console.log($(this).parent().parent().attr("id"))
                 $(this).removeClass('isActive');
             }
         })
@@ -5560,58 +5559,58 @@ const setMenuBottomClosed = () => {
 
 
 
-var ChangeHeight = function() {
+var ChangeHeight = function () {
     ////console.log("Change Height to -> " + data_height);
 }
 
-var ChangeWidth = function() {
+var ChangeWidth = function () {
     ////console.log("Change Height to -> " + data_height);
 }
 
-var ChangeRoof = function() {
+var ChangeRoof = function () {
     ////console.log("Change Roof to -> " + data_roof);
 }
 
-var ChangePole = function() {
+var ChangePole = function () {
     ////console.log("Change Pole to -> " + data_pole);
 }
 
-var ChangeRoofOptions = function() {
+var ChangeRoofOptions = function () {
     ////console.log("Change Roof Option to -> " + data_option_roof);
 }
 
-var ChangeColor = function() {
+var ChangeColor = function () {
     ////console.log("Change Color to -> " + data_color);
 }
 
-var ChangeSurface = function() {
+var ChangeSurface = function () {
     ////console.log("Change Surface to -> " + data_surface);
 }
 
-var ChangeFassafe = function() {
+var ChangeFassafe = function () {
     ////console.log("Change Fassade to -> " + data_fassade);
 }
 
-var ChangeFloor = function() {
+var ChangeFloor = function () {
     ////console.log("Change Floor to -> " + data_floor);
 }
 
-var ChangeGlas = function() {
+var ChangeGlas = function () {
     ////console.log("Change Glas to -> " + data_glas);
 }
 
-var ChangeGlasOptions = function() {
+var ChangeGlasOptions = function () {
     ////console.log("Change Glas Option to -> " + data_option_glas);
 }
 
-var ChangeLight = function() {
+var ChangeLight = function () {
     ////console.log("Change Light to -> " + data_light);
 }
 
-var ChangeLightCounter = function() {
+var ChangeLightCounter = function () {
     ////console.log("Change Light Count to -> " + data_light_count);
 }
 
-var ChangeWater = function() {
+var ChangeWater = function () {
     ////console.log("Change Water to -> " + data_water);
 }

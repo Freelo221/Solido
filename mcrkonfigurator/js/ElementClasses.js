@@ -60,8 +60,6 @@ export class MenuElement {
     priceElement;
     extraPrice;
 
-
-
     priceTable = [];
     discountTable = [];
 
@@ -74,22 +72,26 @@ export class MenuElement {
     }]
 
     slider = [{
-            function: "",
-            text: "",
-            min: "",
-            max: "",
-            step: "",
-            unit: ""
-        },
-        {
-            function: "",
-            text: "",
-            min: "",
-            max: "",
-            step: "",
-            unit: ""
-        }
+        function: "",
+        text: "",
+        min: "",
+        max: "",
+        step: "",
+        unit: ""
+    },
+    {
+        function: "",
+        text: "",
+        min: "",
+        max: "",
+        step: "",
+        unit: ""
+    }
     ]
+
+    currentPrice;
+    currentCount;
+    currentDiscount;
 
 
     constructor(props) {
@@ -131,6 +133,10 @@ export class MenuElement {
         this.selectLinkElements = props.selectLinkElements;
         this.deselectLinkElements = props.deselectLinkElements;
         this.imageCode = props.imageCode;
+
+        this.currentPrice = props.price
+        this.currentCount = 1
+        this.currentDiscount = 0
     }
 }
 
