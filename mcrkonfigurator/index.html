@@ -1,60 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Konfigurator</title>
-		<!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> -->
-		<!-- <script src="js/require.js"></script> -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-			integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
-		<script
-			src="https://code.jquery.com/jquery-3.6.0.js"
-			crossorigin="anonymous"
-		></script>
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			crossorigin="anonymous"
-		/>
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-			crossorigin="anonymous"
-		></script>
-		<link rel="stylesheet" href="./css/form.css" />
 
-		<!-- <script src="//cdn.rawgit.com/mrdoob/three.js/master/build/three.js"></script> -->
-		<!-- <script src="//cdn.rawgit.com/mrdoob/three.js/master/examples/js/controls/OrbitControls.js"></script> -->
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konfigurator</title>
+    <!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> -->
+    <!-- <script src="js/require.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/form.css" />
 
-		<!-- <script src="js/orbit.js"></script> -->
-		<link rel="stylesheet" href="./css/main.css" />
+    <!-- <script src="//cdn.rawgit.com/mrdoob/three.js/master/build/three.js"></script> -->
+    <!-- <script src="//cdn.rawgit.com/mrdoob/three.js/master/examples/js/controls/OrbitControls.js"></script> -->
 
-		<script src="./js/Tween.min.js"></script>
-		<script type="module" src="./js/dynamic.js"></script>
-		<script type="module" src="./js/main.js"></script>
-		<script type="module" src="./js/summary.js"></script>
-	</head>
+    <!-- <script src="js/orbit.js"></script> -->
+    <link rel="stylesheet" href="./css/main.css" />
 
-	<body>
-		<div class="tooltip">
-			<p class="tooltipText">test</p>
-			<!-- <i class="fas fa-chevron-down"></i> -->
-			<div class="arrowBubbleBox"></div>
-		</div>
+    <script src="./js/Tween.min.js"></script>
+    <script type="module" src="./js/dynamic.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/summary.js"></script>
+</head>
 
-		<!-- <span class="info" data-bs-toggle="tooltip" data-bs-placement="top" title="Some Information"></span> -->
+<body>
+    <div class="tooltip">
+        <p class="tooltipText">test</p>
+        <!-- <i class="fas fa-chevron-down"></i> -->
+        <div class="arrowBubbleBox"></div>
+    </div>
 
-		<div class="mainContent">
-			<div class="mainContentInner">
-				<div class="confContainer">
-					<div class="menu list-group float-start" id="list-example">
-						<!-- <a href="#scroll-section-1" class="menuItem list-group-item list-group-item-action">
+    <!-- <span class="info" data-bs-toggle="tooltip" data-bs-placement="top" title="Some Information"></span> -->
+
+    <div class="mainContent">
+        <div class="mainContentInner">
+            <div class="confContainer">
+                <div class="menu list-group float-start" id="list-example">
+                    <!-- <a href="#scroll-section-1" class="menuItem list-group-item list-group-item-action">
                         <div>
                             <div class="menu-icon menu-icon-ruler"></div>
                             <p>Form</p>
@@ -83,9 +69,9 @@
                             <p>Umgebung</p>
                         </div>
                     </a> -->
-					</div>
+                </div>
 
-					<!-- 
+                <!-- 
                     <a href="#sec3" class="menuItem list-group-item list-group-item-action">
                         <img src="./img/external-link-alt-solid.svg" alt="">
                         <p>Ausstattung</p>
@@ -96,43 +82,39 @@
                     </a>
 					-->
 
-					<div class="openMenu">
-						<div>
-							<i class="fas fa-chevron-right"></i>
-						</div>
-					</div>
+                <div class="openMenu">
+                    <div>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
 
-					<div class="blurBG"></div>
+                <div class="blurBG"></div>
 
-					<div class="closeMenu-mobile">
-						<div>
-							<i class="fas fa-chevron-down"></i>
-						</div>
-					</div>
+                <div class="closeMenu-mobile">
+                    <div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
 
-					<div id="OptionList" class="menu-option">
-						<div class="closeMenu">
-							<div>
-								<i class="fas fa-chevron-left"></i>
-							</div>
-						</div>
+                <div id="OptionList" class="menu-option">
+                    <div class="closeMenu">
+                        <div>
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                    </div>
 
-						<!-- <div id="click-stoffbahnen-toggle">click-stoffbahnen-toggle</div> -->
-						<!-- <div id="click-terrassendachmainmaterial-gebuerstet">click-terrassendachmainmaterial-gebuerstet</div> -->
-						<!-- <div id="click-terrassendachmainmaterial-glatt">click-terrassendachmainmaterial-glatt</div> -->
+                    <!-- <div id="click-stoffbahnen-toggle">click-stoffbahnen-toggle</div> -->
+                    <!-- <div id="click-terrassendachmainmaterial-gebuerstet">click-terrassendachmainmaterial-gebuerstet</div> -->
+                    <!-- <div id="click-terrassendachmainmaterial-glatt">click-terrassendachmainmaterial-glatt</div> -->
 
-						<div class="opt-item" id="sec15">
-							<h3>Eigenes Bild hochladen</h3>
-							<div class="kat-wrapper">
-								<div class="kat-item fullWidth">
-									<div class="container">
-										<div class="row">
-											<div class="col-12 col-sm-12 mt-3 mt-sm-0 p-0">
-												<a
-													href="#"
-													id="imageUploaderPre"
-													class="btn btn-secondary"
-													>Bild Hochladen</a
+                    <div class="opt-item" id="sec15">
+                        <h3>Eigenes Bild hochladen</h3>
+                        <div class="kat-wrapper">
+                            <div class="kat-item fullWidth">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 mt-3 mt-sm-0 p-0">
+                                            <a href="#" id="imageUploaderPre" class="btn btn-secondary">Bild Hochladen</a
 												>
 											</div>
 
@@ -229,7 +211,7 @@
 								<div class="kat-item fullWidth">
 									<div class="container">
 										<div class="row">
-											<div class="col-12 col-sm-6 g-0 centerElement">
+											<div class="col-12 col-sm-12 g-0 mb-3 centerElement">
 												<p class="w-100 text-start">
 													Gesamtpreis: <span class="sumText">22.000 €</span>
 												</p>
@@ -237,23 +219,27 @@
 													Sie sparen: 2.768 €
 												</p>
 												<!-- <a href="" class="btn btn-primary mt-2">Angebot anfordern</a> -->
-											</div>
-											<div class="col-12 col-sm-6 mt-3 mt-sm-0 centerElement">
-												<!-- <p>Sparen sie bis zu 20%</p> -->
-												<a class="btn btn-primary btn_angebotAnfordernSmall"
-													>Angebot anfordern</a
+                                        </div>
+
+                                        <div class="col-12 col-sm-6 mt-3 mt-sm-0 p-0">
+                                            <a class="btn btn-secondary-menu config-link">Zusammenfassung</a
 												>
 											</div>
+											<div class="col-12 col-sm-6 mt-3 mt-sm-0 p-0 centerElement">
+												<!-- <p>Sparen sie bis zu 20%</p> -->
+												<a class="btn btn-primary btn_angebotAnfordernSmall">Angebot anfordern</a
+													>
+												</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="mt-3">
+							<!-- <div class="mt-3">
 								<a
-									class="w-100 w-sm-50 d-block ps-sm-0 text-center text-sm-start config-link"
-									>Übersicht</a
+									class="btn btn-primary config-link"
+									>Zusammenfassung</a
 								>
-							</div>
+							</div> -->
 							<!-- <div class=" ">
 								<a
 									class="w-100 w-sm-50 d-block ps-sm-0 text-center text-sm-start config-link"
@@ -273,11 +259,10 @@
 											Sie sparen: 2.768 €
 										</p>
 										<!-- <a href="" class="btn btn-primary mt-2">Angebot anfordern</a> -->
-									</div>
-									<div class="col-6 centerElement">
-										<!-- <p>Sparen sie bis zu 20%</p> -->
-										<a  class="btn btn-primary btn_angebotAnfordernBig" 
-											>Angebot anfordern</a
+                                        </div>
+                                        <div class="col-6 centerElement">
+                                            <!-- <p>Sparen sie bis zu 20%</p> -->
+                                            <a class="btn btn-primary btn_angebotAnfordernBig">Angebot anfordern</a
 										>
 									</div>
 								</div>
@@ -334,17 +319,33 @@
 									</div>
 								</div>
 							</div>
+
+
+							<div id="treeLoadingContainer2" class="treeLoadingContainer2">
+								<div class="preloadFilter"></div>
+								<div class="container">
+									<div class="row justify-content-center">
+										<div
+											class="col-6 offset-3 d-flex flex-column justify-content-center align-items-center vh-100"
+										>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+
 							<div id="threecontainer"></div>
 							<div id="ThreeOverlay">
 								<div class="wrappercontai">
 									<div class="wrapper5by4">
 										<div class="innerCont">
 											<img id="tz_img" src="./img/tz_glatt.svg" alt="" />
-											<p>1100</p>
-											<p>1100</p>
-											<p>1100</p>
-											<p>1100</p>
-											<p>1100</p>
+											<p class="outputRoofDepth">1100</p>
+											<p class="outputMaxRoofHeight">1100</p>
+											<p class="outputRoofHeight">1100</p>
+											<p class="outputDurchgangsHeight">1100</p>
 										</div>
 									</div>
 								</div>
@@ -369,11 +370,11 @@
 						>
 							<div class="imgUploadContainer2">
 								<a id="enableUserImageMode" class="icon_imgUpload"></a>
-								<a id="disableUserImageMode" class="icon_imgUpload"></a>
-							</div>
-						</div>
+                                            <a id="disableUserImageMode" class="icon_imgUpload"></a>
+                                        </div>
+                                    </div>
 
-						<!-- <div class="zoomRangeSliderContainer">
+                                    <!-- <div class="zoomRangeSliderContainer">
                         <div class="closeMenu_zoomSlider">
                             <div>
                                 <i class="fas fa-chevron-down"></i>
@@ -406,70 +407,63 @@
                             <input type="range" name="" id="">
                             <input type="range" name="" id="">
                         </div> -->
-					</div>
+                                </div>
 
-					<div class="iconContDivainer-other">
-						<!-- <div id="enableUserImageMode_cont" class="iconContDiv ">
+                                <div class="iconContDivainer-other">
+                                    <!-- <div id="enableUserImageMode_cont" class="iconContDiv ">
                             <span id="enableUserImageMode_Pre" class="icon_imgUpload"></span>
                         </div> -->
-						<div class="iconContDiv">
-							<span id="btn_showDimensions" class="icon-size"></span>
-						</div>
-						<div class="iconContDiv">
-							<span id="btn_zoomIn" class="icon-plus"></span>
-						</div>
-						<div class="iconContDiv">
-							<span id="btn_zoomOut" class="icon-minus"></span>
-						</div>
-						<div class="iconContDiv">
-							<span class="icon-outer" id="click-campositionbtn-1"></span>
-						</div>
-						<div class="iconContDiv">
-							<span class="icon-inner" id="click-campositionbtn-2"></span>
-						</div>
+                                    <div class="iconContDiv">
+                                        <span id="btn_showDimensions" class="icon-size"></span>
+                                    </div>
+                                    <div class="iconContDiv">
+                                        <span id="btn_zoomIn" class="icon-plus"></span>
+                                    </div>
+                                    <div class="iconContDiv">
+                                        <span id="btn_zoomOut" class="icon-minus"></span>
+                                    </div>
+                                    <div class="iconContDiv">
+                                        <span class="icon-outer" id="click-campositionbtn-1"></span>
+                                    </div>
+                                    <div class="iconContDiv">
+                                        <span class="icon-inner" id="click-campositionbtn-2"></span>
+                                    </div>
 
-						<!-- <div>
+                                    <!-- <div>
 					<span class="icon-undo"></span>
 				</div> -->
-						<!-- <div>
+                                    <!-- <div>
 					<span class="icon-redo"></span>
 				</div> -->
-						<!-- <div>
+                                    <!-- <div>
 					<span class="icon-save"></span>
 				</div>
 				<div>
 					<span class="icon-user"></span>
 				</div> -->
-					</div>
-				</div>
-			</div>
+                                </div>
+                            </div>
+                        </div>
 
-			<div class="modalOption">
-				<div class="blackOut"></div>
-				<div class="modalContent">
-					<div class="container-fluid">
-						<div class="row mt-5">
-							<div class="col-12 col-sm-6">
-								<div class="visualBox">
-									<img
-										id="modalOptionBox_img"
-										src="./img/conf/dacherweiterung.jpg"
-										alt=""
-									/>
-								</div>
-							</div>
-							<div class="col-12 col-sm-6">
-								<h3 id="modalOptionBox_headline" class="mt-3 mt-sm-0">
-									Glatter Wandanschluss
-								</h3>
-								<p id="modalOptionBox_text" class="mt-4">
-									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-									diam nonumy eirmod tempor invidunt ut labore et dolore magna
-									aliquyam era
-								</p>
-								<div class="col-12 mt-5">
-									<a value="" id="modalOptionBox_btn" class="btn btn-primary"
-										>Hinzufügen</a
+                        <div class="modalOption">
+                            <div class="blackOut"></div>
+                            <div class="modalContent">
+                                <div class="container-fluid">
+                                    <div class="row mt-5">
+                                        <div class="col-12 col-sm-6">
+                                            <div class="visualBox">
+                                                <img id="modalOptionBox_img" src="./img/conf/dacherweiterung.jpg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <h3 id="modalOptionBox_headline" class="mt-3 mt-sm-0">
+                                                Glatter Wandanschluss
+                                            </h3>
+                                            <p id="modalOptionBox_text" class="mt-4">
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam era
+                                            </p>
+                                            <div class="col-12 mt-5">
+                                                <a value="" id="modalOptionBox_btn" class="btn btn-primary">Hinzufügen</a
 									>
 								</div>
 							</div>
@@ -546,16 +540,40 @@
             </div> -->
 
 						<h2 class="mb-4">Ihre Konfiguration 2938182</h2>
-						<div class="row gx-5 mt-3">
+						
+            
+						<div class="row gx-5 mt-4">
 							<div class="col-12 m-auto">
 								<div class="row">
 									<div class="col-6 previewImage">
+										<div class="aspect-container">
+											<img id="previewImage_tz" src="./img/tz_glatt.svg" alt="" srcset="" />
+										</div>
+									</div>
+
+									<div class="col-6 previewImage">
+										<ul>
+											<li>A - <span class="outputDurchgangsHeight">2000mm</span></li>
+											<li>B - <span class="outputRoofHeight">2000mm</span></li>
+											<li>C - <span class="outputMaxRoofHeight">2000mm</span></li>
+											<li>D - <span class="outputRoofDepth">2000mm</span></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="row gx-5 mt-3">
+							<div class="col-6">
+								<div class="row">
+									<div class="col-6 previewImage pe-0 ">
 										<div class="aspect-container">
 											<img src="./img/Preview01.png" alt="" srcset="" />
 										</div>
 									</div>
 
-									<div class="col-6 previewImage">
+									<div class="col-6 previewImage pe-0">
 										<div class="aspect-container">
 											<img src="./img/Preview02.png" alt="" srcset="" />
 										</div>
@@ -584,6 +602,7 @@
 								theoretische Werte handelt, müssen bauseits Toleranzen
 								einkalkuliert werden.
 							</p>
+							<p class="befestignungsNotice mt-3">Hinweis: Es gibt verschiedene Mauerwerke - man extra Befestigungsmaterial benötigt; </p>
 						</div>
 					</div>
 				</div>
@@ -637,7 +656,7 @@
 	
 
 					<div class="row">
-						<div class="h5">Ihr Daten</div>
+						<div class="h5">Ihre Daten</div>
 						<div class="col-12 colContent">
 							<form
 								name="modularform_basicinfo_form"
@@ -738,7 +757,7 @@
 										<small class="">*Pflichtfelder</small>
 									</div>
 									<div class="btnContainer">
-										<button type="button" class="btn btn-outline formstepNext">
+										<button type="button" class="btn btn-secondary-menu formstepNext">
 											Weiter
 										</button>
 									</div>
@@ -777,13 +796,13 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="h5">Ihr Daten</div>
+            <div class="row mt-5">
+                <div class="h5">Ihre Daten</div>
                 <div class="col-12 colContent">
                     <form name="modularform_basicinfo_form" class="form-horizontal modularform_basicinfo_form modularform_form" method="post" action="" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-12 col-lg-8 offset-lg-2">
-                                Placeholder RadioButtons
+                                
                                 <div class="modularinputgroup cnt4">
                                     <div class="textinput styled">
                                         <input type="text" class="inputtext modularform_input modularform_textinput submiterr" id="input_vorname" name="input_vorname" placeholder="Vorname*" value="" required="" />
@@ -806,6 +825,7 @@
                                     <div class="textinput styled">
                                         <input type="email" class="inputtext modularform_input modularform_textinput submiterr" id="input_email" name="input_email" placeholder="E-Mail*" value="" required="" />
                                     </div>
+
                                      <div class="textinput textAreaInput styled">
 												<textarea
 													class="inputtext modularform_input modularform_textinput submiterr"
@@ -816,13 +836,22 @@
 													required=""
 												></textarea>
 											</div>
+											<div class="col-12 float-start timespanRadio">
+												<p>Zu wann umsetzen?</p>
+												<label class="radiospanInput" for="rbtn1">< 3 Monate</label>
+												<input class="form-check-input " type="radio" name="timespan" id="rbtn1">
+												<label class="radiospanInput" for="rbtn2">< 6 Monate</label>
+												<input class="form-check-input " type="radio" name="timespan" id="rbtn2">
+												<label class="radiospanInput" for="rbtn3">> 6 Monate</label>
+												<input class="form-check-input " type="radio" name="timespan" id="rbtn3">
+											</div>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-8 offset-lg-2 text-end">
                                 <small class="">*Pflichtfelder</small>
                             </div>
                             <div class="btnContainer">
-                                <button type="button" class="btn btn-outline formstepNext">
+                                <button type="button" class="btn btn-secondary-menu formstepNext">
                     Weiter
                   </button>
                             </div>

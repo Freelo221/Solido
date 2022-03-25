@@ -1,11 +1,19 @@
 import { curWidth, curDepth, GetConstPrice } from "./dynamic.js"
-
+import { sparrenklaueSelected } from "./main.js"
 
 export const CreateSummary = (_itemMap, _selectedItems) => {
     // console.log(_itemMap)
-    // console.log(_selectedItems)
+    console.log(_selectedItems)
 
     document.querySelector(".SummaryContainer").innerHTML = ""
+
+    if (sparrenklaueSelected) {
+        document.querySelector("#previewImage_tz").setAttribute("src", "./img/tech_zeichnung_summary_sparren.jpg")
+    } else {
+        document.querySelector("#previewImage_tz").setAttribute("src", "./img/tech_zeichnung_summary_glatt.jpg")
+    }
+
+
 
 
     let description
@@ -26,11 +34,11 @@ export const CreateSummary = (_itemMap, _selectedItems) => {
     RowItem.append(DescriptionItem, CountItem, PriceItem, FinalPriceItem, emptyElement)
     Container.append(RowItem)
     document.querySelector(".SummaryContainer").appendChild(Container)
-    //Create Tablelike Header end
+        //Create Tablelike Header end
     console.log(GetConstPrice(curWidth, curDepth)) // dachbreite + tiefe Grundpreis
     let constPrice = GetConstPrice(curWidth, curDepth);
     let x = new SummaryElement({
-        description: "Terassendach - " + curWidth + "x" + curDepth,
+        description: "Terassendach - " + curWidth + "mm x " + curDepth + "mm",
         anzahl: 1,
         itemPrice: constPrice + ",00€",
         curFinalPrice: constPrice + ",00€",
@@ -42,25 +50,30 @@ export const CreateSummary = (_itemMap, _selectedItems) => {
 
     _selectedItems.forEach((e) => {
         let SelectedItem = _itemMap.get(e)
-
+        if (e == "Fertigstellung-4") {
+            //selbstaufbau
+            document.querySelector(".befestignungsNotice").style.display = "block"
+        }
+        if (e == "Fertigstellung-5") {
+            //montage
+            document.querySelector(".befestignungsNotice").style.display = "none"
+        }
         description = SelectedItem.name
 
         if (SelectedItem.currentPrice) {
-            itemPrice = SelectedItem.currentPrice
-        }
-        else {
+            itemPrice = SelectedItem.currentPrice / SelectedItem.currentCount
+        } else {
             itemPrice = 0
         }
 
         if (SelectedItem.currentCount) {
             anzahl = SelectedItem.currentCount
-        }
-        else {
+        } else {
             anzahl = 1
         }
 
         if (curFinalPrice >= 0)
-            curFinalPrice = parseFloat(curFinalPrice) + parseFloat(itemPrice)
+            curFinalPrice = parseFloat(anzahl) * parseFloat(itemPrice)
         else {
             curFinalPrice = 0
         }
@@ -130,13 +143,12 @@ class SummaryElement {
                 if (ArrowElement.classList.contains("active")) {
                     ArrowElement.classList.remove("active")
                     DescriptionTextItem.classList.remove("active")
-                    $(DescriptionRowItem).slideUp("fast", function () {
+                    $(DescriptionRowItem).slideUp("fast", function() {
                         // Animation complete.
                         console.log("first")
                     });
-                }
-                else {
-                    $(DescriptionRowItem).slideDown("fast", function () {
+                } else {
+                    $(DescriptionRowItem).slideDown("fast", function() {
                         // Animation complete.
                     });
                     ArrowElement.classList.add("active")
@@ -152,8 +164,7 @@ class SummaryElement {
             DescriptionRowItem.append(DescriptionTextItem);
             RowItem.append(DescriptionItem, CountItem, PriceItem, FinalPriceItem, ArrowElement)
             Container.append(RowItem, DescriptionRowItem)
-        }
-        else {
+        } else {
             RowItem.append(DescriptionItem, CountItem, PriceItem, FinalPriceItem)
             Container.append(RowItem)
         }
@@ -188,5 +199,3 @@ function htmlDecode(value) {
 function htmlEncode(value) {
     return $('<div/>').text(value).html();
 }
-
-
