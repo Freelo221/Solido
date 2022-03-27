@@ -17,7 +17,6 @@ import {
     Action_ChangeRafterState,
     desiredWidthElements,
     Action_ChangeGlobalHeight,
-    currentPolePositionIsEingerueckt,
     UpdateDWEExtern,
     isInitialized,
     selectedCamMode,
@@ -25,8 +24,10 @@ import {
     action_camposition_2,
     action_camposition_3,
     action_camposition_4,
-    ShowHeightSlider
-
+    ShowHeightSlider,
+    currentPolePositionIsEingerueckt,
+    schiebeGlasSelected,
+    sparrenklaueSelected
 
 } from "./main.js";
 import { CreateSummary } from "./summary.js"
@@ -37,7 +38,7 @@ function readTextFile(file) {
     var allText;
     var rawFile = new XMLHttpRequest(); // XMLHttpRequest (often abbreviated as XHR) is a browser object accessible in JavaScript that provides data in XML, JSON, but also HTML format, or even a simple text using HTTP requests.
     rawFile.open("GET", file, false); // open with method GET the file with the link file ,  false (synchronous)
-    rawFile.onreadystatechange = function() {
+    rawFile.onreadystatechange = function () {
         if (rawFile.readyState === 4) // readyState = 4: request finished and response is ready
         {
             if (rawFile.status === 200) // status 200: "OK"
@@ -102,7 +103,7 @@ let UserImagePreButton,
     UserImageZoomContainerStateChanger,
     userImage_isUploaded = false;
 
-$(document).ready(function() {
+$(document).ready(function () {
 
 
 
@@ -178,10 +179,10 @@ $(document).ready(function() {
     let tempBElem = document.querySelector(".bottomElement");
     let tempBElem2 = document.querySelector("#sec15");
 
-    $(".icon-save").click(function() {
+    $(".icon-save").click(function () {
         SaveConfiguration();
     })
-    $(".icon-redo").click(function() {
+    $(".icon-redo").click(function () {
         LoadConfiguration();
     })
 
@@ -202,10 +203,10 @@ $(document).ready(function() {
     obj.optionItems.forEach(element2 => {
         AddNewOptionItem(element2);
         element2.childs.forEach(element3 => {
-                // console.log(element3.priceTable);
-                AddNewElementItem(element3, element2);
-            })
-            // CalcPrice();
+            // console.log(element3.priceTable);
+            AddNewElementItem(element3, element2);
+        })
+        // CalcPrice();
     });
 
     // obj.Optionitems.forEach(element1 => {
@@ -254,12 +255,12 @@ $(document).ready(function() {
         document.querySelector("#enableUserImageMode").click();
     })
     document.querySelector("#imagedelete").addEventListener("click", () => {
-            document.querySelector("#disableUserImageMode").click();
-        })
-        // UserImagePreButton.addEventListener('click', (e) => {
-        //     console.log(e.target);
-        //     console.log("first");
-        //     if (!userImage_isUploaded) {
+        document.querySelector("#disableUserImageMode").click();
+    })
+    // UserImagePreButton.addEventListener('click', (e) => {
+    //     console.log(e.target);
+    //     console.log("first");
+    //     if (!userImage_isUploaded) {
 
     //         document.querySelector("#enableUserImageMode").click();
     //         //switch class
@@ -440,7 +441,7 @@ function AddNewElementItem(item, parent) {
     } else if (item.type == "x-LED") {
         let container = CreateCustomLedBlock(item, OptionMap.get(parent.name));
         ElementItem.element = container
-            // OptionMap.get(parent.name).appendChild(container);
+        // OptionMap.get(parent.name).appendChild(container);
         return;
     }
 
@@ -577,7 +578,7 @@ function AddNewElementItem(item, parent) {
             let ttWidth = ttElem.offsetWidth;
 
             let pos = GetScreenCordinates(e.target)
-                // + full widht/2   +ownwidth/2
+            // + full widht/2   +ownwidth/2
             pos.left += ((targetWidth / 2) - (ttWidth / 2));
             pos.top -= ttElem.offsetHeight;
 
@@ -602,8 +603,15 @@ function AddNewElementItem(item, parent) {
         })
     }
 
-
+    // console.log("########")
+    // console.log(visualElement)
+    // console.log("########")
     visualElement.addEventListener("click", () => {
+
+        // console.log("########")
+        // console.log(visualElement)
+        // console.log("########")
+
         if (ElementItem.isSelected && ElementItem.single || ElementItem.preventUpgradeDeselect && ElementItem.isSelected) {
             console.log("This is a Single Item - cant reclick")
             return
@@ -677,6 +685,7 @@ function AddNewElementItem(item, parent) {
         ElementItem.isSelected = !ElementItem.isSelected
 
         CalcPrice();
+
         CreateConfiguration()
 
     })
@@ -770,6 +779,7 @@ function AddNewElementItem(item, parent) {
 
     if (item.function != "" || item.function != null) {
         visualElement = AddEventToElement(visualElement, item.function, item.functionParam);
+
     }
 
 
@@ -921,7 +931,7 @@ function CreateCustomLedBlock(item, parent) {
                 let ttWidth = ttElem.offsetWidth;
 
                 let pos = GetScreenCordinates(e.target)
-                    // + full widht/2   +ownwidth/2
+                // + full widht/2   +ownwidth/2
                 pos.left += ((targetWidth / 2) - (ttWidth / 2));
                 pos.top -= ttElem.offsetHeight;
 
@@ -1074,8 +1084,8 @@ function countProperties(obj) {
 const SwitchSurfaceColor = (_color) => {
     // console.log("switch other color to" + _color);
     let elems = document.querySelectorAll(".change-by-color")
-        // console.log(elems)
-        // let hexColor = "#" + _color.substring(2);
+    // console.log(elems)
+    // let hexColor = "#" + _color.substring(2);
     elems.forEach((e) => {
         //./img/conf/oberflaeche-gebuerstet.jpg
         let src = e.getAttribute("src")
@@ -1092,7 +1102,7 @@ const SwitchSurfaceColor = (_color) => {
         let finalPath = `${filePath}${fileName}_${_color}${fileType}`
 
         e.setAttribute("src", finalPath)
-            // e.parentNode.style.background = hexColor
+        // e.parentNode.style.background = hexColor
     })
 }
 
@@ -1135,7 +1145,6 @@ function AddEventToElement(elem, elemFunc, elemParam) {
         elem.addEventListener("click", () => { Action_SwitchRoofMaterial(`${elemParam}`) })
     } else if (elemFunc == "ChangeRafterState") {
         elem.addEventListener("click", () => {
-
             TempSwitchTzImage(elemParam)
             Action_ChangeRafterState(`${elemParam}`);
         })
@@ -1154,30 +1163,32 @@ function AddEventToElement(elem, elemFunc, elemParam) {
         })
     } else if (elemFunc == "ChangeRealRealHeight") {
         elem.addEventListener("click", () => {
-            // Action_ChangeGlobalHeight(`${elem.value}`)
+            Action_ChangeGlobalHeight(`${elem.value}`)
             SetDimensionValuesByMaxHeight(elem.value)
-
-
         })
 
-
-        elem.addEventListener('click', () => {
-            if (elem.getAttribute("id") === "ui-obj-Breite") {
-                configuration[0] = elem.value;
-                // elem.dispatchEvent(new Event('change'));
-                return;
-            }
-            if (elem.getAttribute("id") === "ui-obj-Tiefe") {
-                configuration[1] = elem.value;
-                // elem.dispatchEvent(new Event('change'));
-                return;
-            }
-
-            GetCurrentConfiguration(elem);
-        })
-
-        return elem;
     }
+    elem.addEventListener('click', () => {
+        if (elem.getAttribute("id") === "ui-obj-Breite") {
+            configuration[0] = elem.value;
+            // elem.dispatchEvent(new Event('change'));
+            return;
+        }
+        if (elem.getAttribute("id") === "ui-obj-Tiefe") {
+            configuration[1] = elem.value;
+            // elem.dispatchEvent(new Event('change'));
+            return;
+        }
+
+        GetCurrentConfiguration(elem);
+    })
+
+    elem.addEventListener('click', () => {
+        SetDimensionValuesByDgHeight(document.querySelector("#ui-obj-Durchgang").value)
+    })
+
+    return elem;
+
 }
 
 var ActiveExtraPrice = false;
@@ -1233,7 +1244,9 @@ function SetNewPrices() {
                         extraPrice = 0;
                     }
 
-                } catch {}
+                } catch {
+                    console.log("Marvin Suckt -.-")
+                }
                 try {
 
                     let price = curElem.priceTable[0][height][0][width];
@@ -1295,7 +1308,7 @@ function CalcPrice() {
 
     let priceSum = 0;
     let discountSum = 0;
-    $(elems).each(function(i, obj) {
+    $(elems).each(function (i, obj) {
         if ($(obj).hasClass("isActive")) {
             let x = parseInt($(obj).attr("price"));
             let y = parseInt($(obj).attr("disc"));
@@ -1444,9 +1457,9 @@ function updateLedOption() {
 //     }
 // })
 
-const GetElementContentHeight = function(elem) { //add height of all child elements
+const GetElementContentHeight = function (elem) { //add height of all child elements
     var cc = 0;
-    $(elem).children().each(function() {
+    $(elem).children().each(function () {
         cc += $(this).outerHeight();
     });
     return cc;
@@ -1454,7 +1467,7 @@ const GetElementContentHeight = function(elem) { //add height of all child eleme
 let camPos = "normal"
 
 
-$(".menu-option").on('scroll', (function() {
+$(".menu-option").on('scroll', (function () {
     var OptionHeight = GetElementContentHeight($(this));
     // $(this).height())
     // console.log(GetElementContentHeight($(this)));
@@ -1524,7 +1537,7 @@ $(".menu-option").on('scroll', (function() {
 }));
 
 
-var UpdateActiveMenu = function(i) {
+var UpdateActiveMenu = function (i) {
     let array = Array.from(siteMenuMap, ([name, value]) => ({ name, value }));
     array.forEach((item, index) => {
         item.value.classList.remove("active");
@@ -1547,7 +1560,7 @@ function RecalcMenu() {
 }
 
 
-$(window).resize(function() {
+$(window).resize(function () {
     RecalcMenu();
 })
 
@@ -1578,9 +1591,9 @@ function GetCurrentConfiguration(elem) {
 }
 
 function SaveConfiguration() {
-    navigator.clipboard.writeText(configuration.toString()).then(function() {
+    navigator.clipboard.writeText(configuration.toString()).then(function () {
         alert('Copying to clipboard was successful!');
-    }, function(err) {
+    }, function (err) {
         console.error('Could not copy text: ', err);
     });
     console.log(desiredWidthElements)
@@ -1588,7 +1601,7 @@ function SaveConfiguration() {
 
 export function LoadConfiguration(arr) {
     return
-    if (typeof(arr) !== 'undefined') {
+    if (typeof (arr) !== 'undefined') {
         let Elements = [];
         arr.forEach((e, index) => {
             if (index === 0) {
@@ -1596,7 +1609,7 @@ export function LoadConfiguration(arr) {
                 let x = Math.floor(parseFloat(e) / 790);
                 console.log(x)
                 UpdateDWEExtern(x)
-                    // desiredWidthElements = 5;
+                // desiredWidthElements = 5;
                 updateLedOption();
                 console.log("width")
                 CalcPrice();
@@ -1671,7 +1684,7 @@ function AddToolTipToElement(_elem, _text) {
         let ttWidth = ttElem.offsetWidth;
 
         let pos = GetScreenCordinates(e.target)
-            // + full widht/2   +ownwidth/2
+        // + full widht/2   +ownwidth/2
         pos.left += ((targetWidth / 2) - (ttWidth / 2));
         pos.top -= ttElem.offsetHeight;
 
@@ -1727,12 +1740,14 @@ const CreateConfiguration = () => {
             //
             FindElementByNode(xqwe).then((node) => {
                 if (node.classList.contains("Slider-0")) {
-                    console.log("Dimensional slider")
-                        //save slider data and return
+                    // console.log("Dimensional slider")
+                    return
+                    //save slider data and return
                 }
                 if (node.classList.contains("Beleuchtung-0")) {
-                    console.log("LedBlock")
-                        //save Led data and return
+                    // console.log("LedBlock")
+                    return
+                    //save Led data and return
                 }
 
                 let node2 = node.querySelector(".kat-select.isActive")
@@ -1761,7 +1776,7 @@ const CreateConfiguration = () => {
     })
     Promise.all(requests).then(() => {
         //code after all promises are resolved
-        console.log(configuration_Container)
+        // console.log(configuration_Container)
         CreateSummary(ElementMapper, configuration_Container)
     });
 }
@@ -1835,22 +1850,29 @@ const TempSwitchTzImage = (_state) => {
 
 
 const SetDimensionValuesByDgHeight = (_dgHeight) => {
+
+    console.log(sparrenklaueSelected)
+    console.log(schiebeGlasSelected)
+    console.log(currentPolePositionIsEingerueckt)
+
+
     if (curWidth == "" || curWidth == undefined || curWidth == null) {
         curWidth = BaseWidth
     }
     if (curDepth == "" || curDepth == undefined || curDepth == null) {
         curDepth = BaseDepth
     }
-    let TempVar = GetRoofMaxHeight({ "durchgangsHeight": parseFloat(_dgHeight), "roofDepth": parseFloat(curDepth), "roofWidth": parseFloat(curWidth), "sparrenklaue": false, "schiebeGlas": false, "eingerueckt": false })
+
+    let TempVar = GetRoofMaxHeight({ "durchgangsHeight": parseFloat(_dgHeight), "roofDepth": parseFloat(curDepth), "roofWidth": parseFloat(curWidth), "sparrenklaue": sparrenklaueSelected, "schiebeGlas": schiebeGlasSelected, "eingerueckt": currentPolePositionIsEingerueckt })
     durchgangsHeight = _dgHeight;
     roofHeight = TempVar.roofHeight;
     maxRoofHeight = TempVar.maxHeight;
 
     console.log(durchgangsHeight, roofHeight, maxRoofHeight);
-    document.querySelector(".outputDurchgangsHeight").innerText = durchgangsHeight + " mm";
-    document.querySelector(".outputRoofHeight").innerText = roofHeight + " mm";
-    document.querySelector(".outputMaxRoofHeight").innerText = maxRoofHeight + " mm";
-    document.querySelector(".outputRoofDepth").innerText = curDepth + " mm";
+    document.querySelectorAll(".outputDurchgangsHeight").forEach((e) => { e.innerText = durchgangsHeight + " mm"; })
+    document.querySelectorAll(".outputRoofHeight").forEach((e) => { e.innerText = roofHeight + " mm"; })
+    document.querySelectorAll(".outputMaxRoofHeight").forEach((e) => { e.innerText = maxRoofHeight + " mm"; })
+    document.querySelectorAll(".outputRoofDepth").forEach((e) => { e.innerText = curDepth + " mm"; })
     document.querySelector("#ui-obj-Max-Höhe").value = maxRoofHeight;
     document.querySelector("#ui-obj-Max-Höhe").parentNode.parentNode.querySelector(".transform-numbers").innerText = maxRoofHeight + " mm";
 
@@ -1863,16 +1885,16 @@ const SetDimensionValuesByMaxHeight = (_rmHeight) => {
     if (curDepth == "" || curDepth == undefined || curDepth == null) {
         curDepth = BaseDepth
     }
-    let TempVar = GetDurchgangsHeight({ "roofMaxHeight": parseFloat(_rmHeight), "roofDepth": parseFloat(curDepth), "roofWidth": parseFloat(curWidth), "sparrenklaue": false, "schiebeGlas": false, "eingerueckt": false })
+    let TempVar = GetDurchgangsHeight({ "roofMaxHeight": parseFloat(_rmHeight), "roofDepth": parseFloat(curDepth), "roofWidth": parseFloat(curWidth), "sparrenklaue": sparrenklaueSelected, "schiebeGlas": schiebeGlasSelected, "eingerueckt": currentPolePositionIsEingerueckt })
     durchgangsHeight = TempVar.durchgangsHeight;
     roofHeight = TempVar.roofHeight;
     maxRoofHeight = _rmHeight;
 
     console.log(durchgangsHeight, roofHeight, maxRoofHeight);
-    document.querySelector(".outputDurchgangsHeight").innerText = durchgangsHeight + " mm";
-    document.querySelector(".outputRoofHeight").innerText = roofHeight + " mm";
-    document.querySelector(".outputMaxRoofHeight").innerText = maxRoofHeight + " mm";
-    document.querySelector(".outputRoofDepth").innerText = curDepth + " mm";
+    document.querySelectorAll(".outputDurchgangsHeight").forEach((e) => { e.innerText = durchgangsHeight + " mm"; })
+    document.querySelectorAll(".outputRoofHeight").forEach((e) => { e.innerText = roofHeight + " mm"; })
+    document.querySelectorAll(".outputMaxRoofHeight").forEach((e) => { e.innerText = maxRoofHeight + " mm"; })
+    document.querySelectorAll(".outputRoofDepth").forEach((e) => { e.innerText = curDepth + " mm"; })
 
     document.querySelector("#ui-obj-Durchgang").value = durchgangsHeight;
     document.querySelector("#ui-obj-Durchgang").parentNode.parentNode.querySelector(".transform-numbers").innerText = durchgangsHeight + " mm";

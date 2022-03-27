@@ -3,6 +3,7 @@ import { sparrenklaueSelected } from "./main.js"
 
 export const CreateSummary = (_itemMap, _selectedItems) => {
     // console.log(_itemMap)
+
     console.log(_selectedItems)
 
     document.querySelector(".SummaryContainer").innerHTML = ""
@@ -23,9 +24,11 @@ export const CreateSummary = (_itemMap, _selectedItems) => {
     let curFinalPrice = 0
     let infoText
 
+
+
     //Create Tablelike Header
     let Container = ElementCreator({ type: "div", classes: ["col12"] })
-    let RowItem = ElementCreator({ type: "div", classes: ["row", "listContainer"] })
+    let RowItem = ElementCreator({ type: "div", classes: ["row", "listContainer", "listContainerHeading"] })
     let DescriptionItem = ElementCreator({ type: "div", classes: ["col-6", "p-0", "m-0"], innerText: "Beschreibung" })
     let CountItem = ElementCreator({ type: "div", classes: ["col-1", "text-end", "p-0", "m-0"], innerText: "Anzahl" })
     let PriceItem = ElementCreator({ type: "div", classes: ["col-2", "text-end", "p-0", "m-0"], innerText: "Preis" })
@@ -34,7 +37,9 @@ export const CreateSummary = (_itemMap, _selectedItems) => {
     RowItem.append(DescriptionItem, CountItem, PriceItem, FinalPriceItem, emptyElement)
     Container.append(RowItem)
     document.querySelector(".SummaryContainer").appendChild(Container)
-        //Create Tablelike Header end
+    //Create Tablelike Header end
+
+
     console.log(GetConstPrice(curWidth, curDepth)) // dachbreite + tiefe Grundpreis
     let constPrice = GetConstPrice(curWidth, curDepth);
     let x = new SummaryElement({
@@ -50,6 +55,7 @@ export const CreateSummary = (_itemMap, _selectedItems) => {
 
     _selectedItems.forEach((e) => {
         let SelectedItem = _itemMap.get(e)
+        // console.log(SelectedItem)
         if (e == "Fertigstellung-4") {
             //selbstaufbau
             document.querySelector(".befestignungsNotice").style.display = "block"
@@ -143,12 +149,12 @@ class SummaryElement {
                 if (ArrowElement.classList.contains("active")) {
                     ArrowElement.classList.remove("active")
                     DescriptionTextItem.classList.remove("active")
-                    $(DescriptionRowItem).slideUp("fast", function() {
+                    $(DescriptionRowItem).slideUp("fast", function () {
                         // Animation complete.
                         console.log("first")
                     });
                 } else {
-                    $(DescriptionRowItem).slideDown("fast", function() {
+                    $(DescriptionRowItem).slideDown("fast", function () {
                         // Animation complete.
                     });
                     ArrowElement.classList.add("active")
