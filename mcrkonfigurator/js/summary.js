@@ -23,6 +23,7 @@ export const CreateSummary = (_itemMap, _selectedItems) => {
     let discount
     let curFinalPrice = 0
     let infoText
+    let finalPrice = 0
 
 
 
@@ -37,7 +38,7 @@ export const CreateSummary = (_itemMap, _selectedItems) => {
     RowItem.append(DescriptionItem, CountItem, PriceItem, FinalPriceItem, emptyElement)
     Container.append(RowItem)
     document.querySelector(".SummaryContainer").appendChild(Container)
-    //Create Tablelike Header end
+        //Create Tablelike Header end
 
 
     console.log(GetConstPrice(curWidth, curDepth)) // dachbreite + tiefe Grundpreis
@@ -49,13 +50,13 @@ export const CreateSummary = (_itemMap, _selectedItems) => {
         curFinalPrice: constPrice + ",00€",
         infoText: ""
     });
-    curFinalPrice = parseFloat(curFinalPrice) + parseFloat(constPrice)
+    finalPrice = parseFloat(curFinalPrice) + parseFloat(constPrice)
     let tempElem = x.CreateElement()
     document.querySelector(".SummaryContainer").appendChild(tempElem)
 
     _selectedItems.forEach((e) => {
         let SelectedItem = _itemMap.get(e)
-        // console.log(SelectedItem)
+            // console.log(SelectedItem)
         if (e == "Fertigstellung-4") {
             //selbstaufbau
             document.querySelector(".befestignungsNotice").style.display = "block"
@@ -94,13 +95,15 @@ export const CreateSummary = (_itemMap, _selectedItems) => {
             infoText: infoText
         });
         let tempElem = x.CreateElement()
+        finalPrice = parseFloat(finalPrice) + parseFloat(curFinalPrice)
         document.querySelector(".SummaryContainer").appendChild(tempElem)
 
     })
 
 
     // Create last Element
-    let endElement = ElementCreator({ type: "p", classes: ["finalSum", "p-0", "m-0"], innerText: "Gesamtsumme:    " + curFinalPrice + ",00€" })
+
+    let endElement = ElementCreator({ type: "p", classes: ["finalSum", "p-0", "m-0"], innerText: "Gesamtsumme: " + finalPrice + ",00€" })
     endElement.style.borderTop = "1px solid black"
     document.querySelector(".SummaryContainer").appendChild(endElement)
 
@@ -149,12 +152,12 @@ class SummaryElement {
                 if (ArrowElement.classList.contains("active")) {
                     ArrowElement.classList.remove("active")
                     DescriptionTextItem.classList.remove("active")
-                    $(DescriptionRowItem).slideUp("fast", function () {
+                    $(DescriptionRowItem).slideUp("fast", function() {
                         // Animation complete.
                         console.log("first")
                     });
                 } else {
-                    $(DescriptionRowItem).slideDown("fast", function () {
+                    $(DescriptionRowItem).slideDown("fast", function() {
                         // Animation complete.
                     });
                     ArrowElement.classList.add("active")

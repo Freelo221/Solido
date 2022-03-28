@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#606B71;}
+</style>
+<path class="st0" d="M487.8,24.1L387,0.8c-14.7-3.4-29.8,4.2-35.8,18.1l-46.5,108.5c-5.5,12.7-1.8,27.7,8.9,36.5l53.9,44.1
+	c-34,69.2-90.3,125.6-159.6,159.6l-44.1-53.9c-8.8-10.7-23.8-14.4-36.5-8.9L18.9,351.3c-13.9,6-21.5,21-18.1,35.7L24,487.7
+	C27.3,502,39.9,512,54.5,512C306.7,512,512,307.8,512,54.5C512,39.9,502,27.3,487.8,24.1z M55.1,480l-23-99.6l107.4-46l59.5,72.8
+	c103.6-48.6,159.7-104.9,208.1-208.1l-72.8-59.5l46-107.4l99.6,23C479.7,289.7,289.6,479.7,55.1,480z"/>
+</svg>

@@ -1,4 +1,5 @@
 import * as test from "./main.js";
+import { validateForm } from './customFunctions.js'
 import {
     Action_ChangeHeight,
     Action_ChangeWidth,
@@ -171,16 +172,64 @@ $(document).ready(function() {
 
 
 
+
+    document.querySelector(".closeBtn-info").addEventListener("click", () => {
+        // preventDefault();
+        document.querySelector(".modalHeightInfo").style.display = "none";
+    })
+    document.querySelector(".icon-info-container").addEventListener("click", () => {
+        // preventDefault();
+        document.querySelector(".modalHeightInfo").style.display = "block";
+    })
+
+
     document.querySelectorAll(".radiospanInput").forEach(element => {
-        element.addEventListener("click", () => {
+        element.addEventListener("click", (e) => {
             // preventDefault();
-            document.querySelectorAll(".radiospanInput").forEach(x => {
+            let elemName = e.target.getAttribute("name")
+            document.querySelectorAll(".radiospanInput[name=" + elemName + "]").forEach(x => {
                 x.classList.remove("active")
             })
             element.classList.add("active");
         })
     })
 
+
+    //Validate all forms in the page
+    validateForm("solidoContactForm")
+    validateForm("solidoRequestForm")
+
+    document.querySelectorAll("#solidoRequestForm .required").forEach((e) => {
+        e.addEventListener("keyup", () => {
+            validateForm("solidoRequestForm")
+        })
+        e.addEventListener("change", () => {
+            validateForm("solidoRequestForm")
+        })
+
+    });
+
+    document.querySelectorAll("#solidoContactForm .required").forEach((e) => {
+        e.addEventListener("keyup", () => {
+            validateForm("solidoContactForm")
+        })
+        e.addEventListener("change", () => {
+            validateForm("solidoContactForm")
+        })
+
+    });
+
+    // document.querySelector("#solidoRequestForm input[type=checkbox]['required']").addEventListener("click", () => {
+
+    // });
+
+    // document.querySelector("#solidoRequestForm input[type=radio]['required']").addEventListener("click", () => {
+
+    // });
+
+    // document.querySelector("#solidoRequestForm textarea['required']").addEventListener("click", () => {
+
+    // });
 
 
     const obj = JSON.parse(jsonNew);
@@ -1899,8 +1948,8 @@ const SetDimensionValuesByDgHeight = (_dgHeight) => {
     document.querySelectorAll(".outputRoofHeight").forEach((e) => { e.innerText = roofHeight + " mm"; })
     document.querySelectorAll(".outputMaxRoofHeight").forEach((e) => { e.innerText = maxRoofHeight + " mm"; })
     document.querySelectorAll(".outputRoofDepth").forEach((e) => { e.innerText = curDepth + " mm"; })
-    document.querySelector("#ui-obj-Max-Höhe").value = maxRoofHeight;
-    document.querySelector("#ui-obj-Max-Höhe").parentNode.parentNode.querySelector(".transform-numbers").innerText = maxRoofHeight + " mm";
+    document.querySelector("#ui-obj-Gesamthöhe").value = maxRoofHeight;
+    document.querySelector("#ui-obj-Gesamthöhe").parentNode.parentNode.querySelector(".transform-numbers").innerText = maxRoofHeight + " mm";
 
 }
 

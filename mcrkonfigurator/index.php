@@ -8,8 +8,7 @@
     <title>Konfigurator</title>
     <!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> -->
     <!-- <script src="js/require.js"></script> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.6.0.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
@@ -119,73 +118,63 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-12 col-sm-12 mt-3 mt-sm-0 p-0">
-                                            <a href="#" id="imageUploaderPre" class="btn btn-secondary">Bild Hochladen</a
-												>
-											</div>
+                                            <a href="#" id="imageUploaderPre" class="btn btn-secondary">Bild Hochladen</a>
+                                        </div>
 
-											<div class="col-12 p-0">
-												<div class="userImageModeVisible">
-													<div class="col-12 col-sm-12 mt-3 mt-sm-3 p-0">
-														<a href="#" id="imagedelete" class="btn btn-link"
-															>Bild entfernen</a
-														>
-													</div>
+                                        <div class="col-12 p-0">
+                                            <div class="userImageModeVisible">
+                                                <div class="col-12 col-sm-12 mt-3 mt-sm-3 p-0">
+                                                    <a href="#" id="imagedelete" class="btn btn-link">Bild entfernen</a>
+                                                </div>
 
-													<div class="col-12">
-														<input
-															style="display: none"
-															id="userImage"
-															type="file"
-														/>
-													</div>
-													<div class="col-12 userImageLoadedVisible">
-														<div
-															class="col-12 col-sm-4 justify-content-center align-items-center d-flex"
-														>
-															<p class="text-bold heading text-left">Zoom</p>
-														</div>
-														<div
-															class="col-12 col-sm-8 justify-content-center align-items-center d-flex"
-														>
-															<input
-																class="w-100"
-																type="range"
-																min="100"
-																max="200"
-																step="1"
-																value="100"
-																id="ui-userimage-x"
-															/>
-														</div>
-													</div>
+                                                <div class="col-12">
+                                                    <input
+                                                        style="display: none"
+                                                        id="userImage"
+                                                        type="file" />
+                                                </div>
+                                                <div class="col-12 userImageLoadedVisible">
+                                                    <div
+                                                        class="col-12 col-sm-4 justify-content-center align-items-center d-flex">
+                                                        <p class="text-bold heading text-left">Zoom</p>
+                                                    </div>
+                                                    <div
+                                                        class="col-12 col-sm-8 justify-content-center align-items-center d-flex">
+                                                        <input
+                                                            class="w-100"
+                                                            type="range"
+                                                            min="100"
+                                                            max="200"
+                                                            step="1"
+                                                            value="100"
+                                                            id="ui-userimage-x" />
+                                                    </div>
+                                                </div>
 
-													<div class="col-12 userImageLoadedVisible">
-														<div
-															class="col-12 col-sm-4 justify-content-center align-items-center d-flex"
-														>
-															<p class="text-bold heading text-left">
-																Sichtfeld
-															</p>
-														</div>
-														<div
-															class="col-12 col-sm-8 justify-content-center align-items-center d-flex"
-														>
-															<input
-																class="w-100"
-																type="range"
-																min="30"
-																max="90"
-																step="1"
-																value="40"
-																id="ui-fov-slider"
-															/>
-														</div>
-													</div>
+                                                <div class="col-12 userImageLoadedVisible">
+                                                    <div
+                                                        class="col-12 col-sm-4 justify-content-center align-items-center d-flex">
+                                                        <p class="text-bold heading text-left">
+                                                            Sichtfeld
+                                                        </p>
+                                                    </div>
+                                                    <div
+                                                        class="col-12 col-sm-8 justify-content-center align-items-center d-flex">
+                                                        <input
+                                                            class="w-100"
+                                                            type="range"
+                                                            min="30"
+                                                            max="90"
+                                                            step="1"
+                                                            value="40"
+                                                            id="ui-fov-slider" />
+                                                    </div>
+                                                </div>
 
-													<!-- <div
+                                                <!-- <div
                             class="row userImageLoadedVisible text-center mt-3"
                           > -->
-													<!-- <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                                <!-- <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                               <a
                                 href="#"
                                 id="ui-toggle-userimagehelper"
@@ -193,7 +182,7 @@
                                 >Toggle Helper Lines</a
                               >
                             </div> -->
-													<!-- <div class="col-12 col-sm-6">
+                                                <!-- <div class="col-12 col-sm-6">
                               <a
                                 href="#"
                                 id="ui-takeScreenshot"
@@ -201,185 +190,174 @@
                                 >Screenshot</a
                               >
                             </div> -->
-													<!-- </div> -->
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+                                                <!-- </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-						<div class="opt-item opt-item-last" id="sec15">
-							<h3>Ihre Konfiguration</h3>
-							<div class="kat-wrapper">
-								<div class="kat-item fullWidth">
-									<div class="container">
-										<div class="row">
-											<div class="col-12 col-sm-12 g-0 mb-3 centerElement">
-												<p class="w-100 text-start">
-													Gesamtpreis: <span class="sumText">22.000 €</span>
-												</p>
-												<p class="discText text-start w-100">
-													Sie sparen: 2.768 €
-												</p>
-												<!-- <a href="" class="btn btn-primary mt-2">Angebot anfordern</a> -->
+                    <div class="opt-item opt-item-last" id="sec15">
+                        <h3>Ihre Konfiguration</h3>
+                        <div class="kat-wrapper">
+                            <div class="kat-item fullWidth">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 g-0 mb-3 centerElement">
+                                            <p class="w-100 text-start">
+                                                Gesamtpreis: <span class="sumText">22.000 €</span>
+                                            </p>
+                                            <p class="discText text-start w-100">
+                                                Sie sparen: 2.768 €
+                                            </p>
+                                            <!-- <a href="" class="btn btn-primary mt-2">Angebot anfordern</a> -->
                                         </div>
 
                                         <div class="col-12 col-sm-6 mt-3 mt-sm-0 p-0">
-                                            <a class="btn btn-secondary-menu config-link">Zusammenfassung</a
-												>
-											</div>
-											<div class="col-12 col-sm-6 mt-3 mt-sm-0 p-0 centerElement text-center">
-												<!-- <p>Sparen sie bis zu 20%</p> -->
-												<a class="btn btn-primary btn_angebotAnfordernSmall">Angebot anfordern</a
-													>
-												</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- <div class="mt-3">
+                                            <a class="btn btn-secondary-menu config-link">Zusammenfassung</a>
+                                        </div>
+                                        <div class="col-12 col-sm-6 mt-3 mt-sm-0 p-0 centerElement text-center">
+                                            <!-- <p>Sparen sie bis zu 20%</p> -->
+                                            <a class="btn btn-primary btn_angebotAnfordernSmall">Angebot anfordern</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="mt-3">
 								<a
 									class="btn btn-primary config-link"
 									>Zusammenfassung</a
 								>
 							</div> -->
-							<!-- <div class=" ">
+                        <!-- <div class=" ">
 								<a
 									class="w-100 w-sm-50 d-block ps-sm-0 text-center text-sm-start config-link"
 									>Infomaterial</a
 								>
 							</div> -->
-						</div>
+                    </div>
 
-						<div class="bottomElement">
-							<div class="container">
-								<div class="row">
-									<div class="col-6 centerElement">
-										<p class="w-100 text-start ps-3">
-											Gesamtpreis: <span class="sumText">22.000 €</span>
-										</p>
-										<p class="discText text-start ps-3 w-100">
-											Sie sparen: 2.768 €
-										</p>
-										<!-- <a href="" class="btn btn-primary mt-2">Angebot anfordern</a> -->
+                    <div class="bottomElement">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6 centerElement">
+                                    <p class="w-100 text-start ps-3">
+                                        Gesamtpreis: <span class="sumText">22.000 €</span>
+                                    </p>
+                                    <p class="discText text-start ps-3 w-100">
+                                        Sie sparen: 2.768 €
+                                    </p>
+                                    <!-- <a href="" class="btn btn-primary mt-2">Angebot anfordern</a> -->
+                                </div>
+                                <div class="col-6 centerElement text-center">
+                                    <!-- <p>Sparen sie bis zu 20%</p> -->
+                                    <a class="btn btn-primary btn_angebotAnfordernBig">Angebot anfordern</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="visual float-end d-none d-lg-block"> -->
+                <div class="visual float-end">
+                    <div id="gui_container"></div>
+
+                    <div class="visual-topContent">
+                        <!-- <div class="bgFade"></div> -->
+                        <div class="container-fluid h-100">
+                            <div class="row h-100">
+                                <div class="col-4"></div>
+                                <div class="col-4 h-100 Logo-fix">
+                                    <div class="logoContainer h-100 Logo-fix"></div>
+                                </div>
+                                <div class="col-4 h-100 hide-on-mobile">
+                                    <div class="row">
+                                        <div class="col-4 h-100"></div>
+                                        <div class="col-8 h-100">
+                                            <a
+                                                id="tb_indi_plan"
+                                                class="btn btn-secondary tb-individual"
+                                                href="#">Individuelle Planung</a>
+                                            <a
+                                                class="btn btn-secondary tb-kontakt">Kontakt</a>
                                         </div>
-                                        <div class="col-6 centerElement text-center">
-                                            <!-- <p>Sparen sie bis zu 20%</p> -->
-                                            <a class="btn btn-primary btn_angebotAnfordernBig">Angebot anfordern</a
-										>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- <div class="visual float-end d-none d-lg-block"> -->
-					<div class="visual float-end">
-						<div id="gui_container"></div>
-
-						<div class="visual-topContent">
-							<!-- <div class="bgFade"></div> -->
-							<div class="container-fluid h-100">
-								<div class="row h-100">
-									<div class="col-4"></div>
-									<div class="col-4 h-100 Logo-fix">
-										<div class="logoContainer h-100 Logo-fix"></div>
-									</div>
-									<div class="col-4 h-100 hide-on-mobile">
-										<div class="row">
-											<div class="col-4 h-100"></div>
-											<div class="col-8 h-100">
-												<a
-													id="tb_indi_plan"
-													class="btn btn-secondary tb-individual"
-													href="#"
-													>Individuelle Planung</a
-												>
-												<a
-													class="btn btn-secondary tb-kontakt"
-													
-													>Kontakt</a
-												>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="visual-mainContent">
-							<div id="treeLoadingContainer" class="treeLoadingContainer">
-								<div class="preloadFilter"></div>
-								<div class="container">
-									<div class="row justify-content-center">
-										<div
-											class="col-6 offset-3 d-flex flex-column justify-content-center align-items-center vh-100"
-										>
-											<div class="loadingText text-center">
-												<i class="fas fa-circle-notch fa-spin"></i><br />
-												&nbsp;&nbsp;&nbsp;Lade ...
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual-mainContent">
+                        <div id="treeLoadingContainer" class="treeLoadingContainer">
+                            <div class="preloadFilter"></div>
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div
+                                        class="col-6 offset-3 d-flex flex-column justify-content-center align-items-center vh-100">
+                                        <div class="loadingText text-center">
+                                            <i class="fas fa-circle-notch fa-spin"></i><br />
+                                            &nbsp;&nbsp;&nbsp;Lade ...
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
 
-							<div id="treeLoadingContainer2" class="treeLoadingContainer2">
-								<div class="preloadFilter"></div>
-								<div class="container">
-									<div class="row justify-content-center">
-										<div
-											class="col-6 offset-3 d-flex flex-column justify-content-center align-items-center vh-100"
-										>
-											
-										</div>
-									</div>
-								</div>
-							</div>
+                        <div id="treeLoadingContainer2" class="treeLoadingContainer2">
+                            <div class="preloadFilter"></div>
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div
+                                        class="col-6 offset-3 d-flex flex-column justify-content-center align-items-center vh-100">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
 
 
-							<div id="threecontainer"></div>
-							<div id="ThreeOverlay">
-								<div class="wrappercontai">
-									<div class="wrapper5by4">
-										<div class="innerCont">
-											<img id="tz_img" src="./img/tz_glatt.svg" alt="" />
-											<p class="outputRoofDepth">1100</p>
-											<p class="outputMaxRoofHeight">1100</p>
-											<p class="outputRoofHeight">1100</p>
-											<p class="outputDurchgangsHeight">1100</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- <div style=" position: absolute; z-index: 100; left: 500px; bottom: 0; right: 0; height: 50px; background-color: rgba(0, 0, 0, 0.33); color: #fff; display: block; " > -->
-							<!--
+                        <div id="threecontainer"></div>
+                        <div id="ThreeOverlay">
+                            <div class="wrappercontai">
+                                <div class="wrapper5by4">
+                                    <div class="innerCont">
+                                        <img id="tz_img" src="./img/tz_glatt.svg" alt="" />
+                                        <p class="outputRoofDepth">1100</p>
+                                        <p class="outputMaxRoofHeight">1100</p>
+                                        <p class="outputRoofHeight">1100</p>
+                                        <p class="outputDurchgangsHeight">1100</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div style=" position: absolute; z-index: 100; left: 500px; bottom: 0; right: 0; height: 50px; background-color: rgba(0, 0, 0, 0.33); color: #fff; display: block; " > -->
+                        <!--
 					<button id="Cam1">Cam1</button>
 					<button id="Cam2">Cam2</button>
 					<button id="Farbe1">Farbe1</button>
 					<button id="Farbe2">Farbe2</button>
 					<button id="Farbe3">Farbe3</button>
 					-->
-							<!-- <div style="display: inline-block; width: 400px"> -->
-							<!-- <input type="range" min="200" max="260" value="235" class="slider" id="testHeightSlider" /> -->
-							<!-- </div> -->
-							<!-- </div> -->
-						</div>
+                        <!-- <div style="display: inline-block; width: 400px"> -->
+                        <!-- <input type="range" min="200" max="260" value="235" class="slider" id="testHeightSlider" /> -->
+                        <!-- </div> -->
+                        <!-- </div> -->
+                    </div>
 
-						<div
-							id="userImageControlsContainer"
-							class="userImageControlsContainer"
-						>
-							<div class="imgUploadContainer2">
-								<a id="enableUserImageMode" class="icon_imgUpload"></a>
-                                            <a id="disableUserImageMode" class="icon_imgUpload"></a>
-                                        </div>
-                                    </div>
+                    <div
+                        id="userImageControlsContainer"
+                        class="userImageControlsContainer">
+                        <div class="imgUploadContainer2">
+                            <a id="enableUserImageMode" class="icon_imgUpload"></a>
+                            <a id="disableUserImageMode" class="icon_imgUpload"></a>
+                        </div>
+                    </div>
 
-                                    <!-- <div class="zoomRangeSliderContainer">
+                    <!-- <div class="zoomRangeSliderContainer">
                         <div class="closeMenu_zoomSlider">
                             <div>
                                 <i class="fas fa-chevron-down"></i>
@@ -412,79 +390,90 @@
                             <input type="range" name="" id="">
                             <input type="range" name="" id="">
                         </div> -->
-                                </div>
+                </div>
 
-                                <div class="iconContDivainer-other">
-                                    <!-- <div id="enableUserImageMode_cont" class="iconContDiv ">
+                <div class="iconContDivainer-other">
+                    <!-- <div id="enableUserImageMode_cont" class="iconContDiv ">
                             <span id="enableUserImageMode_Pre" class="icon_imgUpload"></span>
                         </div> -->
-                                    <div class="iconContDiv icon-size-container centerTT">
-                                        <span id="btn_showDimensions" class="icon-size"></span>
-                                    </div>
+                    <div class="iconContDiv icon-size-container centerTT">
+                        <span id="btn_showDimensions" class="icon-size"></span>
+                    </div>
 
-                                    <div class="iconContDiv icon-info-container centerTT">
-                                        <span id="btn_showDimensionInfo" class="icon-info"></span>
-                                    </div>
+                    <div class="iconContDiv icon-info-container centerTT">
+                        <span id="btn_showDimensionInfo" class="icon-info"></span>
+                    </div>
 
-                                    <div class="iconContDiv icon-plus-container centerTT">
-                                        <span id="btn_zoomIn" class="icon-plus"></span>
-                                    </div>
-                                    <div class="iconContDiv icon-minus-container centerTT">
-                                        <span id="btn_zoomOut" class="icon-minus"></span>
-                                    </div>
-                                    <div class="iconContDiv icon-outer-container centerTT">
-                                        <span class="icon-outer" id="click-campositionbtn-1"></span>
-                                    </div>
-                                    <div class="iconContDiv icon-inner-container centerTT">
-                                        <span class="icon-inner" id="click-campositionbtn-2"></span>
-                                    </div>
+                    <div class="iconContDiv icon-plus-container centerTT">
+                        <span id="btn_zoomIn" class="icon-plus"></span>
+                    </div>
+                    <div class="iconContDiv icon-minus-container centerTT">
+                        <span id="btn_zoomOut" class="icon-minus"></span>
+                    </div>
+                    <div class="iconContDiv icon-outer-container centerTT">
+                        <span class="icon-outer" id="click-campositionbtn-1"></span>
+                    </div>
+                    <div class="iconContDiv icon-inner-container centerTT">
+                        <span class="icon-inner" id="click-campositionbtn-2"></span>
+                    </div>
 
-                                    <!-- <div>
+                    <!-- <div>
 					<span class="icon-undo"></span>
 				</div> -->
-                                    <!-- <div>
+                    <!-- <div>
 					<span class="icon-redo"></span>
 				</div> -->
-                                    <!-- <div>
+                    <!-- <div>
 					<span class="icon-save"></span>
 				</div>
 				<div>
 					<span class="icon-user"></span>
 				</div> -->
-                                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modalOption">
+            <div class="blackOut"></div>
+            <div class="modalContent">
+                <div class="container-fluid">
+                    <div class="row mt-5">
+                        <div class="col-12 col-sm-6">
+                            <div class="visualBox">
+                                <img id="modalOptionBox_img" src="./img/conf/dacherweiterung.jpg" alt="" />
                             </div>
                         </div>
+                        <div class="col-12 col-sm-6">
+                            <h3 id="modalOptionBox_headline" class="mt-3 mt-sm-0">
+                                Glatter Wandanschluss
+                            </h3>
+                            <p id="modalOptionBox_text" class="mt-4">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam era
+                            </p>
+                            <div class="col-12 mt-5">
+                                <a value="" id="modalOptionBox_btn" class="btn btn-primary">Hinzufügen</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                        <div class="modalOption">
-                            <div class="blackOut"></div>
-                            <div class="modalContent">
-                                <div class="container-fluid">
-                                    <div class="row mt-5">
-                                        <div class="col-12 col-sm-6">
-                                            <div class="visualBox">
-                                                <img id="modalOptionBox_img" src="./img/conf/dacherweiterung.jpg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6">
-                                            <h3 id="modalOptionBox_headline" class="mt-3 mt-sm-0">
-                                                Glatter Wandanschluss
-                                            </h3>
-                                            <p id="modalOptionBox_text" class="mt-4">
-                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam era
-                                            </p>
-                                            <div class="col-12 mt-5">
-                                                <a value="" id="modalOptionBox_btn" class="btn btn-primary">Hinzufügen</a
-									>
-								</div>
-							</div>
-						</div>
-					</div>
+                <div class="closeBtn-modal"></div>
+            </div>
+        </div>
 
-					<div class="closeBtn-modal"></div>
-				</div>
-			</div>
 
-			<!-- <div class="modalOption2">
+        <?php
+
+include("./content/customplan.php");
+include("./content/contact.php");
+include("./content/summary.php");
+include("./content/request.php");
+include("./content/info.php");
+
+?>
+
+
+        <!-- <div class="modalOption2">
 				<div class="blackOut"></div>
 				<div class="modalContent">
 					<div class="container-fluid">
@@ -573,13 +562,13 @@
 					<div class="closeBtn-modal2"></div>
 				</div>
 			</div> -->
-		</div>
+    </div>
 
-		<!-- <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet"> -->
 
 
 
-		<!-- <div class="modal_getAllInfo">
+    <!-- <div class="modal_getAllInfo">
 			<div class="blackOut"></div>
 
 			<div class="container">
@@ -707,7 +696,7 @@
 			</div>
 		</div> -->
 
-		<!-- <div class="modal_contact">
+    <!-- <div class="modal_contact">
 			<div class="blackOut"></div>
             <div class="container">
                     <div class="closeBtn-contactContainer"></div>
@@ -859,7 +848,7 @@
 				</div>
 			</div> -->
 
-            <!-- <div class="modal_anfrage">
+    <!-- <div class="modal_anfrage">
                     <div class="blackOut"></div>
             <div class="container">
                     <div class="closeBtn-anfrageContainer"></div>
@@ -960,7 +949,7 @@
 
 
 
-	<!-- <div class="modalHeightInfo">
+    <!-- <div class="modalHeightInfo">
 		<div class="blackOut"></div>
 		<div class="modalContent">
 			<div class="container-fluid">
@@ -997,10 +986,10 @@
 
 
 
-            </div>
+    </div>
 
 
-		</div>
-	</body>
+    </div>
+</body>
 
 </html>
